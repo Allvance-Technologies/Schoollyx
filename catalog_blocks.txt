@@ -1,0 +1,721 @@
+=== PAGE 1 ===
+(28, 16, 31, 121) ->  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+(41, 127, 407, 133) -> # 
+MODULE 
+DESCRIPTION 
+KEY FEATURES 
+
+(42, 145, 151, 152) -> 1 
+Student Information System 
+
+(62, 156, 103, 162) -> 50+ Data Fields 
+
+(229, 144, 325, 152) -> 50+ data fields. Complete 360° 
+
+(229, 155, 325, 163) -> student profiles with document 
+
+(229, 165, 270, 173) -> management. 
+
+(359, 143, 511, 166) -> Student profile management · Admission & enrollment 
+records · Academic history tracking · ID Card generation · 
+Document management +2 more 
+
+(41, 185, 139, 193) -> 2 
+Admission Management 
+
+(62, 196, 106, 203) -> 70% Time Saved 
+
+(229, 184, 321, 193) -> 24/7 online applications. 100% 
+
+(229, 195, 313, 203) -> paperless. 70% time saved. 
+
+(359, 184, 514, 206) -> Online admission form · WhatsApp admission link sharing · 
+Instant fee payment integration · Document upload by 
+parents · Admission approval workflow +2 more 
+
+(41, 219, 140, 226) -> 3 
+Fee Management ⭐ KEY 
+
+(62, 230, 123, 236) -> 10+ Payment Gateways 
+
+(229, 218, 327, 227) -> Collect fees via 10+ gateways — 
+
+(229, 228, 343, 247) -> Razorpay, PhonePe, UPI, POS & more. 
+45% faster collections with auto 
+
+(229, 249, 282, 257) -> defaulter tracking. 
+
+(359, 217, 513, 247) -> Online fee payment (UPI, Cards, Net Banking) · POS 
+machine integration · Fee structure customization · 
+Installment & partial payment · Defaulter tracking & reports 
++3 more 
+
+(41, 270, 165, 278) -> 4 
+Attendance Management ⭐ KEY 
+
+(62, 282, 106, 288) -> 99.9% Accuracy 
+
+(229, 269, 343, 278) -> Biometric + Mobile App + GPS. 99.9% 
+
+(229, 280, 311, 288) -> accuracy with instant parent 
+
+(229, 290, 296, 298) -> WhatsApp/SMS alerts. 
+
+(359, 268, 501, 291) -> Biometric device integration · Mobile app attendance 
+marking · Real-time parent notifications · Attendance 
+reports & analytics · Weekly attendance summary 
+
+(41, 311, 169, 319) -> 5 
+Employee & Teacher Management 
+
+(62, 322, 97, 328) -> Complete HR 
+
+(229, 310, 318, 319) -> Staff records, attendance, role 
+
+(229, 320, 325, 329) -> management & experience letter 
+
+(229, 330, 262, 339) -> generation. 
+
+(359, 309, 516, 332) -> Staff profile management · Teacher class allocation · 
+Schedule & timetable assignment · Document management 
+· Staff attendance tracking +2 more 
+
+(41, 351, 132, 359) -> 6 
+Expense Management 
+
+(62, 363, 114, 369) -> 100% Transparency 
+
+(229, 351, 344, 369) -> Budget tracking, vendor management 
+& approval workflows. 100% financial 
+
+(229, 371, 269, 379) -> transparency. 
+
+(359, 350, 495, 372) -> Expense entry & categorization · Vendor & supplier 
+management · Expense approval workflow · Budget 
+tracking · Expense reports & analytics +2 more 
+
+(41, 392, 146, 400) -> 7 
+Smart Notifications ⭐ KEY 
+
+(62, 403, 110, 409) -> 99% Delivery Rate 
+
+(229, 391, 346, 400) -> WhatsApp + SMS + Email + Push. 99% 
+
+(229, 402, 333, 410) -> delivery rate. 98% WhatsApp open 
+
+(229, 412, 340, 421) -> rate. Unlimited free push notifications. 
+
+(359, 390, 515, 413) -> SMS notifications · WhatsApp messages · Email 
+notifications · Push notifications (App) · Bulk messaging +3 
+more 
+
+(41, 432, 120, 440) -> 8 
+Lead Management 
+
+(62, 444, 101, 450) -> 2x Admissions 
+
+(229, 432, 316, 440) -> Track enquiries, follow-ups & 
+
+(229, 442, 332, 451) -> conversions. Never lose a potential 
+
+(229, 453, 261, 461) -> admission. 
+
+(359, 431, 510, 462) -> Enquiry capture from multiple sources · Single setup lead 
+overview dashboard · Lead scoring & prioritization · 
+Admission pipeline dashboard · Source-wise conversion 
+analytics +3 more 
+
+(41, 473, 120, 481) -> 9 
+User Management 
+
+(62, 485, 112, 491) -> Full Access Control 
+
+(229, 473, 336, 481) -> One dashboard to manage all users. 
+
+(229, 483, 329, 492) -> Role-based access, bulk import & 
+
+(229, 494, 287, 502) -> complete audit trail. 
+
+(359, 472, 512, 503) -> Student, parent, teacher & admin accounts · Role-based 
+access control (RBAC) · Bulk user import via Excel/CSV · 
+User activation & deactivation · Password reset & account 
+recovery +4 more 
+
+(28, 509, 31, 520) ->  
+
+(28, 531, 31, 542) ->  
+
+(40, 547, 531, 554) -> # 
+MODULE 
+DESCRIPTION 
+KEY FEATURES 
+ 
+
+(39, 565, 124, 573) -> 10 
+Salary Management 
+
+(61, 577, 107, 583) -> One-Click Payroll 
+
+(136, 565, 246, 573) -> One-click payroll. Auto deductions for 
+
+(136, 575, 250, 584) -> PF, ESI & TDS. Salary slips in seconds. 
+
+(272, 564, 513, 578) -> Monthly salary processing · Salary slip generation (PDF) · Deduction management (PF, ESI, 
+TDS) · Advance salary tracking · Leave & absence deduction integration +5 more 
+
+(38, 595, 123, 603) -> 11 
+Leave Management 
+
+(61, 607, 110, 613) -> Zero Paper Leaves 
+
+(136, 596, 243, 603) -> Digital leave applications with instant 
+
+(136, 605, 232, 614) -> approvals. Auto salary deduction 
+
+(136, 616, 169, 624) -> integration. 
+
+(272, 594, 509, 616) -> Configurable leave types (casual, sick, earned, etc.) · Online leave application by staff & 
+students · Multi-level leave approval workflow · Leave balance tracking & carry-forward · 
+Holiday calendar integration +4 more 
+
+(28, 631, 31, 642) ->  
+
+(28, 651, 31, 662) ->  
+
+(41, 668, 531, 675) -> # 
+MODULE 
+DESCRIPTION 
+KEY FEATURES 
+ 
+
+(39, 686, 152, 694) -> 12 
+Exam & Results Management 
+
+(62, 698, 98, 704) -> 5 Min Publish 
+
+(192, 686, 313, 694) -> Auto report cards in 5 min. CBSE & State 
+
+(192, 696, 299, 705) -> Board compliant. 99.9% calculation 
+
+(328, 685, 504, 700) -> Exam scheduling · Admit Card generation · Datesheet generation & 
+publishing · Grade & marks entry · Report card generation +3 more 
+
+(530, 687, 531, 693) ->  
+
+(192, 706, 221, 715) -> accuracy. 
+
+(70, 34, 165, 49) -> SCHOOLLYX 
+
+(70, 53, 212, 60) -> Empowering Schools Through Smart Technology. 
+
+(440, 36, 564, 47) -> Product Features & Modules 
+
+(505, 49, 554, 56) -> www.schoollyx.in 
+
+(220, 18, 410, 45) ->  Hafzee Research Inforpark 
+
+(38, 94, 116, 104) -> Core Management 
+
+(85, 635, 557, 645) ->  
+ 
+
+(38, 748, 557, 758) -> Academic 
+ 
+
+=== PAGE 2 ===
+(28, 15, 29, 16) ->  
+
+(41, 22, 544, 29) -> # 
+MODULE 
+DESCRIPTION 
+KEY FEATURES 
+LINK 
+
+(39, 40, 140, 48) -> 13 
+Homework Management 
+
+(62, 51, 118, 57) -> 95% Submission Rate 
+
+(192, 40, 281, 48) -> Digital assignments with photo 
+
+(192, 50, 314, 58) -> submissions. 95% submission rate. Zero 
+
+(192, 60, 238, 69) -> lost homework. 
+
+(328, 39, 516, 61) -> Homework assignment creation · Subject-wise homework · Submission 
+tracking · File attachment support · Teacher feedback & grading +2 
+more 
+
+(530, 41, 531, 47) ->  
+
+(39, 80, 137, 88) -> 14 
+Timetable Management 
+
+(62, 92, 99, 98) -> Zero Conflicts 
+
+(192, 80, 303, 88) -> Drag-drop visual builder. Auto conflict 
+
+(192, 90, 300, 99) -> detection. Substitution management. 
+
+(328, 79, 503, 94) -> Class-wise timetable creation · Teacher period allocation · Conflict 
+detection · Timetable publishing · Teacher timetable view +1 more 
+
+(530, 81, 531, 87) ->  
+
+(39, 111, 145, 119) -> 15 
+Online Classes Integration 
+
+(62, 122, 93, 129) -> 3 Platforms 
+
+(192, 110, 310, 119) -> Seamless Teams, Google Meet & Zoom 
+
+(192, 120, 303, 129) -> integration. Schedule and track virtual 
+
+(192, 131, 217, 139) -> classes. 
+
+(328, 110, 490, 124) -> Microsoft Teams integration · Google Meet integration · Zoom 
+integration · Class scheduling · Meeting link sharing +2 more 
+
+(39, 152, 124, 159) -> 16 
+Academic Calendar 
+
+(62, 163, 105, 169) -> Auto Reminders 
+
+(192, 151, 302, 159) -> Holiday planning, event scheduling & 
+
+(192, 161, 307, 170) -> auto reminders. Syncs to parent mobile 
+
+(192, 172, 206, 181) -> app. 
+
+(328, 150, 508, 165) -> Event creation & management · Holiday calendar · Activity calendar · 
+Parent calendar access · Reminders & notifications 
+
+(530, 152, 531, 159) ->  
+
+(39, 192, 127, 200) -> 17 
+Library Management 
+
+(62, 203, 103, 209) -> Full Automation 
+
+(192, 191, 308, 200) -> Barcode-based book tracking. Auto fine 
+
+(192, 202, 308, 210) -> calculation. Digital catalog for students. 
+
+(328, 191, 511, 213) -> Book catalog with barcode / QR scanning · Book issuance & return 
+tracking · Fine calculation & collection · Digital e-book library access · 
+Reservation & hold management +4 more 
+
+(530, 193, 531, 199) ->  
+
+(39, 226, 180, 233) -> 18 
+Learning Management System (LMS) 
+
+(62, 237, 100, 243) -> Complete LMS 
+
+(192, 225, 312, 234) -> Self-paced courses, video lessons & live 
+
+(192, 235, 306, 244) -> quizzes. Track every student's learning 
+
+(192, 245, 217, 254) -> journey. 
+
+(328, 224, 511, 247) -> Course creation & management · Video & document upload · Chapter-
+wise structured content · Online quizzes & assessments · Student 
+progress tracking +5 more 
+
+(530, 227, 531, 233) ->  
+
+(28, 261, 31, 272) ->  
+
+(28, 282, 31, 293) ->  
+
+(41, 299, 544, 306) -> # 
+MODULE 
+DESCRIPTION 
+KEY FEATURES 
+LINK 
+
+(39, 317, 126, 325) -> 19 
+Digital Notice Board 
+
+(62, 328, 100, 334) -> 100% Delivery 
+
+(191, 316, 308, 325) -> Digital circulars with read receipts. Multi-
+
+(191, 326, 293, 334) -> language support. 100% delivery. 
+
+(329, 315, 510, 338) -> Notice creation & publishing · Class-wise/school-wide notices · File 
+attachment support · Urgent notice marking · Notice read tracking +1 
+more 
+
+(530, 318, 531, 324) ->  
+
+(39, 350, 146, 358) -> 20 
+Feedback & Query System 
+
+(62, 361, 100, 367) -> Better Insights 
+
+(191, 350, 293, 358) -> Structured feedback collection with 
+
+(191, 359, 279, 368) -> category tracking & resolution 
+
+(191, 370, 232, 379) -> management. 
+
+(329, 348, 510, 363) -> Feedback submission · Query/complaint registration · Category-wise 
+tracking · Response management · Feedback analytics +2 more 
+
+(39, 390, 134, 398) -> 21 
+Guardian Management 
+
+(62, 402, 111, 408) -> Complete Records 
+
+(191, 390, 295, 398) -> Organized parent profiles with multi-
+
+(191, 400, 294, 409) -> guardian support & communication 
+
+(191, 411, 213, 419) -> history. 
+
+(329, 389, 497, 411) -> Parent profile management · Multiple guardian support · 
+Communication history · Document sharing · Parent app access 
+control +1 more 
+
+(39, 431, 180, 439) -> 22 
+Messages & Internal Communication 
+
+(62, 443, 102, 449) -> Real-Time Chat 
+
+(191, 431, 300, 439) -> Instant messaging between teachers, 
+
+(191, 441, 299, 449) -> parents & students. Group chats, file 
+
+(191, 451, 258, 459) -> sharing, read receipts. 
+
+(329, 430, 516, 453) -> Direct messaging (teacher ↔ parent, admin ↔ staff) · Group 
+conversation support · File & image attachment sharing · Read receipts 
+& delivery status · Message history & search +3 more 
+
+(530, 432, 531, 439) ->  
+
+(28, 467, 31, 478) ->  
+
+(28, 487, 31, 498) ->  
+
+(41, 504, 544, 510) -> # 
+MODULE 
+DESCRIPTION 
+KEY FEATURES 
+LINK 
+
+(39, 522, 160, 529) -> 23 
+Transport Management ⭐ KEY 
+
+(62, 534, 107, 540) -> Live GPS Tracking 
+
+(185, 521, 304, 529) -> Live GPS tracking with SOS alerts. RFID 
+
+(185, 531, 297, 540) -> boarding. Parent app for real-time bus 
+
+(185, 542, 287, 550) -> tracking. 90% fewer enquiry calls. 
+
+(329, 520, 531, 535) -> Route creation & management · Stops management · Live GPS tracking 
+· Driver & vehicle management · Parent live tracking access +3 more 
+ 
+
+(39, 563, 147, 571) -> 24 
+User Request Management 
+
+(62, 574, 107, 580) -> Quick Resolution 
+
+(185, 562, 295, 580) -> Centralized ticket system for parent, 
+student & teacher requests. 
+
+(329, 561, 509, 576) -> Request submission · Category-wise requests · Assignment to staff · 
+Status tracking · Resolution timeline +2 more 
+
+(39, 593, 105, 600) -> 25 
+Photo Gallery 
+
+(62, 604, 103, 610) -> Secure Sharing 
+
+(185, 593, 315, 601) -> Digital photo albums for school events with 
+
+(185, 603, 289, 611) -> privacy controls & parent access. 
+
+(329, 591, 513, 606) -> Photo upload & albums · Event-wise gallery · Privacy controls · Parent 
+access · Download options +1 more 
+
+(39, 623, 125, 631) -> 26 
+Hostel Management 
+
+(62, 635, 108, 641) -> Full Hostel Control 
+
+(185, 623, 282, 631) -> Manage rooms, meals & student 
+
+(185, 633, 302, 641) -> movement. Parents get real-time check-
+
+(185, 643, 223, 651) -> in/out alerts. 
+
+(329, 622, 514, 645) -> Room & bed allocation management · Hostel fee collection & receipts · 
+Student check-in / check-out tracking · Parent notifications on 
+movement · Warden assignment & management +4 more 
+
+(530, 624, 531, 631) ->  
+
+(39, 664, 136, 672) -> 27 
+Inventory Management 
+
+(62, 675, 104, 681) -> Zero Stock-outs 
+
+(185, 663, 287, 672) -> Never run out of supplies. Barcode 
+
+(185, 673, 299, 682) -> tracking, low-stock alerts & vendor PO 
+
+(185, 683, 226, 692) -> management. 
+
+(329, 662, 504, 685) -> Asset & stock catalog · Purchase order creation & approval · Stock 
+issuance to departments · Return & wastage tracking · Vendor & 
+supplier management +4 more 
+
+(530, 665, 531, 671) ->  
+
+(39, 704, 143, 712) -> 28 
+Front Office Management 
+
+(62, 716, 106, 722) -> Smart Reception 
+
+(185, 704, 307, 712) -> Digital visitor log with photo capture. Gate 
+
+(185, 714, 313, 723) -> passes, appointment scheduling & call log. 
+
+(329, 703, 515, 725) -> Visitor registration with photo capture · Gate pass generation & printing 
+· Appointment scheduling & calendar · Reception dashboard & queue 
+management · Call log & follow-up tracking +4 more 
+
+(530, 705, 531, 711) ->  
+
+(39, 738, 109, 746) -> 29 
+Daily Activities 
+
+(62, 749, 104, 756) -> Full Day Visibility 
+
+(185, 737, 306, 746) -> Structured daily operation logs. Staff task 
+
+(185, 747, 302, 756) -> tracking. Activity schedules at a glance. 
+
+(329, 737, 511, 759) -> Daily activity scheduling · Staff task assignment & tracking · Student 
+activity log · Event & co-curricular activity management · Daily diary / 
+journal entries +3 more 
+
+(530, 739, 531, 745) ->  
+
+(39, 771, 170, 779) -> 30 
+Multi-Branch Management ⭐ KEY 
+
+(62, 782, 122, 789) -> All Branches, One View 
+
+(185, 770, 313, 779) -> One dashboard, all branches. Consolidated 
+
+(185, 781, 304, 789) -> reports, cross-branch analytics & unified 
+
+(185, 791, 208, 800) -> control. 
+
+(329, 770, 499, 800) -> Centralized admin dashboard for all branches · Branch-wise fee, 
+attendance & result reports · Inter-branch student transfer · 
+Consolidated financial analytics · Branch-level role & permission 
+management +3 more 
+
+(530, 772, 531, 778) ->  
+
+(38, 277, 558, 287) -> Communication 
+ 
+
+(38, 483, 557, 493) -> Operations 
+ 
+
+=== PAGE 3 ===
+(28, 27, 31, 38) ->  
+
+(41, 44, 544, 51) -> # 
+MODULE 
+DESCRIPTION 
+KEY FEATURES 
+LINK 
+
+(39, 62, 148, 70) -> 31 
+AI Assistant (Genie) ⭐ KEY 
+
+(62, 73, 100, 79) -> <2s Response 
+
+(168, 61, 325, 79) -> AI-powered answers in <2 seconds. Save 70% time. 
+Natural language queries. No competitor has this. 
+
+(342, 60, 511, 74) -> Natural language queries · Automated report generation · Smart 
+suggestions · Data insights · Predictive analytics +2 more 
+
+(530, 63, 531, 69) ->  
+
+(39, 92, 156, 100) -> 32 
+Admin Dashboard & Analytics 
+
+(62, 103, 96, 109) -> 20+ Widgets 
+
+(168, 91, 320, 100) -> 4 role-based dashboards. 20+ smart widgets. Real-
+
+(168, 102, 288, 110) -> time analytics with customizable themes. 
+
+(342, 90, 510, 113) -> Real-time dashboard · Fee collection analytics · Attendance 
+analytics · Student performance reports · Custom report builder 
++2 more 
+
+(530, 93, 531, 99) ->  
+
+(28, 120, 31, 131) ->  
+
+(28, 140, 31, 151) ->  
+
+(41, 157, 531, 164) -> # 
+MODULE 
+DESCRIPTION 
+KEY FEATURES 
+ 
+
+(39, 175, 132, 183) -> 33 
+School Customization 
+
+(62, 186, 97, 193) -> Full Branding 
+
+(192, 174, 303, 183) -> Custom colors, themes & dashboard 
+
+(192, 185, 303, 193) -> layouts. Light/dark mode. Role-wise 
+
+(192, 195, 238, 204) -> personalization. 
+
+(326, 174, 512, 196) -> School color palette selection · Light & dark theme toggle · Custom 
+accent & primary colors · Mobile app dashboard layout customization · 
+Web dashboard layout customization +1 more 
+
+(530, 176, 531, 182) ->  
+
+(39, 215, 180, 223) -> 34 
+Document Themes (100+ Templates) 
+
+(62, 227, 104, 233) -> 100+ Templates 
+
+(192, 215, 310, 223) -> 100+ professionally designed templates 
+
+(192, 225, 299, 234) -> for report cards, receipts, ID cards & 
+
+(192, 236, 226, 244) -> certificates. 
+
+(326, 214, 506, 229) -> 100+ document theme templates · Result & report card themes · Fee 
+receipt themes · Admit card themes · ID card themes +6 more 
+
+(39, 257, 165, 264) -> 35 
+System Settings & Configuration 
+
+(62, 268, 108, 274) -> Complete Control 
+
+(192, 256, 309, 265) -> One settings panel for everything. SMS, 
+
+(192, 266, 308, 285) -> WhatsApp, Email, academic year, roles 
+& integrations. 
+
+(326, 255, 513, 278) -> SMS gateway configuration (multiple providers) · WhatsApp Business 
+API integration · Email SMTP & template setup · Academic year & term 
+configuration · School profile & branding settings +5 more 
+
+(530, 258, 531, 264) ->  
+
+(28, 292, 31, 303) ->  
+
+(28, 312, 31, 323) ->  
+
+(41, 329, 531, 336) -> # 
+MODULE 
+DESCRIPTION 
+KEY FEATURES 
+ 
+
+(39, 347, 120, 354) -> 36 
+Parent Mobile App 
+
+(63, 358, 94, 364) -> Native Apps 
+
+(137, 346, 312, 355) -> Native iOS & Android app. Pay fees, track attendance, view 
+
+(137, 357, 256, 365) -> results & communicate — all in one app. 
+
+(331, 345, 501, 360) -> iOS & Android app · Fee payment · Attendance view · Homework 
+tracking · Result access +3 more 
+
+(530, 348, 531, 354) ->  
+
+(39, 377, 126, 385) -> 37 
+Teacher Mobile App 
+
+(63, 389, 106, 395) -> Teach Anywhere 
+
+(137, 377, 305, 385) -> Mark attendance, assign homework, enter grades & send 
+
+(137, 387, 206, 396) -> notices from anywhere. 
+
+(331, 376, 506, 390) -> iOS & Android app · Attendance marking · Homework assignment · 
+Grade entry · Notice publishing +2 more 
+
+(530, 378, 531, 384) ->  
+
+(39, 407, 120, 415) -> 38 
+Admin Mobile App 
+
+(63, 419, 102, 425) -> Manage On-Go 
+
+(137, 407, 311, 415) -> Dashboard overview, fee tracking, attendance monitoring & 
+
+(137, 417, 198, 426) -> approvals on the go. 
+
+(331, 406, 506, 421) -> iOS & Android app · Dashboard overview · Fee collection tracking · 
+Attendance monitoring · Approval workflows +2 more 
+
+(530, 402, 531, 408) ->  
+
+(28, 442, 31, 453) ->  
+
+(42, 453, 170, 462) -> 🏆 Why Schools Choose Schoollyx 
+
+(42, 467, 481, 475) -> ✓ All-in-One — 25+ modules 
+✓ AI-Powered — Built-in Genie 
+✓ Mobile-First — 3 native apps 
+
+(42, 479, 471, 488) -> ✓ 24/7 Support — training included 
+✓ 99.9% Uptime — enterprise cloud 
+✓ White Label — your brand 
+
+(28, 495, 31, 506) ->  
+
+(38, 22, 557, 32) -> Intelligence 
+ 
+
+(38, 136, 557, 146) -> Customization 
+ 
+
+(64, 298, 556, 308) ->  Apps 
+ 
+
+(30, 607, 554, 615) -> © 2026 Schoollyx Software. All rights reserved. 
+www.schoollyx.in 
+
+(207, 516, 390, 525) -> For pricing, demos, or custom requirements — contact us 
+
+(188, 529, 417, 538) ->  www.schoollyx.in 
+ info@schoollyx.com 
+ 
+ 8754671568 
+

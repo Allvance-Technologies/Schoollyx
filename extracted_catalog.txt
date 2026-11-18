@@ -1,0 +1,452 @@
+=== PAGE 1 ===
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+# 
+MODULE 
+DESCRIPTION 
+KEY FEATURES 
+1 
+Student Information System 
+50+ Data Fields 
+50+ data fields. Complete 360° 
+student profiles with document 
+management. 
+Student profile management · Admission & enrollment 
+records · Academic history tracking · ID Card generation · 
+Document management +2 more 
+2 
+Admission Management 
+70% Time Saved 
+24/7 online applications. 100% 
+paperless. 70% time saved. 
+Online admission form · WhatsApp admission link sharing · 
+Instant fee payment integration · Document upload by 
+parents · Admission approval workflow +2 more 
+3 
+Fee Management ⭐ KEY 
+10+ Payment Gateways 
+Collect fees via 10+ gateways — 
+Razorpay, PhonePe, UPI, POS & more. 
+45% faster collections with auto 
+defaulter tracking. 
+Online fee payment (UPI, Cards, Net Banking) · POS 
+machine integration · Fee structure customization · 
+Installment & partial payment · Defaulter tracking & reports 
++3 more 
+4 
+Attendance Management ⭐ KEY 
+99.9% Accuracy 
+Biometric + Mobile App + GPS. 99.9% 
+accuracy with instant parent 
+WhatsApp/SMS alerts. 
+Biometric device integration · Mobile app attendance 
+marking · Real-time parent notifications · Attendance 
+reports & analytics · Weekly attendance summary 
+5 
+Employee & Teacher Management 
+Complete HR 
+Staff records, attendance, role 
+management & experience letter 
+generation. 
+Staff profile management · Teacher class allocation · 
+Schedule & timetable assignment · Document management 
+· Staff attendance tracking +2 more 
+6 
+Expense Management 
+100% Transparency 
+Budget tracking, vendor management 
+& approval workflows. 100% financial 
+transparency. 
+Expense entry & categorization · Vendor & supplier 
+management · Expense approval workflow · Budget 
+tracking · Expense reports & analytics +2 more 
+7 
+Smart Notifications ⭐ KEY 
+99% Delivery Rate 
+WhatsApp + SMS + Email + Push. 99% 
+delivery rate. 98% WhatsApp open 
+rate. Unlimited free push notifications. 
+SMS notifications · WhatsApp messages · Email 
+notifications · Push notifications (App) · Bulk messaging +3 
+more 
+8 
+Lead Management 
+2x Admissions 
+Track enquiries, follow-ups & 
+conversions. Never lose a potential 
+admission. 
+Enquiry capture from multiple sources · Single setup lead 
+overview dashboard · Lead scoring & prioritization · 
+Admission pipeline dashboard · Source-wise conversion 
+analytics +3 more 
+9 
+User Management 
+Full Access Control 
+One dashboard to manage all users. 
+Role-based access, bulk import & 
+complete audit trail. 
+Student, parent, teacher & admin accounts · Role-based 
+access control (RBAC) · Bulk user import via Excel/CSV · 
+User activation & deactivation · Password reset & account 
+recovery +4 more 
+ 
+ 
+# 
+MODULE 
+DESCRIPTION 
+KEY FEATURES 
+ 
+10 
+Salary Management 
+One-Click Payroll 
+One-click payroll. Auto deductions for 
+PF, ESI & TDS. Salary slips in seconds. 
+Monthly salary processing · Salary slip generation (PDF) · Deduction management (PF, ESI, 
+TDS) · Advance salary tracking · Leave & absence deduction integration +5 more 
+11 
+Leave Management 
+Zero Paper Leaves 
+Digital leave applications with instant 
+approvals. Auto salary deduction 
+integration. 
+Configurable leave types (casual, sick, earned, etc.) · Online leave application by staff & 
+students · Multi-level leave approval workflow · Leave balance tracking & carry-forward · 
+Holiday calendar integration +4 more 
+ 
+ 
+# 
+MODULE 
+DESCRIPTION 
+KEY FEATURES 
+ 
+12 
+Exam & Results Management 
+5 Min Publish 
+Auto report cards in 5 min. CBSE & State 
+Board compliant. 99.9% calculation 
+Exam scheduling · Admit Card generation · Datesheet generation & 
+publishing · Grade & marks entry · Report card generation +3 more 
+ 
+accuracy. 
+SCHOOLLYX 
+Empowering Schools Through Smart Technology. 
+Product Features & Modules 
+www.schoollyx.in 
+ Hafzee Research Inforpark 
+Core Management 
+ 
+ 
+Academic 
+ 
+
+
+=== PAGE 2 ===
+ 
+# 
+MODULE 
+DESCRIPTION 
+KEY FEATURES 
+LINK 
+13 
+Homework Management 
+95% Submission Rate 
+Digital assignments with photo 
+submissions. 95% submission rate. Zero 
+lost homework. 
+Homework assignment creation · Subject-wise homework · Submission 
+tracking · File attachment support · Teacher feedback & grading +2 
+more 
+ 
+14 
+Timetable Management 
+Zero Conflicts 
+Drag-drop visual builder. Auto conflict 
+detection. Substitution management. 
+Class-wise timetable creation · Teacher period allocation · Conflict 
+detection · Timetable publishing · Teacher timetable view +1 more 
+ 
+15 
+Online Classes Integration 
+3 Platforms 
+Seamless Teams, Google Meet & Zoom 
+integration. Schedule and track virtual 
+classes. 
+Microsoft Teams integration · Google Meet integration · Zoom 
+integration · Class scheduling · Meeting link sharing +2 more 
+16 
+Academic Calendar 
+Auto Reminders 
+Holiday planning, event scheduling & 
+auto reminders. Syncs to parent mobile 
+app. 
+Event creation & management · Holiday calendar · Activity calendar · 
+Parent calendar access · Reminders & notifications 
+ 
+17 
+Library Management 
+Full Automation 
+Barcode-based book tracking. Auto fine 
+calculation. Digital catalog for students. 
+Book catalog with barcode / QR scanning · Book issuance & return 
+tracking · Fine calculation & collection · Digital e-book library access · 
+Reservation & hold management +4 more 
+ 
+18 
+Learning Management System (LMS) 
+Complete LMS 
+Self-paced courses, video lessons & live 
+quizzes. Track every student's learning 
+journey. 
+Course creation & management · Video & document upload · Chapter-
+wise structured content · Online quizzes & assessments · Student 
+progress tracking +5 more 
+ 
+ 
+ 
+# 
+MODULE 
+DESCRIPTION 
+KEY FEATURES 
+LINK 
+19 
+Digital Notice Board 
+100% Delivery 
+Digital circulars with read receipts. Multi-
+language support. 100% delivery. 
+Notice creation & publishing · Class-wise/school-wide notices · File 
+attachment support · Urgent notice marking · Notice read tracking +1 
+more 
+ 
+20 
+Feedback & Query System 
+Better Insights 
+Structured feedback collection with 
+category tracking & resolution 
+management. 
+Feedback submission · Query/complaint registration · Category-wise 
+tracking · Response management · Feedback analytics +2 more 
+21 
+Guardian Management 
+Complete Records 
+Organized parent profiles with multi-
+guardian support & communication 
+history. 
+Parent profile management · Multiple guardian support · 
+Communication history · Document sharing · Parent app access 
+control +1 more 
+22 
+Messages & Internal Communication 
+Real-Time Chat 
+Instant messaging between teachers, 
+parents & students. Group chats, file 
+sharing, read receipts. 
+Direct messaging (teacher ↔ parent, admin ↔ staff) · Group 
+conversation support · File & image attachment sharing · Read receipts 
+& delivery status · Message history & search +3 more 
+ 
+ 
+ 
+# 
+MODULE 
+DESCRIPTION 
+KEY FEATURES 
+LINK 
+23 
+Transport Management ⭐ KEY 
+Live GPS Tracking 
+Live GPS tracking with SOS alerts. RFID 
+boarding. Parent app for real-time bus 
+tracking. 90% fewer enquiry calls. 
+Route creation & management · Stops management · Live GPS tracking 
+· Driver & vehicle management · Parent live tracking access +3 more 
+ 
+24 
+User Request Management 
+Quick Resolution 
+Centralized ticket system for parent, 
+student & teacher requests. 
+Request submission · Category-wise requests · Assignment to staff · 
+Status tracking · Resolution timeline +2 more 
+25 
+Photo Gallery 
+Secure Sharing 
+Digital photo albums for school events with 
+privacy controls & parent access. 
+Photo upload & albums · Event-wise gallery · Privacy controls · Parent 
+access · Download options +1 more 
+26 
+Hostel Management 
+Full Hostel Control 
+Manage rooms, meals & student 
+movement. Parents get real-time check-
+in/out alerts. 
+Room & bed allocation management · Hostel fee collection & receipts · 
+Student check-in / check-out tracking · Parent notifications on 
+movement · Warden assignment & management +4 more 
+ 
+27 
+Inventory Management 
+Zero Stock-outs 
+Never run out of supplies. Barcode 
+tracking, low-stock alerts & vendor PO 
+management. 
+Asset & stock catalog · Purchase order creation & approval · Stock 
+issuance to departments · Return & wastage tracking · Vendor & 
+supplier management +4 more 
+ 
+28 
+Front Office Management 
+Smart Reception 
+Digital visitor log with photo capture. Gate 
+passes, appointment scheduling & call log. 
+Visitor registration with photo capture · Gate pass generation & printing 
+· Appointment scheduling & calendar · Reception dashboard & queue 
+management · Call log & follow-up tracking +4 more 
+ 
+29 
+Daily Activities 
+Full Day Visibility 
+Structured daily operation logs. Staff task 
+tracking. Activity schedules at a glance. 
+Daily activity scheduling · Staff task assignment & tracking · Student 
+activity log · Event & co-curricular activity management · Daily diary / 
+journal entries +3 more 
+ 
+30 
+Multi-Branch Management ⭐ KEY 
+All Branches, One View 
+One dashboard, all branches. Consolidated 
+reports, cross-branch analytics & unified 
+control. 
+Centralized admin dashboard for all branches · Branch-wise fee, 
+attendance & result reports · Inter-branch student transfer · 
+Consolidated financial analytics · Branch-level role & permission 
+management +3 more 
+ 
+Communication 
+ 
+Operations 
+ 
+
+
+=== PAGE 3 ===
+ 
+# 
+MODULE 
+DESCRIPTION 
+KEY FEATURES 
+LINK 
+31 
+AI Assistant (Genie) ⭐ KEY 
+<2s Response 
+AI-powered answers in <2 seconds. Save 70% time. 
+Natural language queries. No competitor has this. 
+Natural language queries · Automated report generation · Smart 
+suggestions · Data insights · Predictive analytics +2 more 
+ 
+32 
+Admin Dashboard & Analytics 
+20+ Widgets 
+4 role-based dashboards. 20+ smart widgets. Real-
+time analytics with customizable themes. 
+Real-time dashboard · Fee collection analytics · Attendance 
+analytics · Student performance reports · Custom report builder 
++2 more 
+ 
+ 
+ 
+# 
+MODULE 
+DESCRIPTION 
+KEY FEATURES 
+ 
+33 
+School Customization 
+Full Branding 
+Custom colors, themes & dashboard 
+layouts. Light/dark mode. Role-wise 
+personalization. 
+School color palette selection · Light & dark theme toggle · Custom 
+accent & primary colors · Mobile app dashboard layout customization · 
+Web dashboard layout customization +1 more 
+ 
+34 
+Document Themes (100+ Templates) 
+100+ Templates 
+100+ professionally designed templates 
+for report cards, receipts, ID cards & 
+certificates. 
+100+ document theme templates · Result & report card themes · Fee 
+receipt themes · Admit card themes · ID card themes +6 more 
+35 
+System Settings & Configuration 
+Complete Control 
+One settings panel for everything. SMS, 
+WhatsApp, Email, academic year, roles 
+& integrations. 
+SMS gateway configuration (multiple providers) · WhatsApp Business 
+API integration · Email SMTP & template setup · Academic year & term 
+configuration · School profile & branding settings +5 more 
+ 
+ 
+ 
+# 
+MODULE 
+DESCRIPTION 
+KEY FEATURES 
+ 
+36 
+Parent Mobile App 
+Native Apps 
+Native iOS & Android app. Pay fees, track attendance, view 
+results & communicate — all in one app. 
+iOS & Android app · Fee payment · Attendance view · Homework 
+tracking · Result access +3 more 
+ 
+37 
+Teacher Mobile App 
+Teach Anywhere 
+Mark attendance, assign homework, enter grades & send 
+notices from anywhere. 
+iOS & Android app · Attendance marking · Homework assignment · 
+Grade entry · Notice publishing +2 more 
+ 
+38 
+Admin Mobile App 
+Manage On-Go 
+Dashboard overview, fee tracking, attendance monitoring & 
+approvals on the go. 
+iOS & Android app · Dashboard overview · Fee collection tracking · 
+Attendance monitoring · Approval workflows +2 more 
+ 
+ 
+🏆 Why Schools Choose Schoollyx 
+✓ All-in-One — 25+ modules 
+✓ AI-Powered — Built-in Genie 
+✓ Mobile-First — 3 native apps 
+✓ 24/7 Support — training included 
+✓ 99.9% Uptime — enterprise cloud 
+✓ White Label — your brand 
+ 
+Intelligence 
+ 
+Customization 
+ 
+ Apps 
+ 
+© 2026 Schoollyx Software. All rights reserved. 
+www.schoollyx.in 
+For pricing, demos, or custom requirements — contact us 
+ www.schoollyx.in 
+ info@schoollyx.com 
+ 
+ 8754671568 
+
+
