@@ -1,7 +1,7 @@
 /**
- * Schoollyx - Main Client Application Logic (Production Clean)
+ * Schoollyx - Main Client Application Logic (Production Clean & Mobile-Optimized)
  * Dynamic catalog rendering, presets, interactive filters, quote builder,
- * Genie AI simulator, portal gateway modal, scrollspy, and ROI calculator.
+ * Genie AI simulator, portal gateway modal, scrollspy, mobile menu, and ROI calculator.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -18,7 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
         selectedModules: new Set(SCHOOLLYX_DATA.presets.starter.moduleIds),
         currentModalModule: null,
         activeAppTab: 'parent',
-        activeLoginRole: 'admin'
+        activeLoginRole: 'admin',
+        isMobileMenuOpen: false
     };
 
     // DOM Elements
@@ -28,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const moduleCountDisplay = document.getElementById('module-count-display');
     const quoteCountBadge = document.getElementById('quote-count-badge');
     const floatingQuoteBadge = document.getElementById('floating-quote-count');
+    const mobileMenuDrawer = document.getElementById('mobile-menu-drawer');
     
     // Modals & Drawers
     const moduleDetailModal = document.getElementById('module-detail-modal');
@@ -35,6 +37,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const demoModal = document.getElementById('demo-modal');
     const loginModal = document.getElementById('login-modal');
     const whitepaperModal = document.getElementById('whitepaper-modal');
+
+    // -------------------------------------------------------------
+    // 0. Mobile Menu Logic
+    // -------------------------------------------------------------
+    window.toggleMobileMenu = function() {
+        state.isMobileMenuOpen = !state.isMobileMenuOpen;
+        if (mobileMenuDrawer) {
+            mobileMenuDrawer.classList.toggle('hidden', !state.isMobileMenuOpen);
+        }
+    };
+
+    window.closeMobileMenu = function() {
+        state.isMobileMenuOpen = false;
+        if (mobileMenuDrawer) {
+            mobileMenuDrawer.classList.add('hidden');
+        }
+    };
 
     // -------------------------------------------------------------
     // 1. Presets Logic (Reduce Decision Fatigue)
@@ -72,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return `
                 <button 
                     data-filter="${pillar.id}" 
-                    class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold transition-all duration-200 flex items-center gap-2 whitespace-nowrap ${
+                    class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold transition-all duration-200 flex items-center gap-2 whitespace-nowrap flex-shrink-0 ${
                         isActive 
                         ? 'bg-indigo-600 text-white shadow-md shadow-indigo-500/25' 
                         : 'bg-white text-slate-600 hover:bg-slate-100 hover:text-slate-900 border border-slate-200/80'
@@ -85,7 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         }).join('');
 
-        // Attach listeners
         filterPillsContainer.querySelectorAll('.filter-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 state.activeFilter = btn.dataset.filter;
@@ -102,7 +120,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!modulesGrid) return;
 
         let filtered = SCHOOLLYX_DATA.modules.filter(mod => {
-            // Category check
             let matchesCategory = true;
             if (state.activeFilter === 'key') {
                 matchesCategory = mod.isKey;
@@ -110,7 +127,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 matchesCategory = mod.category === state.activeFilter;
             }
 
-            // Search query check
             let matchesSearch = true;
             if (state.query && state.query.trim() !== '') {
                 const q = state.query.toLowerCase().trim();
@@ -125,7 +141,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return matchesCategory && matchesSearch;
         });
 
-        // Update count text
         if (moduleCountDisplay) {
             moduleCountDisplay.textContent = `Showing ${filtered.length} Capabilities`;
         }
@@ -160,20 +175,20 @@ document.addEventListener('DOMContentLoaded', () => {
         modulesGrid.innerHTML = filtered.map(mod => {
             const isSelected = state.selectedModules.has(mod.id);
             return `
-                <div class="module-card group bg-white rounded-2xl p-6 border ${mod.isKey ? 'border-amber-200 shadow-sm shadow-amber-100/50' : 'border-slate-200/90'} flex flex-col justify-between hover:border-indigo-400">
+                <div class="module-card group bg-white rounded-2xl p-5 sm:p-6 border ${mod.isKey ? 'border-amber-200 shadow-sm shadow-amber-100/50' : 'border-slate-200/90'} flex flex-col justify-between hover:border-indigo-400">
                     <div>
                         <!-- Header with Badges -->
                         <div class="flex items-start justify-between gap-3 mb-4">
                             <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 rounded-xl ${mod.isKey ? 'bg-amber-50 text-amber-600' : 'bg-indigo-50 text-indigo-600'} flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <div class="w-10 h-10 rounded-xl ${mod.isKey ? 'bg-amber-50 text-amber-600' : 'bg-indigo-50 text-indigo-600'} flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
                                     <i data-lucide="${mod.icon}" class="w-5 h-5"></i>
                                 </div>
-                                <span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">
+                                <span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block truncate">
                                     ${mod.categoryName}
                                 </span>
                             </div>
                             
-                            <div class="flex flex-col items-end gap-1">
+                            <div class="flex flex-col items-end gap-1 flex-shrink-0">
                                 ${mod.isKey ? `
                                     <span class="key-badge text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
                                         ⭐ KEY MODULE
@@ -309,7 +324,6 @@ document.addEventListener('DOMContentLoaded', () => {
             keyBadgeEl.style.display = mod.isKey ? 'inline-flex' : 'none';
         }
 
-        // Compliance badges
         const badgesContainer = document.getElementById('modal-badges-container');
         if (badgesContainer) {
             badgesContainer.innerHTML = (mod.badges || []).map(b => `
@@ -518,7 +532,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                     </div>
 
-                    <div class="flex items-center gap-2 pt-1">
+                    <div class="flex items-center gap-2 pt-1 flex-wrap">
                         ${item.response.actions.map(act => `
                             <button class="px-2.5 py-1 rounded-md bg-indigo-600/80 hover:bg-indigo-600 text-white text-[11px] font-semibold transition">
                                 ${act}
@@ -538,7 +552,6 @@ document.addEventListener('DOMContentLoaded', () => {
         state.activeLoginRole = role;
         if (!loginModal) return;
 
-        // Update active tab inside modal
         document.querySelectorAll('.login-role-tab').forEach(tab => {
             const isMatch = tab.dataset.role === role;
             tab.className = `login-role-tab flex-1 py-2.5 rounded-xl font-bold text-xs text-center transition ${
@@ -645,29 +658,48 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // -------------------------------------------------------------
-    // 11. Mobile Apps 3-Tab Switcher
+    // 11. Mobile Apps 3-Tab Switcher (Mobile & Desktop Aware)
     // -------------------------------------------------------------
     window.switchAppPreview = function(tab) {
         state.activeAppTab = tab;
         document.querySelectorAll('.app-tab-btn').forEach(btn => {
             const isTarget = btn.dataset.tab === tab;
-            btn.className = `app-tab-btn px-5 py-2.5 rounded-xl font-bold text-xs transition-all ${
+            btn.className = `app-tab-btn px-4 sm:px-5 py-2.5 rounded-xl font-bold text-xs transition-all ${
                 isTarget 
                 ? 'bg-indigo-600 text-white shadow-md shadow-indigo-500/25' 
                 : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
             }`;
         });
 
-        const parentScreen = document.getElementById('phone-screen-parent');
-        const teacherScreen = document.getElementById('phone-screen-teacher');
-        const adminScreen = document.getElementById('phone-screen-admin');
+        const parentMockup = document.getElementById('phone-mockup-parent');
+        const teacherMockup = document.getElementById('phone-mockup-teacher');
+        const adminMockup = document.getElementById('phone-mockup-admin');
 
-        if (parentScreen && teacherScreen && adminScreen) {
-            parentScreen.classList.toggle('hidden', tab !== 'parent');
-            teacherScreen.classList.toggle('hidden', tab !== 'teacher');
-            adminScreen.classList.toggle('hidden', tab !== 'admin');
+        if (parentMockup && teacherMockup && adminMockup) {
+            if (window.innerWidth < 1024) {
+                // On mobile/tablet, show only the active app
+                parentMockup.style.display = tab === 'parent' ? 'block' : 'none';
+                teacherMockup.style.display = tab === 'teacher' ? 'block' : 'none';
+                adminMockup.style.display = tab === 'admin' ? 'block' : 'none';
+            } else {
+                // On desktop, show all 3 side-by-side and highlight active
+                parentMockup.style.display = 'block';
+                teacherMockup.style.display = 'block';
+                adminMockup.style.display = 'block';
+
+                parentMockup.classList.toggle('ring-4', tab === 'parent');
+                parentMockup.classList.toggle('ring-indigo-500/50', tab === 'parent');
+                teacherMockup.classList.toggle('ring-4', tab === 'teacher');
+                teacherMockup.classList.toggle('ring-indigo-500/50', tab === 'teacher');
+                adminMockup.classList.toggle('ring-4', tab === 'admin');
+                adminMockup.classList.toggle('ring-indigo-500/50', tab === 'admin');
+            }
         }
     };
+
+    window.addEventListener('resize', () => {
+        window.switchAppPreview(state.activeAppTab);
+    });
 
     // -------------------------------------------------------------
     // 12. Navbar Scrollspy
@@ -764,4 +796,5 @@ document.addEventListener('DOMContentLoaded', () => {
     renderModules();
     updateQuoteBadges();
     runGenieSimulation(0);
+    window.switchAppPreview('parent');
 });

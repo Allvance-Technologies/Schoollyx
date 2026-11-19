@@ -70,6 +70,15 @@ body {
   border-radius: 2px;
 }
 
+/* No Scrollbar Utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 /* Horizontal Scroll Fade for Mobile Category Pills */
 .scroll-fade-container {
   position: relative;
@@ -123,6 +132,7 @@ body {
 .phone-mockup {
   position: relative;
   width: 280px;
+  max-width: calc(100vw - 32px);
   height: 570px;
   background: #0F172A;
   border-radius: 40px;
@@ -210,23 +220,24 @@ body {
 /* Floating Actions */
 .floating-actions {
   position: fixed;
-  bottom: 24px;
-  right: 24px;
+  bottom: 20px;
+  right: 20px;
   z-index: 50;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 /* Toast Notification */
 .toast-container {
   position: fixed;
-  bottom: 24px;
-  left: 24px;
+  bottom: 20px;
+  left: 20px;
   z-index: 9999;
   display: flex;
   flex-direction: column;
   gap: 8px;
+  max-width: calc(100vw - 40px);
 }
 
 .toast {

@@ -188,6 +188,61 @@
                     <span class="hidden md:inline">Book Live Demo</span>
                     <span class="md:hidden">Demo</span>
                 </button>
+
+                <!-- Mobile Hamburger Toggle Button -->
+                <button id="mobile-menu-btn" onclick="window.toggleMobileMenu()"
+                    class="lg:hidden p-2.5 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-100 transition"
+                    aria-label="Toggle Mobile Menu">
+                    <i data-lucide="menu" class="w-5 h-5"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer Dropdown -->
+        <div id="mobile-menu-drawer" class="lg:hidden hidden bg-white/95 backdrop-blur-md border-t border-slate-200 px-5 py-4 space-y-3 shadow-xl">
+            <nav class="flex flex-col space-y-1 text-sm font-semibold text-slate-700">
+                <a href="#modules" onclick="window.closeMobileMenu()" class="p-2.5 rounded-xl hover:bg-slate-100 flex items-center justify-between">
+                    <span>Capabilities</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+                </a>
+                <a href="#genie-ai" onclick="window.closeMobileMenu()" class="p-2.5 rounded-xl hover:bg-indigo-50 text-indigo-600 flex items-center justify-between">
+                    <span class="flex items-center gap-2">
+                        <i data-lucide="sparkles" class="w-4 h-4 text-cyan-500"></i>
+                        <span>Genie AI</span>
+                    </span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-indigo-400"></i>
+                </a>
+                <a href="#mobile-apps" onclick="window.closeMobileMenu()" class="p-2.5 rounded-xl hover:bg-slate-100 flex items-center justify-between">
+                    <span>Mobile Apps</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+                </a>
+                <a href="#groups" onclick="window.closeMobileMenu()" class="p-2.5 rounded-xl hover:bg-slate-100 flex items-center justify-between">
+                    <span>Campus Groups</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+                </a>
+                <a href="#migration" onclick="window.closeMobileMenu()" class="p-2.5 rounded-xl hover:bg-slate-100 flex items-center justify-between">
+                    <span>Quick Onboarding</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+                </a>
+                <a href="#roi-calculator" onclick="window.closeMobileMenu()" class="p-2.5 rounded-xl hover:bg-slate-100 flex items-center justify-between">
+                    <span>ROI Calculator</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+                </a>
+                <a href="#contact" onclick="window.closeMobileMenu()" class="p-2.5 rounded-xl hover:bg-slate-100 flex items-center justify-between">
+                    <span>Contact & Location</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+                </a>
+            </nav>
+
+            <div class="pt-3 border-t border-slate-100 space-y-2">
+                <button onclick="window.closeMobileMenu(); window.openDemoModal();" class="w-full py-2.5 rounded-xl bg-indigo-600 text-white font-bold text-xs flex items-center justify-center gap-2">
+                    <i data-lucide="calendar" class="w-4 h-4"></i>
+                    <span>Schedule Live Demo</span>
+                </button>
+                <a href="tel:+918754671568" class="w-full py-2.5 rounded-xl bg-slate-100 text-slate-800 font-bold text-xs flex items-center justify-center gap-2">
+                    <i data-lucide="phone" class="w-4 h-4 text-emerald-500"></i>
+                    <span>Call: +91 8754671568</span>
+                </a>
             </div>
         </div>
     </header>
@@ -293,7 +348,7 @@
 
                         <!-- Floating Live Status Overlays -->
                         <div
-                            class="absolute -bottom-5 -left-4 p-3 rounded-xl bg-slate-900/95 border border-indigo-500/40 shadow-xl backdrop-blur-md flex items-center gap-3">
+                            class="absolute -bottom-5 left-2 sm:-left-4 p-3 rounded-xl bg-slate-900/95 border border-indigo-500/40 shadow-xl backdrop-blur-md flex items-center gap-3">
                             <div
                                 class="w-9 h-9 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
                                 <i data-lucide="zap" class="w-5 h-5"></i>
@@ -305,7 +360,7 @@
                         </div>
 
                         <div
-                            class="absolute -top-5 -right-4 p-3 rounded-xl bg-slate-900/95 border border-cyan-500/40 shadow-xl backdrop-blur-md flex items-center gap-3">
+                            class="absolute -top-5 right-2 sm:-right-4 p-3 rounded-xl bg-slate-900/95 border border-cyan-500/40 shadow-xl backdrop-blur-md flex items-center gap-3">
                             <div
                                 class="w-9 h-9 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center">
                                 <i data-lucide="sparkles" class="w-5 h-5"></i>
@@ -768,7 +823,7 @@
             <div class="flex flex-wrap items-center justify-center gap-8 py-6">
 
                 <!-- Phone 1: Parent App Showcase -->
-                <div class="phone-mockup">
+                <div id="phone-mockup-parent" class="phone-mockup">
                     <div class="phone-notch">
                         <div class="phone-camera"></div>
                     </div>
@@ -837,7 +892,7 @@
                 </div>
 
                 <!-- Phone 2: Teacher App Showcase -->
-                <div class="phone-mockup">
+                <div id="phone-mockup-teacher" class="phone-mockup">
                     <div class="phone-notch">
                         <div class="phone-camera"></div>
                     </div>
@@ -894,7 +949,7 @@
                 </div>
 
                 <!-- Phone 3: Admin Executive App Showcase -->
-                <div class="phone-mockup">
+                <div id="phone-mockup-admin" class="phone-mockup">
                     <div class="phone-notch">
                         <div class="phone-camera"></div>
                     </div>
@@ -1145,6 +1200,11 @@
                 </p>
             </div>
 
+            <!-- Mobile Scroll Hint -->
+            <div class="lg:hidden text-xs text-slate-500 text-center mb-3 flex items-center justify-center gap-1.5 font-medium">
+                <i data-lucide="arrow-left-right" class="w-3.5 h-3.5 text-indigo-500"></i>
+                <span>Swipe table sideways to view all comparisons</span>
+            </div>
             <div class="overflow-x-auto">
                 <table
                     class="w-full text-left text-sm border-collapse bg-white rounded-2xl shadow-sm border border-slate-200">
@@ -1504,7 +1564,7 @@
     <!-- ======================================================== -->
     <div id="login-modal"
         class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm hidden flex items-center justify-center p-4">
-        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-slate-200 relative">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-slate-200 relative max-h-[90vh] overflow-y-auto">
             <button onclick="window.closeLoginModal()"
                 class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 p-1">
                 <i data-lucide="x" class="w-5 h-5"></i>
@@ -1579,8 +1639,7 @@
     <!-- ======================================================== -->
     <div id="module-detail-modal"
         class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm hidden flex items-center justify-center p-4">
-        <div
-            class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-200 relative animate-float">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-200 relative animate-float max-h-[90vh] overflow-y-auto">
             <button onclick="window.closeModuleDetail()"
                 class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 p-1 rounded-lg">
                 <i data-lucide="x" class="w-5 h-5"></i>
@@ -1703,7 +1762,7 @@
     <!-- ======================================================== -->
     <div id="demo-modal"
         class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm hidden flex items-center justify-center p-4">
-        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-slate-200 relative">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-slate-200 relative max-h-[90vh] overflow-y-auto">
             <button onclick="window.closeDemoModal()"
                 class="absolute top-5 right-5 text-slate-400 hover:text-slate-600">
                 <i data-lucide="x" class="w-5 h-5"></i>
@@ -1751,7 +1810,7 @@
     <!-- ======================================================== -->
     <div id="whitepaper-modal"
         class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm hidden flex items-center justify-center p-4">
-        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-slate-200 relative">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-slate-200 relative max-h-[90vh] overflow-y-auto">
             <button onclick="window.closeWhitepaperModal()"
                 class="absolute top-5 right-5 text-slate-400 hover:text-slate-600">
                 <i data-lucide="x" class="w-5 h-5"></i>
