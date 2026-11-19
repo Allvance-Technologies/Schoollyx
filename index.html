@@ -61,30 +61,32 @@
 <body class="bg-slate-50 text-slate-900 antialiased selection:bg-indigo-500 selection:text-white">
 
     <!-- ======================================================== -->
-    <!-- TOP NOTIFICATION BANNER (NO PDF DOWNLOAD HERE)           -->
+    <!-- TOP NOTIFICATION BANNER (CLEAN & ALIGNED)                -->
     <!-- ======================================================== -->
-    <div
-        class="bg-gradient-to-r from-indigo-950 via-slate-900 to-indigo-900 text-white text-xs py-2.5 px-4 border-b border-indigo-800/40">
-        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
-            <div class="flex items-center gap-2">
-                <span
-                    class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px] font-bold tracking-wider uppercase border border-emerald-500/30">
-                    30-Day Zero-Risk Pilot
+    <div class="bg-slate-950 text-white text-xs py-2 px-3 sm:px-4 border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
+            <!-- Left Pilot Badge & Note -->
+            <div class="flex items-center gap-2 min-w-0">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 text-[10px] font-bold uppercase tracking-wider border border-emerald-500/30 whitespace-nowrap flex-shrink-0">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                    Pilot
                 </span>
-                <span class="font-medium text-slate-200">
-                    Deploy Schoollyx for your campus with zero setup fee and free data migration.
+                <span class="text-[11px] sm:text-xs text-slate-300 truncate">
+                    30-Day Zero-Risk Campus Pilot with Free Data Migration
                 </span>
             </div>
-            <div class="flex items-center gap-4 text-slate-300">
-                <a href="tel:+918754671568" class="hover:text-white flex items-center gap-1.5 transition">
+            <!-- Right Contact -->
+            <div class="flex items-center gap-2.5 sm:gap-4 text-slate-300 text-xs flex-shrink-0">
+                <a href="tel:+918754671568" class="hover:text-white font-bold text-white flex items-center gap-1 transition">
                     <i data-lucide="phone" class="w-3.5 h-3.5 text-emerald-400"></i>
-                    <span class="font-bold text-white">+91 8754671568</span>
+                    <span class="hidden sm:inline">+91 8754671568</span>
+                    <span class="sm:hidden text-[11px]">Call</span>
                 </a>
-                <span class="text-slate-600">|</span>
+                <span class="text-slate-700 hidden sm:inline">|</span>
                 <a href="https://maps.app.goo.gl/6Gky1rJjpNDoPung9?g_st=aw" target="_blank"
-                    class="hover:text-cyan-400 flex items-center gap-1 transition text-slate-300">
+                    class="hover:text-cyan-400 hidden sm:flex items-center gap-1 transition text-slate-400 text-[11px]">
                     <i data-lucide="map-pin" class="w-3.5 h-3.5 text-cyan-400"></i>
-                    <span>Nagercoil Campus</span>
+                    <span>Nagercoil</span>
                 </a>
             </div>
         </div>
@@ -169,12 +171,12 @@
                     </div>
                 </div>
 
-                <!-- Custom Package Cart Counter -->
+                <!-- Custom Package Cart Counter (Hidden on mobile; prominent in bottom navigation!) -->
                 <button onclick="window.openQuoteDrawer()"
-                    class="relative px-3.5 py-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-bold flex items-center gap-2 transition shadow-sm"
+                    class="hidden md:flex relative px-3.5 py-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-bold items-center gap-2 transition shadow-sm"
                     title="View Selected Modules">
                     <i data-lucide="layers" class="w-4 h-4 text-indigo-600"></i>
-                    <span class="hidden sm:inline">My Package</span>
+                    <span>My Package</span>
                     <span id="quote-count-badge"
                         class="w-5 h-5 rounded-full bg-indigo-600 text-white text-[10px] flex items-center justify-center font-extrabold">
                         6
@@ -189,63 +191,7 @@
                     <span class="md:hidden">Demo</span>
                 </button>
 
-                <!-- Mobile Hamburger Toggle Button -->
-                <button id="mobile-menu-btn" onclick="window.toggleMobileMenu()"
-                    class="lg:hidden p-2.5 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-100 transition"
-                    aria-label="Toggle Mobile Menu">
-                    <i data-lucide="menu" class="w-5 h-5"></i>
-                </button>
-            </div>
-        </div>
-
-        <!-- Mobile Navigation Drawer Dropdown -->
-        <div id="mobile-menu-drawer" class="lg:hidden hidden bg-white/95 backdrop-blur-md border-t border-slate-200 px-5 py-4 space-y-3 shadow-xl">
-            <nav class="flex flex-col space-y-1 text-sm font-semibold text-slate-700">
-                <a href="#modules" onclick="window.closeMobileMenu()" class="p-2.5 rounded-xl hover:bg-slate-100 flex items-center justify-between">
-                    <span>Capabilities</span>
-                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
-                </a>
-                <a href="#genie-ai" onclick="window.closeMobileMenu()" class="p-2.5 rounded-xl hover:bg-indigo-50 text-indigo-600 flex items-center justify-between">
-                    <span class="flex items-center gap-2">
-                        <i data-lucide="sparkles" class="w-4 h-4 text-cyan-500"></i>
-                        <span>Genie AI</span>
-                    </span>
-                    <i data-lucide="chevron-right" class="w-4 h-4 text-indigo-400"></i>
-                </a>
-                <a href="#mobile-apps" onclick="window.closeMobileMenu()" class="p-2.5 rounded-xl hover:bg-slate-100 flex items-center justify-between">
-                    <span>Mobile Apps</span>
-                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
-                </a>
-                <a href="#groups" onclick="window.closeMobileMenu()" class="p-2.5 rounded-xl hover:bg-slate-100 flex items-center justify-between">
-                    <span>Campus Groups</span>
-                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
-                </a>
-                <a href="#migration" onclick="window.closeMobileMenu()" class="p-2.5 rounded-xl hover:bg-slate-100 flex items-center justify-between">
-                    <span>Quick Onboarding</span>
-                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
-                </a>
-                <a href="#roi-calculator" onclick="window.closeMobileMenu()" class="p-2.5 rounded-xl hover:bg-slate-100 flex items-center justify-between">
-                    <span>ROI Calculator</span>
-                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
-                </a>
-                <a href="#contact" onclick="window.closeMobileMenu()" class="p-2.5 rounded-xl hover:bg-slate-100 flex items-center justify-between">
-                    <span>Contact & Location</span>
-                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
-                </a>
-            </nav>
-
-            <div class="pt-3 border-t border-slate-100 space-y-2">
-                <button onclick="window.closeMobileMenu(); window.openDemoModal();" class="w-full py-2.5 rounded-xl bg-indigo-600 text-white font-bold text-xs flex items-center justify-center gap-2">
-                    <i data-lucide="calendar" class="w-4 h-4"></i>
-                    <span>Schedule Live Demo</span>
-                </button>
-                <a href="tel:+918754671568" class="w-full py-2.5 rounded-xl bg-slate-100 text-slate-800 font-bold text-xs flex items-center justify-center gap-2">
-                    <i data-lucide="phone" class="w-4 h-4 text-emerald-500"></i>
-                    <span>Call: +91 8754671568</span>
-                </a>
-            </div>
-        </div>
-    </header>
+                </header>
 
     <!-- ======================================================== -->
     <!-- HERO SECTION                                             -->
@@ -1538,7 +1484,7 @@
     <!-- ======================================================== -->
     <!-- FLOATING DOCK (WHATSAPP + PACKAGE CART)                  -->
     <!-- ======================================================== -->
-    <div class="floating-actions">
+    <div class="floating-actions hidden md:flex">
         <!-- Package Trigger Button -->
         <button onclick="window.openQuoteDrawer()"
             class="p-3.5 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white shadow-xl shadow-indigo-500/30 transition transform hover:scale-105 flex items-center justify-center relative"
@@ -1852,6 +1798,52 @@
             </form>
         </div>
     </div>
+
+        <!-- ======================================================== -->
+    <!-- MOBILE BOTTOM NAVIGATION BAR (FOR RESPONSIVE SCREENS)    -->
+    <!-- ======================================================== -->
+    <nav class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-t border-slate-200/90 shadow-[0_-4px_25px_rgba(0,0,0,0.08)] py-1.5 px-3">
+        <div class="max-w-md mx-auto grid grid-cols-5 items-center justify-around text-center">
+            
+            <!-- Tab 1: Home -->
+            <a href="#" class="mobile-nav-item flex flex-col items-center justify-center py-1 text-slate-500 hover:text-indigo-600 transition active:scale-95">
+                <i data-lucide="home" class="w-5 h-5 mb-0.5"></i>
+                <span class="text-[10px] font-bold tracking-tight">Home</span>
+            </a>
+
+            <!-- Tab 2: Capabilities / Modules -->
+            <a href="#modules" class="mobile-nav-item flex flex-col items-center justify-center py-1 text-slate-500 hover:text-indigo-600 transition active:scale-95">
+                <i data-lucide="grid" class="w-5 h-5 mb-0.5"></i>
+                <span class="text-[10px] font-bold tracking-tight">Modules</span>
+            </a>
+
+            <!-- Tab 3: Genie AI (Center Floating Button) -->
+            <a href="#genie-ai" class="mobile-nav-item flex flex-col items-center justify-center py-1 text-indigo-600 transition active:scale-95 relative">
+                <div class="w-10 h-10 -mt-5 rounded-full bg-gradient-to-tr from-cyan-500 to-indigo-600 text-white flex items-center justify-center shadow-lg shadow-indigo-500/35 border-2 border-white">
+                    <i data-lucide="sparkles" class="w-5 h-5"></i>
+                </div>
+                <span class="text-[10px] font-extrabold tracking-tight text-indigo-600 mt-0.5">Genie AI</span>
+            </a>
+
+            <!-- Tab 4: My Package (with Live Badge) -->
+            <button onclick="window.openQuoteDrawer()" class="mobile-nav-item flex flex-col items-center justify-center py-1 text-slate-500 hover:text-indigo-600 transition active:scale-95 relative">
+                <div class="relative">
+                    <i data-lucide="layers" class="w-5 h-5 mb-0.5"></i>
+                    <span id="mobile-bottom-quote-count" class="absolute -top-1.5 -right-2.5 w-4 h-4 rounded-full bg-rose-500 text-white text-[9px] font-extrabold flex items-center justify-center">
+                        6
+                    </span>
+                </div>
+                <span class="text-[10px] font-bold tracking-tight">Package</span>
+            </button>
+
+            <!-- Tab 5: WhatsApp Chat -->
+            <a href="https://wa.me/918754671568?text=Hello%20Schoollyx%20Team%2C%20I%20would%20like%20to%20learn%20more%20about%20the%20Schoollyx%20ERP." target="_blank" class="mobile-nav-item flex flex-col items-center justify-center py-1 text-emerald-600 transition active:scale-95">
+                <i data-lucide="message-circle" class="w-5 h-5 mb-0.5"></i>
+                <span class="text-[10px] font-bold tracking-tight">Chat</span>
+            </a>
+
+        </div>
+    </nav>
 
     <!-- TOAST NOTIFICATION CONTAINER -->
     <div id="toast-container" class="toast-container"></div>

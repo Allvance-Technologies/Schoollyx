@@ -285,6 +285,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const count = state.selectedModules.size;
         if (quoteCountBadge) quoteCountBadge.textContent = count;
         if (floatingQuoteBadge) floatingQuoteBadge.textContent = count;
+        const mobileBottomCount = document.getElementById('mobile-bottom-quote-count');
+        if (mobileBottomCount) mobileBottomCount.textContent = count;
     }
 
     window.selectAllModules = function() {
