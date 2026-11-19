@@ -47,13 +47,46 @@ body {
 }
 
 .glass-nav {
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.85);
 }
 
-/* Glowing Ambient Gradients */
+/* Scrollspy Active Nav Link */
+.nav-link.active {
+  color: #4F46E5 !important;
+  position: relative;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #4F46E5;
+  border-radius: 2px;
+}
+
+/* Horizontal Scroll Fade for Mobile Category Pills */
+.scroll-fade-container {
+  position: relative;
+}
+
+.scroll-fade-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 32px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.95));
+  pointer-events: none;
+}
+
+/* Ambient Gradients */
 .glow-primary {
   box-shadow: 0 0 35px -5px rgba(99, 102, 241, 0.35);
 }
@@ -66,16 +99,6 @@ body {
   background: linear-gradient(135deg, #4F46E5 0%, #06B6D4 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.text-gradient-gold {
-  background: linear-gradient(135deg, #F59E0B 0%, #EF4444 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.bg-gradient-brand {
-  background: linear-gradient(135deg, #4F46E5 0%, #06B6D4 100%);
 }
 
 .hero-mesh-bg {
@@ -92,20 +115,11 @@ body {
   50% { transform: translateY(-8px); }
 }
 
-@keyframes pulseGlow {
-  0%, 100% { opacity: 0.4; }
-  50% { opacity: 0.8; }
-}
-
 .animate-float {
   animation: float 4s ease-in-out infinite;
 }
 
-.animate-pulse-glow {
-  animation: pulseGlow 3s ease-in-out infinite;
-}
-
-/* Device Mockups (Realistic Phone Frames) */
+/* Realistic Smartphone Mockups */
 .phone-mockup {
   position: relative;
   width: 280px;
@@ -163,6 +177,7 @@ body {
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
+  height: 8px;
 }
 ::-webkit-scrollbar-track {
   background: #F1F5F9;
@@ -192,7 +207,7 @@ body {
   border: 1px solid #FCD34D;
 }
 
-/* Floating WhatsApp & Quote Pills */
+/* Floating Actions */
 .floating-actions {
   position: fixed;
   bottom: 24px;

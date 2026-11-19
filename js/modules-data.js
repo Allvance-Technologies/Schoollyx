@@ -1,29 +1,117 @@
-// Schoollyx Modules Catalog Data
-// Auto-generated from Schoollex_Catalog.pdf
-// Contains all 38 production modules across 8 functional pillars
+// Schoollyx Modular ERP Architecture Data
+// Production Clean Data Model with Compliance Badges & Package Presets
 
 const SCHOOLLYX_DATA = {
     company: {
         name: "Schoollyx",
         legalName: "Hafzee Research Infopark",
         tagline: "Empowering Schools Through Smart Technology.",
-        heroSubtitle: "Next-generation AI-powered School Operating System with 38 integrated modules, live GPS transport tracking, automated fees with 10+ gateways, and Genie AI assistant.",
+        heroSubtitle: "Next-generation AI-powered School Operating System with comprehensive modular architecture, live GPS transport tracking, automated fees with 10+ gateways, and Genie AI assistant.",
         phone: "+91 8754671568",
         phoneRaw: "918754671568",
         email: "contact@schoollyx.in",
         website: "www.schoollyx.in",
+        address: "Hafzee Research Infopark, Priya Nagar, Nagercoil, Tamil Nadu 629002",
+        mapUrl: "https://maps.app.goo.gl/6Gky1rJjpNDoPung9?g_st=aw",
         stats: [
-            { label: "Integrated Modules", value: "38+" },
             { label: "Payment Gateways", value: "10+" },
             { label: "AI Response Time", value: "< 2s" },
             { label: "Attendance Accuracy", value: "99.9%" },
-            { label: "Time Saved in Admin", value: "70%" }
+            { label: "Admin Time Saved", value: "70%" },
+            { label: "Parent WhatsApp Open", value: "98%" }
         ]
     },
+    presets: {
+    "starter": {
+        "id": "starter",
+        "name": "Starter Essentials",
+        "tag": "Essential 6 Modules",
+        "color": "emerald",
+        "description": "Core foundation for new schools: Student Records, Paperless Admissions, Online Fees, Smart Attendance & WhatsApp Alerts.",
+        "moduleIds": [
+            1,
+            2,
+            3,
+            4,
+            7,
+            21
+        ]
+    },
+    "academic": {
+        "id": "academic",
+        "name": "Academic Pro",
+        "tag": "Curriculum & Classrooms",
+        "color": "amber",
+        "description": "Everything in Starter plus CBSE/ICSE Exams, Digital Homework, Timetable, Online Classes, and Parent/Teacher Mobile Apps.",
+        "moduleIds": [
+            1,
+            2,
+            3,
+            4,
+            7,
+            12,
+            13,
+            14,
+            15,
+            16,
+            18,
+            21,
+            36,
+            37
+        ]
+    },
+    "enterprise": {
+        "id": "enterprise",
+        "name": "Complete Enterprise Suite",
+        "tag": "Full Institutional Operating System",
+        "color": "indigo",
+        "description": "Every single module unlocked: Genie AI Assistant (<2s), Live GPS Bus Safety, Multi-Branch Management & 100+ Document Themes.",
+        "moduleIds": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38
+        ]
+    }
+},
     pillars: [
     {
         "id": "all",
-        "name": "All 38 Modules",
+        "name": "All Capabilities",
         "count": 38,
         "icon": "grid"
     },
@@ -92,6 +180,11 @@ const SCHOOLLYX_DATA = {
         "category": "core",
         "categoryName": "Core Administration",
         "description": "50+ data fields. Complete 360\u00b0 student profiles with document management.",
+        "badges": [
+            "360\u00b0 Profile",
+            "Encrypted Storage",
+            "Document Vault"
+        ],
         "features": [
             "Student profile management",
             "Admission & enrollment records",
@@ -112,6 +205,11 @@ const SCHOOLLYX_DATA = {
         "category": "core",
         "categoryName": "Core Administration",
         "description": "24/7 online applications. 100% paperless. 70% time saved.",
+        "badges": [
+            "100% Paperless",
+            "WhatsApp Link",
+            "Zero Setup"
+        ],
         "features": [
             "Online admission form",
             "WhatsApp admission link sharing",
@@ -132,6 +230,12 @@ const SCHOOLLYX_DATA = {
         "category": "finance",
         "categoryName": "Finance & Accounts",
         "description": "Collect fees via 10+ gateways \u2014 Razorpay, PhonePe, UPI, POS & more. 45% faster collections with auto defaulter tracking.",
+        "badges": [
+            "RBI / GST Compliant",
+            "10+ Gateways",
+            "WhatsApp Reminders",
+            "POS Ready"
+        ],
         "features": [
             "Online fee payment (UPI, Cards, Net Banking)",
             "POS machine integration for on-counter payments",
@@ -152,6 +256,11 @@ const SCHOOLLYX_DATA = {
         "category": "core",
         "categoryName": "Core Administration",
         "description": "Biometric + Mobile App + GPS. 99.9% accuracy with instant parent WhatsApp/SMS alerts.",
+        "badges": [
+            "Biometric + Face",
+            "Parent WhatsApp",
+            "Geo-Fenced"
+        ],
         "features": [
             "Biometric device integration (Fingerprint & Face)",
             "Mobile app attendance marking by teachers",
@@ -172,6 +281,11 @@ const SCHOOLLYX_DATA = {
         "category": "operations",
         "categoryName": "Staff & Operations",
         "description": "Staff records, attendance, role management & experience letter generation.",
+        "badges": [
+            "Staff KYC",
+            "Role Permissions",
+            "Payroll Ready"
+        ],
         "features": [
             "Staff profile & KYC management",
             "Biometric staff attendance tracking",
@@ -192,6 +306,11 @@ const SCHOOLLYX_DATA = {
         "category": "finance",
         "categoryName": "Finance & Accounts",
         "description": "Budget tracking, vendor management & approval workflows. 100% financial transparency.",
+        "badges": [
+            "Audit Trail",
+            "Vendor Ledger",
+            "Multi-Level Approvals"
+        ],
         "features": [
             "Expense entry & category tagging",
             "Vendor management & payment history",
@@ -212,6 +331,11 @@ const SCHOOLLYX_DATA = {
         "category": "communication",
         "categoryName": "Communication & Growth",
         "description": "WhatsApp + SMS + Email + Push. 99% delivery rate. 98% WhatsApp open rate.",
+        "badges": [
+            "Official WhatsApp API",
+            "98% Open Rate",
+            "Emergency Broadcast"
+        ],
         "features": [
             "Official WhatsApp Business API integration",
             "Multi-language SMS gateway connectivity",
@@ -232,6 +356,11 @@ const SCHOOLLYX_DATA = {
         "category": "communication",
         "categoryName": "Communication & Growth",
         "description": "Track enquiries, follow-ups & conversions. Never lose a potential student.",
+        "badges": [
+            "Admission CRM",
+            "Auto Follow-Ups",
+            "Pipeline View"
+        ],
         "features": [
             "Walk-in & online enquiry capture",
             "Follow-up scheduling with reminders",
@@ -252,6 +381,11 @@ const SCHOOLLYX_DATA = {
         "category": "core",
         "categoryName": "Core Administration",
         "description": "Bulk ID card generation with QR codes & school branding in seconds.",
+        "badges": [
+            "QR Verification",
+            "Bulk PDF Print",
+            "Custom Crest"
+        ],
         "features": [
             "Custom template designer",
             "Dynamic QR & Barcode generation",
@@ -271,6 +405,11 @@ const SCHOOLLYX_DATA = {
         "category": "core",
         "categoryName": "Core Administration",
         "description": "Transfer certificate, character certificate & custom certificates with digital verification.",
+        "badges": [
+            "Digital Signatures",
+            "QR Verification",
+            "Govt Formats"
+        ],
         "features": [
             "Transfer Certificate (TC) auto-generation",
             "Character & Bonafide certificates",
@@ -290,6 +429,11 @@ const SCHOOLLYX_DATA = {
         "category": "core",
         "categoryName": "Core Administration",
         "description": "Excel / CSV imports for students, staff, fees, and marks with instant error validation.",
+        "badges": [
+            "Zero Data Loss",
+            "Excel / CSV Ready",
+            "Instant Error Check"
+        ],
         "features": [
             "Excel & CSV data import templates",
             "Automatic data error detection",
@@ -309,6 +453,12 @@ const SCHOOLLYX_DATA = {
         "category": "academics",
         "categoryName": "Academics & LMS",
         "description": "Auto report cards in 5 min. CBSE & State Board compliant. 99.9% calculation accuracy.",
+        "badges": [
+            "CBSE & ICSE Compliant",
+            "CCE Grading",
+            "Admit Cards",
+            "Instant SMS Result"
+        ],
         "features": [
             "Exam scheduling & datesheet publishing",
             "Admit card generation with student photos",
@@ -329,6 +479,11 @@ const SCHOOLLYX_DATA = {
         "category": "academics",
         "categoryName": "Academics & LMS",
         "description": "Digital assignments with photo submissions. 95% submission rate. Zero lost homework.",
+        "badges": [
+            "Photo Submissions",
+            "Parent Visibility",
+            "Teacher Grading"
+        ],
         "features": [
             "Homework assignment creation by subject",
             "Photo & PDF attachment uploads by students",
@@ -348,6 +503,11 @@ const SCHOOLLYX_DATA = {
         "category": "academics",
         "categoryName": "Academics & LMS",
         "description": "Drag-drop visual builder. Auto conflict detection. Substitution management.",
+        "badges": [
+            "Clash Detection",
+            "Substitution Auto-Suggest",
+            "App Sync"
+        ],
         "features": [
             "Class-wise timetable visual creator",
             "Teacher period allocation & workload balance",
@@ -367,6 +527,11 @@ const SCHOOLLYX_DATA = {
         "category": "academics",
         "categoryName": "Academics & LMS",
         "description": "Seamless Teams, Google Meet & Zoom integration. Schedule and track virtual classes.",
+        "badges": [
+            "Zoom / Meet / Teams",
+            "Auto Attendance",
+            "Calendar Sync"
+        ],
         "features": [
             "Microsoft Teams API integration",
             "Google Meet 1-click meeting generator",
@@ -386,6 +551,11 @@ const SCHOOLLYX_DATA = {
         "category": "academics",
         "categoryName": "Academics & LMS",
         "description": "Holiday planning, event scheduling & auto reminders. Syncs to parent mobile app.",
+        "badges": [
+            "Board Holiday Lists",
+            "Push Reminders",
+            "Parent App View"
+        ],
         "features": [
             "Annual school academic calendar planner",
             "Holiday list configuration by board",
@@ -404,6 +574,11 @@ const SCHOOLLYX_DATA = {
         "category": "operations",
         "categoryName": "Staff & Operations",
         "description": "Barcode-based book tracking. Auto fine calculation. Digital catalog for students.",
+        "badges": [
+            "Barcode & QR",
+            "Digital OPAC Catalog",
+            "Auto Fines"
+        ],
         "features": [
             "Book catalog with barcode / QR scanning",
             "Book issue & return tracking",
@@ -423,6 +598,11 @@ const SCHOOLLYX_DATA = {
         "category": "academics",
         "categoryName": "Academics & LMS",
         "description": "Self-paced courses, video lessons & live interactive quizzes for modern blended learning.",
+        "badges": [
+            "Blended Learning",
+            "Auto MCQ Grading",
+            "Video Lessons"
+        ],
         "features": [
             "Chapter-wise course material upload",
             "Video lecture embedding & document viewer",
@@ -442,6 +622,11 @@ const SCHOOLLYX_DATA = {
         "category": "communication",
         "categoryName": "Communication & Growth",
         "description": "Digital circulars with read receipts. Multi-language support. 100% delivery.",
+        "badges": [
+            "Read Receipts",
+            "Multi-Language",
+            "Class Filters"
+        ],
         "features": [
             "Notice creation & targeted publishing",
             "Class-wise, section-wise or whole school notices",
@@ -461,6 +646,11 @@ const SCHOOLLYX_DATA = {
         "category": "communication",
         "categoryName": "Communication & Growth",
         "description": "Structured feedback collection with category tracking & resolution management.",
+        "badges": [
+            "Helpdesk SLA",
+            "Ticket Categories",
+            "Parent Rating"
+        ],
         "features": [
             "Parent feedback & query submission",
             "Ticket categorization (Academic, Transport, Fees)",
@@ -480,6 +670,11 @@ const SCHOOLLYX_DATA = {
         "category": "core",
         "categoryName": "Core Administration",
         "description": "Organized parent profiles with multi-child linkage in one single mobile login.",
+        "badges": [
+            "Multi-Child Support",
+            "Single Login",
+            "Pickup Pass"
+        ],
         "features": [
             "Father, mother & guardian detailed profiles",
             "Multi-child linking under single parent account",
@@ -498,6 +693,11 @@ const SCHOOLLYX_DATA = {
         "category": "communication",
         "categoryName": "Communication & Growth",
         "description": "Instant messaging between teachers, parents, and administrative staff.",
+        "badges": [
+            "Privacy Shield",
+            "Controlled Hours",
+            "Direct Chat"
+        ],
         "features": [
             "Teacher-to-parent direct messaging channel",
             "Staff internal collaboration groups",
@@ -516,6 +716,12 @@ const SCHOOLLYX_DATA = {
         "category": "safety",
         "categoryName": "Safety & Transport",
         "description": "Live GPS tracking with SOS alerts. RFID boarding. Parent app for real-time bus tracking. 90% fewer enquiry calls.",
+        "badges": [
+            "Live GPS on Map",
+            "RFID Boarding Logs",
+            "SOS Panic Alert",
+            "Speed Alarms"
+        ],
         "features": [
             "Bus route & stop sequence management",
             "Live vehicle GPS tracking on real-time map",
@@ -536,6 +742,11 @@ const SCHOOLLYX_DATA = {
         "category": "core",
         "categoryName": "Core Administration",
         "description": "Centralized ticket system for parent, student & teacher requests.",
+        "badges": [
+            "Department Routing",
+            "Audit Trail",
+            "Status Tracker"
+        ],
         "features": [
             "Online request submission workflow",
             "Categorization (Leave, Document, Fee adjustments)",
@@ -554,6 +765,11 @@ const SCHOOLLYX_DATA = {
         "category": "communication",
         "categoryName": "Communication & Growth",
         "description": "Digital photo albums for school events with secure parent app access.",
+        "badges": [
+            "High-Res Cloud CDN",
+            "Parent App Gallery",
+            "Event Tagging"
+        ],
         "features": [
             "Event photo upload & gallery album creation",
             "Category tagging (Sports Day, Annual Day, Science Fair)",
@@ -572,6 +788,11 @@ const SCHOOLLYX_DATA = {
         "category": "operations",
         "categoryName": "Staff & Operations",
         "description": "Manage rooms, meals & student boarding with complete residential control.",
+        "badges": [
+            "Bed Allocations",
+            "Mess Attendance",
+            "Curfew Logs"
+        ],
         "features": [
             "Hostel building, floor & room allocation",
             "Bed assignment & vacancy tracker",
@@ -591,6 +812,11 @@ const SCHOOLLYX_DATA = {
         "category": "operations",
         "categoryName": "Staff & Operations",
         "description": "Never run out of supplies. Barcode asset tracking & low-stock alerts.",
+        "badges": [
+            "Barcode Scanning",
+            "Low-Stock Triggers",
+            "Vendor Ledger"
+        ],
         "features": [
             "Asset & stock cataloging with barcode labels",
             "Stock in/out issuance tracking",
@@ -610,6 +836,11 @@ const SCHOOLLYX_DATA = {
         "category": "safety",
         "categoryName": "Safety & Transport",
         "description": "Digital visitor log with photo capture. Gate security passes & call logs.",
+        "badges": [
+            "Webcam Photo Capture",
+            "SMS/App Host Alert",
+            "Printed QR Pass"
+        ],
         "features": [
             "Visitor digital check-in with webcam photo",
             "Instant OTP verification on visitor phone",
@@ -629,6 +860,11 @@ const SCHOOLLYX_DATA = {
         "category": "operations",
         "categoryName": "Staff & Operations",
         "description": "Structured daily operation logs. Staff task management & activity reports.",
+        "badges": [
+            "Early Childhood Logs",
+            "Staff Checklist",
+            "Duty Logs"
+        ],
         "features": [
             "Daily activity submission by class teachers",
             "Early childhood milestone / activity log",
@@ -646,6 +882,11 @@ const SCHOOLLYX_DATA = {
         "category": "core",
         "categoryName": "Core Administration",
         "description": "One dashboard, all branches. Consolidated analytics & centralized admin control.",
+        "badges": [
+            "Group Super-Admin",
+            "Consolidated Ledger",
+            "Cross-Campus Transfer"
+        ],
         "features": [
             "Centralized super-admin control panel",
             "Branch-level data segregation & permissions",
@@ -665,6 +906,12 @@ const SCHOOLLYX_DATA = {
         "category": "ai",
         "categoryName": "Intelligence & Customization",
         "description": "AI-powered answers in <2 seconds. Save 70% time. Natural language queries. No competitor has this.",
+        "badges": [
+            "Sub-2s Query Engine",
+            "Natural Language",
+            "WhatsApp Integrated",
+            "Zero SQL Required"
+        ],
         "features": [
             "Natural language queries in English & regional languages",
             "Instant answers on fees, attendance & academics",
@@ -684,6 +931,11 @@ const SCHOOLLYX_DATA = {
         "category": "ai",
         "categoryName": "Intelligence & Customization",
         "description": "4 role-based dashboards. 20+ smart widgets. Real-time analytics with customizable themes.",
+        "badges": [
+            "4 Role Dashboards",
+            "Live Revenue Gauges",
+            "Export to PDF/Excel"
+        ],
         "features": [
             "Real-time school performance executive dashboard",
             "Fee collection vs outstanding live gauges",
@@ -703,6 +955,11 @@ const SCHOOLLYX_DATA = {
         "category": "ai",
         "categoryName": "Intelligence & Customization",
         "description": "Custom colors, themes & dashboard layouts. Light/dark mode. Role-wise personalization.",
+        "badges": [
+            "School Crest & Colors",
+            "Custom Subdomain",
+            "Dark / Light Mode"
+        ],
         "features": [
             "School primary & secondary color palette picker",
             "Custom logo, school crest & watermark embedding",
@@ -722,6 +979,11 @@ const SCHOOLLYX_DATA = {
         "category": "ai",
         "categoryName": "Intelligence & Customization",
         "description": "100+ professionally designed templates for report cards, receipts, ID cards & certificates.",
+        "badges": [
+            "CBSE / ICSE / State Formats",
+            "Branded Invoices",
+            "ID Orientation Options"
+        ],
         "features": [
             "100+ pre-built document theme designs",
             "Custom report card layouts (CBSE, ICSE, IB format)",
@@ -741,6 +1003,11 @@ const SCHOOLLYX_DATA = {
         "category": "operations",
         "categoryName": "Staff & Operations",
         "description": "One settings panel for everything. SMS, WhatsApp, Email, academic year, roles & integrations.",
+        "badges": [
+            "Gateway Config",
+            "SMTP Server",
+            "Granular Roles"
+        ],
         "features": [
             "SMS & WhatsApp Business API gateway configuration",
             "Email server (SMTP) setup",
@@ -759,6 +1026,11 @@ const SCHOOLLYX_DATA = {
         "category": "apps",
         "categoryName": "Mobile Apps Suite",
         "description": "Native iOS & Android app. Pay fees, track attendance, view results & communicate \u2014 all in one app.",
+        "badges": [
+            "iOS & Android",
+            "1-Tap UPI Payment",
+            "Live Bus GPS Map"
+        ],
         "features": [
             "Native iOS & Android application",
             "Instant 1-click online fee payment (UPI, Cards)",
@@ -779,6 +1051,11 @@ const SCHOOLLYX_DATA = {
         "category": "apps",
         "categoryName": "Mobile Apps Suite",
         "description": "Mark attendance, assign homework, enter grades & send notices from anywhere.",
+        "badges": [
+            "iOS & Android",
+            "30-Sec Attendance",
+            "Photo Homework Snap"
+        ],
         "features": [
             "Lightning fast class attendance marking",
             "Subject homework assignment with photo attachment",
@@ -798,6 +1075,11 @@ const SCHOOLLYX_DATA = {
         "category": "apps",
         "categoryName": "Mobile Apps Suite",
         "description": "Dashboard overview, fee tracking, attendance monitoring & approvals on mobile.",
+        "badges": [
+            "Executive Dashboard",
+            "1-Tap Broadcast",
+            "Leave Approvals"
+        ],
         "features": [
             "Live executive summary of fee collections",
             "School-wide real-time attendance counts",

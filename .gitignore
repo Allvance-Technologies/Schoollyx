@@ -1,0 +1,13 @@
+# OS & Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Extraction & Scraping temp scripts
+*.py
+*.txt
+schoolites_home.html
+
+# Local logs
+*.log

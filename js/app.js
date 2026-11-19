@@ -1,6 +1,7 @@
 /**
- * Schoollyx - Main Client Application Logic
- * Dynamic catalog rendering, interactive filters, quote builder, Genie AI simulator, and ROI calculator
+ * Schoollyx - Main Client Application Logic (Production Clean)
+ * Dynamic catalog rendering, presets, interactive filters, quote builder,
+ * Genie AI simulator, portal gateway modal, scrollspy, and ROI calculator.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -12,10 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // State
     const state = {
         activeFilter: 'all',
+        activePreset: 'starter',
         searchQuery: '',
-        selectedModules: new Set([1, 2, 3, 4, 7, 23, 31, 36]), // pre-select recommended starter pack
+        selectedModules: new Set(SCHOOLLYX_DATA.presets.starter.moduleIds),
         currentModalModule: null,
-        activeAppTab: 'parent'
+        activeAppTab: 'parent',
+        activeLoginRole: 'admin'
     };
 
     // DOM Elements
@@ -26,13 +29,40 @@ document.addEventListener('DOMContentLoaded', () => {
     const quoteCountBadge = document.getElementById('quote-count-badge');
     const floatingQuoteBadge = document.getElementById('floating-quote-count');
     
-    // Modals
+    // Modals & Drawers
     const moduleDetailModal = document.getElementById('module-detail-modal');
     const quoteDrawer = document.getElementById('quote-drawer');
     const demoModal = document.getElementById('demo-modal');
+    const loginModal = document.getElementById('login-modal');
+    const whitepaperModal = document.getElementById('whitepaper-modal');
 
     // -------------------------------------------------------------
-    // 1. Render Category Filter Pills
+    // 1. Presets Logic (Reduce Decision Fatigue)
+    // -------------------------------------------------------------
+    window.applyPreset = function(presetKey) {
+        const preset = SCHOOLLYX_DATA.presets[presetKey];
+        if (!preset) return;
+
+        state.activePreset = presetKey;
+        state.selectedModules = new Set(preset.moduleIds);
+
+        // Update button active styling
+        document.querySelectorAll('.preset-btn').forEach(btn => {
+            const isCurrent = btn.dataset.preset === presetKey;
+            btn.classList.toggle('ring-2', isCurrent);
+            btn.classList.toggle('ring-indigo-600', isCurrent);
+            btn.classList.toggle('bg-white', !isCurrent);
+            btn.classList.toggle('bg-indigo-50', isCurrent);
+        });
+
+        updateQuoteBadges();
+        renderModules();
+        renderQuoteDrawer();
+        showToast(`Selected "${preset.name}" (${preset.moduleIds.length} capabilities loaded)`);
+    };
+
+    // -------------------------------------------------------------
+    // 2. Render Category Filter Pills
     // -------------------------------------------------------------
     function renderFilterPills() {
         if (!filterPillsContainer) return;
@@ -42,13 +72,13 @@ document.addEventListener('DOMContentLoaded', () => {
             return `
                 <button 
                     data-filter="${pillar.id}" 
-                    class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 flex items-center gap-2 whitespace-nowrap ${
+                    class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold transition-all duration-200 flex items-center gap-2 whitespace-nowrap ${
                         isActive 
                         ? 'bg-indigo-600 text-white shadow-md shadow-indigo-500/25' 
                         : 'bg-white text-slate-600 hover:bg-slate-100 hover:text-slate-900 border border-slate-200/80'
                     }">
                     <span>${pillar.name}</span>
-                    <span class="text-xs px-2 py-0.5 rounded-full ${isActive ? 'bg-indigo-700/60 text-white' : 'bg-slate-100 text-slate-500'}">
+                    <span class="text-[11px] px-2 py-0.5 rounded-full ${isActive ? 'bg-indigo-700/60 text-white' : 'bg-slate-100 text-slate-500'}">
                         ${pillar.count}
                     </span>
                 </button>
@@ -66,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // -------------------------------------------------------------
-    // 2. Render Module Cards in Grid
+    // 3. Render Module Cards in Grid
     // -------------------------------------------------------------
     function renderModules() {
         if (!modulesGrid) return;
@@ -87,8 +117,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 const inTitle = mod.title.toLowerCase().includes(q);
                 const inDesc = mod.description.toLowerCase().includes(q);
                 const inStat = mod.stat.toLowerCase().includes(q);
+                const inBadges = (mod.badges || []).some(b => b.toLowerCase().includes(q));
                 const inFeatures = mod.features.some(f => f.toLowerCase().includes(q));
-                matchesSearch = inTitle || inDesc || inStat || inFeatures;
+                matchesSearch = inTitle || inDesc || inStat || inBadges || inFeatures;
             }
 
             return matchesCategory && matchesSearch;
@@ -96,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Update count text
         if (moduleCountDisplay) {
-            moduleCountDisplay.textContent = `Showing ${filtered.length} of 38 Modules`;
+            moduleCountDisplay.textContent = `Showing ${filtered.length} Capabilities`;
         }
 
         if (filtered.length === 0) {
@@ -105,8 +136,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="w-16 h-16 bg-slate-100 text-slate-400 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i data-lucide="search" class="w-8 h-8"></i>
                     </div>
-                    <h3 class="text-lg font-bold text-slate-800">No modules found</h3>
-                    <p class="text-sm text-slate-500 mt-1">Try tweaking your search term or switch categories.</p>
+                    <h3 class="text-lg font-bold text-slate-800">No capabilities found</h3>
+                    <p class="text-sm text-slate-500 mt-1">Try tweaking your search term or reset filters.</p>
                     <button id="reset-filter-btn" class="mt-4 px-4 py-2 bg-indigo-50 text-indigo-600 font-semibold text-sm rounded-lg hover:bg-indigo-100 transition">
                         Reset Filters
                     </button>
@@ -131,31 +162,31 @@ document.addEventListener('DOMContentLoaded', () => {
             return `
                 <div class="module-card group bg-white rounded-2xl p-6 border ${mod.isKey ? 'border-amber-200 shadow-sm shadow-amber-100/50' : 'border-slate-200/90'} flex flex-col justify-between hover:border-indigo-400">
                     <div>
-                        <!-- Header with ID and Badges -->
+                        <!-- Header with Badges -->
                         <div class="flex items-start justify-between gap-3 mb-4">
                             <div class="flex items-center gap-3">
-                                <span class="w-8 h-8 rounded-lg bg-slate-100 text-slate-600 font-bold text-xs flex items-center justify-center">
-                                    #${mod.id.toString().padStart(2, '0')}
-                                </span>
                                 <div class="w-10 h-10 rounded-xl ${mod.isKey ? 'bg-amber-50 text-amber-600' : 'bg-indigo-50 text-indigo-600'} flex items-center justify-center group-hover:scale-110 transition-transform">
                                     <i data-lucide="${mod.icon}" class="w-5 h-5"></i>
                                 </div>
+                                <span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">
+                                    ${mod.categoryName}
+                                </span>
                             </div>
                             
                             <div class="flex flex-col items-end gap-1">
                                 ${mod.isKey ? `
-                                    <span class="key-badge text-[11px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+                                    <span class="key-badge text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
                                         ⭐ KEY MODULE
                                     </span>
                                 ` : ''}
-                                <span class="text-[11px] font-semibold px-2 py-0.5 rounded-md bg-slate-100 text-slate-600">
+                                <span class="text-[11px] font-semibold px-2 py-0.5 rounded-md bg-slate-100 text-slate-700">
                                     ${mod.stat}
                                 </span>
                             </div>
                         </div>
 
                         <!-- Title & Tagline -->
-                        <h3 class="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                        <h3 class="text-base font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
                             ${mod.title}
                         </h3>
                         <p class="text-xs font-medium text-indigo-500 mt-0.5 mb-2.5">
@@ -164,6 +195,15 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p class="text-xs text-slate-600 leading-relaxed line-clamp-2">
                             ${mod.description}
                         </p>
+
+                        <!-- Compliance Badges -->
+                        <div class="flex flex-wrap gap-1.5 mt-3">
+                            ${(mod.badges || []).slice(0, 3).map(b => `
+                                <span class="text-[10px] font-medium px-2 py-0.5 rounded bg-slate-50 border border-slate-200/70 text-slate-600">
+                                    ${b}
+                                </span>
+                            `).join('')}
+                        </div>
 
                         <!-- Key Features Preview (Top 3) -->
                         <div class="mt-4 pt-3 border-t border-slate-100 space-y-1.5">
@@ -175,7 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             `).join('')}
                             ${mod.features.length > 3 ? `
                                 <div class="text-[11px] font-semibold text-slate-400 pl-3">
-                                    +${mod.features.length - 3} more capabilities
+                                    +${mod.features.length - 3} more features
                                 </div>
                             ` : ''}
                         </div>
@@ -211,15 +251,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // -------------------------------------------------------------
-    // 3. Selection & Quote Cart Management
+    // 4. Selection & Quote Cart Management
     // -------------------------------------------------------------
     window.toggleModuleSelection = function(id) {
         if (state.selectedModules.has(id)) {
             state.selectedModules.delete(id);
-            showToast(`Removed Module #${id} from customized plan`);
+            showToast(`Removed from customized plan`);
         } else {
             state.selectedModules.add(id);
-            showToast(`Added Module #${id} to customized plan`);
+            showToast(`Added to customized plan`);
         }
         updateQuoteBadges();
         renderModules();
@@ -237,7 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateQuoteBadges();
         renderModules();
         renderQuoteDrawer();
-        showToast('All 38 modules selected for complete ERP suite');
+        showToast('All modules included in comprehensive proposal');
     };
 
     window.resetModuleSelection = function() {
@@ -249,7 +289,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // -------------------------------------------------------------
-    // 4. Module Detail Modal
+    // 5. Module Detail Modal
     // -------------------------------------------------------------
     window.openModuleDetail = function(id) {
         const mod = SCHOOLLYX_DATA.modules.find(m => m.id === id);
@@ -258,7 +298,6 @@ document.addEventListener('DOMContentLoaded', () => {
         state.currentModalModule = mod;
         const isSelected = state.selectedModules.has(mod.id);
 
-        document.getElementById('modal-module-id').textContent = `#${mod.id.toString().padStart(2, '0')}`;
         document.getElementById('modal-module-title').textContent = mod.title;
         document.getElementById('modal-module-tagline').textContent = mod.tagline;
         document.getElementById('modal-module-stat').textContent = mod.stat;
@@ -268,6 +307,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const keyBadgeEl = document.getElementById('modal-key-badge');
         if (keyBadgeEl) {
             keyBadgeEl.style.display = mod.isKey ? 'inline-flex' : 'none';
+        }
+
+        // Compliance badges
+        const badgesContainer = document.getElementById('modal-badges-container');
+        if (badgesContainer) {
+            badgesContainer.innerHTML = (mod.badges || []).map(b => `
+                <span class="text-xs font-semibold px-2.5 py-1 rounded-lg bg-indigo-50 text-indigo-700 border border-indigo-100 flex items-center gap-1">
+                    <i data-lucide="check" class="w-3.5 h-3.5 text-indigo-500"></i>
+                    <span>${b}</span>
+                </span>
+            `).join('');
         }
 
         const featuresListEl = document.getElementById('modal-features-list');
@@ -295,7 +345,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
             modalAddBtn.onclick = () => {
                 window.toggleModuleSelection(mod.id);
-                window.openModuleDetail(mod.id); // refresh modal state
+                window.openModuleDetail(mod.id);
             };
         }
 
@@ -308,7 +358,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // -------------------------------------------------------------
-    // 5. Quote Drawer / Package Builder
+    // 6. Quote Drawer / Package Builder
     // -------------------------------------------------------------
     window.openQuoteDrawer = function() {
         if (!quoteDrawer) return;
@@ -328,7 +378,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const selectedList = SCHOOLLYX_DATA.modules.filter(m => state.selectedModules.has(m.id));
         if (countDisplay) {
-            countDisplay.textContent = `${selectedList.length} Selected`;
+            countDisplay.textContent = `${selectedList.length} Modules in Package`;
         }
 
         if (selectedList.length === 0) {
@@ -336,7 +386,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="py-12 text-center text-slate-400">
                     <i data-lucide="package-open" class="w-12 h-12 mx-auto mb-3 opacity-60"></i>
                     <p class="text-sm font-semibold text-slate-600">Your package is currently empty</p>
-                    <p class="text-xs text-slate-400 mt-1">Select modules from the catalog above to build your custom proposal.</p>
+                    <p class="text-xs text-slate-400 mt-1">Select modules from the catalog above or pick a quick preset.</p>
                 </div>
             `;
             if (window.lucide) lucide.createIcons();
@@ -346,10 +396,9 @@ document.addEventListener('DOMContentLoaded', () => {
         container.innerHTML = selectedList.map(mod => `
             <div class="p-3 bg-slate-50 border border-slate-200/80 rounded-xl flex items-center justify-between gap-3">
                 <div class="flex items-center gap-3 min-w-0">
-                    <span class="text-xs font-bold text-slate-400">#${mod.id}</span>
                     <div class="truncate">
                         <div class="text-xs font-bold text-slate-800 truncate">${mod.title}</div>
-                        <div class="text-[11px] text-slate-500">${mod.categoryName}</div>
+                        <div class="text-[11px] text-slate-500">${mod.categoryName} · ${mod.stat}</div>
                     </div>
                 </div>
                 <button onclick="window.toggleModuleSelection(${mod.id})" class="text-slate-400 hover:text-rose-500 p-1 rounded-md transition">
@@ -367,7 +416,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const students = document.getElementById('quote-student-count')?.value || '1000';
         
         const selectedList = SCHOOLLYX_DATA.modules.filter(m => state.selectedModules.has(m.id));
-        const moduleNames = selectedList.map(m => `#${m.id} ${m.title}`).join(', ');
+        const moduleNames = selectedList.map(m => m.title).join(', ');
 
         const text = encodeURIComponent(
             `*Schoollyx Official ERP Inquiry*\n` +
@@ -375,17 +424,17 @@ document.addEventListener('DOMContentLoaded', () => {
             `*Phone/Email:* ${contact}\n` +
             `*Estimated Students:* ${students}\n` +
             `*Selected Modules (${selectedList.length}):*\n${moduleNames}\n\n` +
-            `Please share customized quote & setup timeline.`
+            `Please share customized quote & setup timeline for our campus.`
         );
 
         const whatsappUrl = `https://wa.me/${SCHOOLLYX_DATA.company.phoneRaw}?text=${text}`;
         window.open(whatsappUrl, '_blank');
-        showToast('Redirecting to WhatsApp with your customized module request!');
+        showToast('Opening WhatsApp with your customized school requirements!');
         window.closeQuoteDrawer();
     };
 
     // -------------------------------------------------------------
-    // 6. Interactive Genie AI Simulator
+    // 7. Interactive Genie AI Simulator
     // -------------------------------------------------------------
     const geniePrompts = [
         {
@@ -442,7 +491,6 @@ document.addEventListener('DOMContentLoaded', () => {
         cardDisplay.classList.add('hidden');
         if (loader) loader.classList.remove('hidden');
 
-        // Fast simulated AI latency (< 1.5s)
         setTimeout(() => {
             if (loader) loader.classList.add('hidden');
             cardDisplay.innerHTML = `
@@ -484,7 +532,88 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // -------------------------------------------------------------
-    // 7. Interactive ROI & Savings Calculator
+    // 8. Portal Login Gateway Modal (Like Schoolites)
+    // -------------------------------------------------------------
+    window.openLoginModal = function(role = 'admin') {
+        state.activeLoginRole = role;
+        if (!loginModal) return;
+
+        // Update active tab inside modal
+        document.querySelectorAll('.login-role-tab').forEach(tab => {
+            const isMatch = tab.dataset.role === role;
+            tab.className = `login-role-tab flex-1 py-2.5 rounded-xl font-bold text-xs text-center transition ${
+                isMatch ? 'bg-indigo-600 text-white shadow-sm' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+            }`;
+        });
+
+        const titleEl = document.getElementById('login-modal-role-title');
+        const descEl = document.getElementById('login-modal-role-desc');
+        if (titleEl) {
+            const titles = {
+                admin: "School Administrator & Management Portal",
+                teacher: "Teacher & Staff Academic Portal",
+                parent: "Parent & Guardian Gateway",
+                student: "Student Learning & Exam Portal"
+            };
+            titleEl.textContent = titles[role] || "School Portal Login";
+        }
+        if (descEl) {
+            const descs = {
+                admin: "Access daily collections, executive dashboard, attendance logs, and staff management.",
+                teacher: "Mark period attendance, upload homework assignments, and compile term grades.",
+                parent: "Pay school fees with 10+ gateways, monitor live bus GPS, and view digital report cards.",
+                student: "Access homework schedules, online classes, syllabus materials, and exam datesheets."
+            };
+            descEl.textContent = descs[role] || "Enter your institutional credentials.";
+        }
+
+        loginModal.classList.remove('hidden');
+    };
+
+    window.closeLoginModal = function() {
+        if (loginModal) loginModal.classList.add('hidden');
+    };
+
+    window.submitLoginDemo = function(e) {
+        if (e) e.preventDefault();
+        const subdomain = document.getElementById('login-subdomain')?.value || 'demo';
+        showToast(`Redirecting to ${subdomain}.schoollyx.in/${state.activeLoginRole}...`);
+        setTimeout(() => {
+            alert(`Demo Gateway: In full production, this forwards directly to your dedicated SSL subdomain (${subdomain}.schoollyx.in). To deploy for your school, contact our onboarding team at +91 8754671568.`);
+            window.closeLoginModal();
+        }, 600);
+    };
+
+    // -------------------------------------------------------------
+    // 9. Whitepaper / Implementation Guide Modal
+    // -------------------------------------------------------------
+    window.openWhitepaperModal = function() {
+        if (whitepaperModal) whitepaperModal.classList.remove('hidden');
+    };
+    window.closeWhitepaperModal = function() {
+        if (whitepaperModal) whitepaperModal.classList.add('hidden');
+    };
+    window.submitWhitepaperRequest = function(e) {
+        if (e) e.preventDefault();
+        const name = document.getElementById('whitepaper-name')?.value || 'School Leader';
+        const phone = document.getElementById('whitepaper-phone')?.value || '';
+        const school = document.getElementById('whitepaper-school')?.value || 'Institution';
+
+        const text = encodeURIComponent(
+            `*Schoollyx 2026 ERP Implementation Guide Request*\n` +
+            `*Name:* ${name}\n` +
+            `*School:* ${school}\n` +
+            `*Phone:* ${phone}\n` +
+            `Please share the 2026 School ERP Implementation Guide & Pricing Matrix.`
+        );
+
+        window.open(`https://wa.me/${SCHOOLLYX_DATA.company.phoneRaw}?text=${text}`, '_blank');
+        window.closeWhitepaperModal();
+        showToast('Request sent! Guide will be shared on WhatsApp.');
+    };
+
+    // -------------------------------------------------------------
+    // 10. Interactive ROI & Savings Calculator
     // -------------------------------------------------------------
     const studentSlider = document.getElementById('calc-students');
     const feeSlider = document.getElementById('calc-fee');
@@ -498,17 +627,10 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('calc-students-val').textContent = students.toLocaleString();
         document.getElementById('calc-fee-val').textContent = `₹${annualFee.toLocaleString()}`;
 
-        // Formulas based on catalog stats:
-        // 70% admin time saved ~ approx 0.15 hours saved per student per year
         const hoursSavedMonthly = Math.round((students * 1.8) / 12);
-        
-        // 45% faster fee collection & reducing uncollected bad debts by ~1.5% of gross collections
         const grossFeeCollection = students * annualFee;
         const estimatedFeeRecovery = Math.round(grossFeeCollection * 0.02);
-        
-        // Administrative stationery/paperless savings (approx ₹350 per student saved on reports, ID cards, forms)
         const paperlessSavings = Math.round(students * 350);
-
         const totalAnnualSavings = estimatedFeeRecovery + paperlessSavings;
 
         document.getElementById('calc-hours-saved').textContent = `${hoursSavedMonthly} hrs/mo`;
@@ -523,7 +645,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // -------------------------------------------------------------
-    // 8. Mobile Apps 3-Tab Switcher
+    // 11. Mobile Apps 3-Tab Switcher
     // -------------------------------------------------------------
     window.switchAppPreview = function(tab) {
         state.activeAppTab = tab;
@@ -548,7 +670,33 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // -------------------------------------------------------------
-    // 9. Toast Notifications
+    // 12. Navbar Scrollspy
+    // -------------------------------------------------------------
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+        let currentSection = '';
+        const scrollPosition = window.scrollY + 120;
+
+        sections.forEach(sec => {
+            const top = sec.offsetTop;
+            const height = sec.offsetHeight;
+            if (scrollPosition >= top && scrollPosition < top + height) {
+                currentSection = sec.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${currentSection}`) {
+                link.classList.add('active');
+            }
+        });
+    });
+
+    // -------------------------------------------------------------
+    // 13. Toast Notifications
     // -------------------------------------------------------------
     function showToast(message) {
         const container = document.getElementById('toast-container');
@@ -572,7 +720,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.showToast = showToast;
 
     // -------------------------------------------------------------
-    // 10. Search Listener
+    // 14. Search Listener
     // -------------------------------------------------------------
     if (searchInput) {
         searchInput.addEventListener('input', (e) => {
@@ -582,7 +730,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // -------------------------------------------------------------
-    // 11. Lead / Demo Modal Handlers
+    // 15. Lead / Demo Modal Handlers
     // -------------------------------------------------------------
     window.openDemoModal = function() {
         if (demoModal) demoModal.classList.remove('hidden');
@@ -602,7 +750,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `*School:* ${school}\n` +
             `*Name:* ${name}\n` +
             `*Phone:* ${phone}\n` +
-            `I want to schedule a live demo of the 38-module Schoollyx ERP.`
+            `I want to schedule a live demo of the Schoollyx AI Operating System.`
         );
 
         const whatsappUrl = `https://wa.me/${SCHOOLLYX_DATA.company.phoneRaw}?text=${text}`;

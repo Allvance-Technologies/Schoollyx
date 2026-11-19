@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schoollyx — AI-Powered School Operating System | 38 Integrated Modules</title>
-    <meta name="description" content="Modern AI-first School Management ERP Software with 38 integrated modules: Genie AI assistant (<2s response), 10+ payment gateways, live GPS bus tracking, and native iOS & Android apps.">
+    <title>Schoollyx — AI-Powered School Operating System</title>
+    <meta name="description" content="Next-generation AI-powered School Management ERP Software with modular architecture, Genie AI assistant (<2s response), 10+ payment gateways, live GPS bus tracking, and native iOS & Android apps.">
     <meta name="keywords" content="school management system, school ERP, schoolites alternative, school software, Genie AI school, fee management, student attendance, school bus GPS tracking">
 
     <!-- Google Fonts -->
@@ -55,34 +55,34 @@
 <body class="bg-slate-50 text-slate-900 antialiased selection:bg-indigo-500 selection:text-white">
 
     <!-- ======================================================== -->
-    <!-- TOP NOTIFICATION BANNER                                  -->
+    <!-- TOP NOTIFICATION BANNER (NO PDF DOWNLOAD HERE)           -->
     <!-- ======================================================== -->
-    <div class="bg-gradient-to-r from-indigo-900 via-indigo-800 to-slate-900 text-white text-xs py-2 px-4 border-b border-indigo-700/50">
-        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+    <div class="bg-gradient-to-r from-indigo-950 via-slate-900 to-indigo-900 text-white text-xs py-2.5 px-4 border-b border-indigo-800/40">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
             <div class="flex items-center gap-2">
-                <span class="px-2 py-0.5 rounded-full bg-indigo-500/30 text-indigo-200 text-[10px] font-bold tracking-wider uppercase border border-indigo-400/30">
-                    2026 Edition
+                <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px] font-bold tracking-wider uppercase border border-emerald-500/30">
+                    30-Day Zero-Risk Pilot
                 </span>
                 <span class="font-medium text-slate-200">
-                    Schoollyx AI Suite with 38 modules & Genie AI assistant is now live for progressive K-12 institutions.
+                    Deploy Schoollyx for your campus with zero setup fee and free 48-hour data migration.
                 </span>
             </div>
             <div class="flex items-center gap-4 text-slate-300">
-                <a href="tel:+918754671568" class="hover:text-white flex items-center gap-1 transition">
+                <a href="tel:+918754671568" class="hover:text-white flex items-center gap-1.5 transition">
                     <i data-lucide="phone" class="w-3.5 h-3.5 text-emerald-400"></i>
-                    <span class="font-semibold">+91 8754671568</span>
+                    <span class="font-bold text-white">+91 8754671568</span>
                 </a>
                 <span class="text-slate-600">|</span>
-                <a href="assets/docs/Schoollyx_Catalog.pdf" target="_blank" download class="hover:text-white flex items-center gap-1 transition text-indigo-300 font-semibold">
-                    <i data-lucide="download" class="w-3.5 h-3.5"></i>
-                    <span>Official PDF Catalog</span>
+                <a href="https://maps.app.goo.gl/6Gky1rJjpNDoPung9?g_st=aw" target="_blank" class="hover:text-cyan-400 flex items-center gap-1 transition text-slate-300">
+                    <i data-lucide="map-pin" class="w-3.5 h-3.5 text-cyan-400"></i>
+                    <span>Nagercoil Campus</span>
                 </a>
             </div>
         </div>
     </div>
 
     <!-- ======================================================== -->
-    <!-- NAVIGATION BAR                                           -->
+    <!-- NAVIGATION BAR WITH LOGIN DROPDOWN & SCROLLSPY          -->
     <!-- ======================================================== -->
     <header class="sticky top-0 z-40 glass-nav transition-all">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
@@ -102,29 +102,62 @@
                 </div>
             </a>
 
-            <!-- Desktop Navigation Links -->
-            <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-600">
-                <a href="#modules" class="hover:text-indigo-600 transition">38 Modules</a>
-                <a href="#genie-ai" class="hover:text-indigo-600 flex items-center gap-1.5 transition text-indigo-600">
+            <!-- Desktop Navigation Links (with Scrollspy) -->
+            <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-600">
+                <a href="#modules" class="nav-link hover:text-indigo-600 transition">Capabilities</a>
+                <a href="#genie-ai" class="nav-link hover:text-indigo-600 flex items-center gap-1.5 transition text-indigo-600">
                     <i data-lucide="sparkles" class="w-4 h-4 text-cyan-500"></i>
                     <span>Genie AI</span>
                 </a>
-                <a href="#mobile-apps" class="hover:text-indigo-600 transition">Mobile Apps</a>
-                <a href="#roi-calculator" class="hover:text-indigo-600 transition">ROI Calculator</a>
-                <a href="#compare" class="hover:text-indigo-600 transition">Why Us</a>
-                <a href="#faq" class="hover:text-indigo-600 transition">FAQ</a>
+                <a href="#mobile-apps" class="nav-link hover:text-indigo-600 transition">Mobile Apps</a>
+                <a href="#groups" class="nav-link hover:text-indigo-600 transition">Campus Groups</a>
+                <a href="#migration" class="nav-link hover:text-indigo-600 transition">48h Migration</a>
+                <a href="#roi-calculator" class="nav-link hover:text-indigo-600 transition">ROI Calculator</a>
+                <a href="#contact" class="nav-link hover:text-indigo-600 transition">Contact</a>
             </nav>
 
-            <!-- CTA Buttons & Package Cart Dock -->
+            <!-- Actions: Login Dropdown + Custom Package Cart + Book Demo -->
             <div class="flex items-center gap-3">
-                <!-- Custom Package Counter -->
+                <!-- Portal Login Dropdown (CREDIBILITY BOOSTER) -->
+                <div class="relative group">
+                    <button class="px-3.5 py-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-bold flex items-center gap-1.5 transition shadow-sm">
+                        <i data-lucide="log-in" class="w-4 h-4 text-indigo-600"></i>
+                        <span>Login</span>
+                        <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-slate-400 group-hover:rotate-180 transition-transform"></i>
+                    </button>
+                    <!-- Dropdown Menu -->
+                    <div class="absolute right-0 mt-2 w-56 rounded-2xl bg-white border border-slate-200 shadow-xl py-2 hidden group-hover:block transition-all z-50">
+                        <div class="px-4 py-2 border-b border-slate-100 text-[11px] font-bold text-slate-400 uppercase tracking-wider">
+                            Select Institutional Portal
+                        </div>
+                        <button onclick="window.openLoginModal('admin')" class="w-full text-left px-4 py-2.5 text-xs font-semibold text-slate-700 hover:bg-indigo-50 hover:text-indigo-600 flex items-center gap-2.5 transition">
+                            <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
+                            <span>School Admin Portal</span>
+                        </button>
+                        <button onclick="window.openLoginModal('teacher')" class="w-full text-left px-4 py-2.5 text-xs font-semibold text-slate-700 hover:bg-indigo-50 hover:text-indigo-600 flex items-center gap-2.5 transition">
+                            <span class="w-2 h-2 rounded-full bg-cyan-500"></span>
+                            <span>Teacher & Staff Portal</span>
+                        </button>
+                        <button onclick="window.openLoginModal('parent')" class="w-full text-left px-4 py-2.5 text-xs font-semibold text-slate-700 hover:bg-indigo-50 hover:text-indigo-600 flex items-center gap-2.5 transition">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                            <span>Parent & Guardian Gateway</span>
+                        </button>
+                        <button onclick="window.openLoginModal('student')" class="w-full text-left px-4 py-2.5 text-xs font-semibold text-slate-700 hover:bg-indigo-50 hover:text-indigo-600 flex items-center gap-2.5 transition">
+                            <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                            <span>Student Learning Portal</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Custom Package Cart Counter -->
                 <button 
                     onclick="window.openQuoteDrawer()" 
-                    class="relative px-3.5 py-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-bold flex items-center gap-2 transition shadow-sm">
+                    class="relative px-3.5 py-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-bold flex items-center gap-2 transition shadow-sm"
+                    title="View Selected Modules">
                     <i data-lucide="layers" class="w-4 h-4 text-indigo-600"></i>
                     <span class="hidden sm:inline">My Package</span>
                     <span id="quote-count-badge" class="w-5 h-5 rounded-full bg-indigo-600 text-white text-[10px] flex items-center justify-center font-extrabold">
-                        8
+                        6
                     </span>
                 </button>
 
@@ -133,17 +166,17 @@
                     onclick="window.openDemoModal()" 
                     class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 text-white text-xs font-bold shadow-md shadow-indigo-500/25 transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
                     <i data-lucide="calendar" class="w-4 h-4"></i>
-                    <span>Book Live Demo</span>
+                    <span class="hidden md:inline">Book Live Demo</span>
+                    <span class="md:hidden">Demo</span>
                 </button>
             </div>
         </div>
     </header>
 
     <!-- ======================================================== -->
-    <!-- HERO SECTION (Vertical Slice 1)                          -->
+    <!-- HERO SECTION                                             -->
     <!-- ======================================================== -->
     <section class="relative hero-mesh-bg text-white pt-20 pb-28 overflow-hidden">
-        <!-- Ambient background glow rings -->
         <div class="absolute -top-40 -left-40 w-96 h-96 bg-indigo-600/30 rounded-full blur-[120px] pointer-events-none"></div>
         <div class="absolute top-1/2 -right-40 w-96 h-96 bg-cyan-500/20 rounded-full blur-[140px] pointer-events-none"></div>
 
@@ -151,12 +184,11 @@
             <!-- Eyebrow Pill -->
             <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-slate-700 text-xs font-semibold text-slate-300 mb-8 backdrop-blur-md">
                 <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span>The Complete AI-Powered School Operating System</span>
+                <span>The Unified AI-Powered School Operating System</span>
                 <span class="text-slate-500">|</span>
-                <span class="text-cyan-400 font-mono">v4.2 Production</span>
+                <span class="text-cyan-400 font-mono">2026 Enterprise Edition</span>
             </div>
 
-            <!-- Headline & Subtitle -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-7 space-y-6">
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15]">
@@ -165,23 +197,22 @@
                     </h1>
                     
                     <p class="text-base sm:text-lg text-slate-300 max-w-2xl font-normal leading-relaxed">
-                        Replace fragmented software with one unified platform. 
-                        <strong>38 integrated modules</strong> covering 360° student records, automated fee collections with <strong>10+ payment gateways</strong>, real-time GPS bus tracking, and our signature <strong>Genie AI Assistant</strong> that answers queries in under 2 seconds.
+                        Replace slow, fragmented legacy software with one seamless operating system. Complete student lifecycle records, automated fee collections with <strong>10+ payment gateways</strong>, live GPS transit security, and our signature <strong>Genie AI Assistant</strong> answering administrative questions in under 2 seconds.
                     </p>
 
-                    <!-- Key Metrics Grid -->
+                    <!-- Key Institutional Metrics -->
                     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2">
                         <div class="p-4 rounded-2xl glass-panel-dark border border-slate-800">
-                            <div class="text-2xl sm:text-3xl font-extrabold text-white">38+</div>
-                            <div class="text-xs text-slate-400 mt-1">Connected Modules</div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-white">10+</div>
+                            <div class="text-xs text-slate-400 mt-1">Payment Gateways</div>
                         </div>
                         <div class="p-4 rounded-2xl glass-panel-dark border border-slate-800">
                             <div class="text-2xl sm:text-3xl font-extrabold text-cyan-400">&lt;2s</div>
                             <div class="text-xs text-slate-400 mt-1">Genie AI Response</div>
                         </div>
                         <div class="p-4 rounded-2xl glass-panel-dark border border-slate-800">
-                            <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400">10+</div>
-                            <div class="text-xs text-slate-400 mt-1">Payment Gateways</div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400">99.9%</div>
+                            <div class="text-xs text-slate-400 mt-1">Attendance Accuracy</div>
                         </div>
                         <div class="p-4 rounded-2xl glass-panel-dark border border-slate-800">
                             <div class="text-2xl sm:text-3xl font-extrabold text-amber-400">70%</div>
@@ -202,30 +233,27 @@
                             href="#modules" 
                             class="px-6 py-4 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700 text-slate-200 font-bold text-sm transition flex items-center gap-2">
                             <i data-lucide="grid" class="w-4 h-4 text-cyan-400"></i>
-                            <span>Explore 38 Modules</span>
+                            <span>Explore Capabilities</span>
                         </a>
 
-                        <a 
-                            href="assets/docs/Schoollyx_Catalog.pdf" 
-                            target="_blank" 
-                            download 
+                        <button 
+                            onclick="window.openWhitepaperModal()" 
                             class="px-5 py-4 rounded-xl text-slate-400 hover:text-white font-semibold text-sm transition flex items-center gap-1.5">
-                            <i data-lucide="file-down" class="w-4 h-4"></i>
-                            <span>Download PDF</span>
-                        </a>
+                            <i data-lucide="file-text" class="w-4 h-4 text-indigo-400"></i>
+                            <span>Implementation Guide</span>
+                        </button>
                     </div>
 
                     <!-- Trust statement -->
                     <div class="flex items-center gap-3 pt-2 text-xs text-slate-400">
-                        <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
-                        <span>Zero setup fee for approved K-12 institutions · Free data migration from legacy software</span>
+                        <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+                        <span>Zero setup fee for approved K-12 institutions · Free 48-hour data migration from legacy software</span>
                     </div>
                 </div>
 
                 <!-- Hero Dashboard Showcase Visual -->
                 <div class="lg:col-span-5 relative">
                     <div class="relative mx-auto rounded-2xl p-2 bg-gradient-to-b from-slate-700/60 to-slate-900/90 border border-slate-700/80 shadow-2xl glow-primary">
-                        <!-- Window Chrome -->
                         <div class="flex items-center justify-between px-3 py-2 border-b border-slate-700/50 mb-2">
                             <div class="flex items-center gap-1.5">
                                 <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
@@ -236,7 +264,6 @@
                             <div class="w-8"></div>
                         </div>
 
-                        <!-- Real Generated Dashboard Visual -->
                         <img 
                             src="assets/images/hero_dashboard.jpg" 
                             alt="Schoollyx SaaS Executive Dashboard" 
@@ -276,67 +303,205 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center items-center">
                 <div class="flex flex-col items-center">
-                    <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Curriculum Ready</span>
-                    <span class="text-sm font-extrabold text-slate-800 mt-1">CBSE, ICSE & State</span>
+                    <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Curriculum Standard</span>
+                    <span class="text-sm font-extrabold text-slate-800 mt-1 flex items-center gap-1">
+                        <i data-lucide="award" class="w-4 h-4 text-indigo-600"></i>
+                        <span>CBSE, ICSE & State</span>
+                    </span>
                 </div>
                 <div class="flex flex-col items-center">
-                    <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Payments</span>
-                    <span class="text-sm font-extrabold text-slate-800 mt-1">Razorpay, PhonePe & POS</span>
+                    <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Payments & POS</span>
+                    <span class="text-sm font-extrabold text-slate-800 mt-1 flex items-center gap-1">
+                        <i data-lucide="credit-card" class="w-4 h-4 text-emerald-600"></i>
+                        <span>Razorpay, PhonePe, POS</span>
+                    </span>
                 </div>
                 <div class="flex flex-col items-center">
-                    <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Communication</span>
-                    <span class="text-sm font-extrabold text-slate-800 mt-1">WhatsApp Business API</span>
+                    <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Parent Channel</span>
+                    <span class="text-sm font-extrabold text-slate-800 mt-1 flex items-center gap-1">
+                        <i data-lucide="message-circle" class="w-4 h-4 text-emerald-500"></i>
+                        <span>WhatsApp Cloud API</span>
+                    </span>
                 </div>
                 <div class="flex flex-col items-center">
-                    <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Security</span>
-                    <span class="text-sm font-extrabold text-slate-800 mt-1">Role-Based & Encrypted</span>
+                    <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Data Protection</span>
+                    <span class="text-sm font-extrabold text-slate-800 mt-1 flex items-center gap-1">
+                        <i data-lucide="lock" class="w-4 h-4 text-cyan-600"></i>
+                        <span>AES-256 Encrypted</span>
+                    </span>
                 </div>
                 <div class="col-span-2 md:col-span-1 flex flex-col items-center">
-                    <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Support</span>
-                    <span class="text-sm font-extrabold text-emerald-600 mt-1">24/7 Dedicated Manager</span>
+                    <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Dedicated Support</span>
+                    <span class="text-sm font-extrabold text-emerald-600 mt-1 flex items-center gap-1">
+                        <i data-lucide="headphones" class="w-4 h-4 text-emerald-600"></i>
+                        <span>24/7 Campus Manager</span>
+                    </span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ======================================================== -->
-    <!-- 38-MODULE INTERACTIVE CATALOG EXPLORER (Slice 2)        -->
+    <!-- 48-HOUR DATA MIGRATION BANNER (MIGRATION ANXIETY CURE)    -->
     <!-- ======================================================== -->
-    <section id="modules" class="py-20 bg-slate-50 relative">
+    <section id="migration" class="py-14 bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Section Header -->
-            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-                <div>
-                    <div class="inline-flex items-center gap-2 text-xs font-bold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full mb-3">
-                        <i data-lucide="layers" class="w-3.5 h-3.5"></i>
-                        <span>COMPLETE 38-MODULE SPECIFICATION</span>
-                    </div>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-                        Every Tool Your School Needs. Zero Bloat.
-                    </h2>
-                    <p class="text-slate-600 text-sm sm:text-base mt-2 max-w-2xl">
-                        Filter by functional pillar, search any keyword or feature, and click any module card to inspect deep specifications or add it to your custom school package.
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-4 space-y-2">
+                    <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider flex items-center gap-1.5">
+                        <i data-lucide="check-circle" class="w-4 h-4"></i>
+                        <span>Zero Data Loss Guarantee</span>
+                    </span>
+                    <h3 class="text-2xl font-extrabold tracking-tight">
+                        Switching From Your Old ERP? Live in 48 Hours.
+                    </h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Never worry about losing historical student records or pending fees. Our dedicated engineering team migrates all your school data with 100% verification.
                     </p>
                 </div>
 
-                <!-- Package Quick Actions -->
+                <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2">
+                        <div class="w-8 h-8 rounded-lg bg-indigo-600 text-white text-xs font-bold flex items-center justify-center">
+                            01
+                        </div>
+                        <h4 class="text-sm font-bold text-white">Upload Excel / CSV</h4>
+                        <p class="text-xs text-slate-300">Export student profiles, parent contacts, and fee registers from your legacy system.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2">
+                        <div class="w-8 h-8 rounded-lg bg-cyan-600 text-white text-xs font-bold flex items-center justify-center">
+                            02
+                        </div>
+                        <h4 class="text-sm font-bold text-white">Automated AI Audit</h4>
+                        <p class="text-xs text-slate-300">Our engine scans and corrects duplicates, phone formatting, and historical balance errors.</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2">
+                        <div class="w-8 h-8 rounded-lg bg-emerald-600 text-white text-xs font-bold flex items-center justify-center">
+                            03
+                        </div>
+                        <h4 class="text-sm font-bold text-white">Campus Goes Live</h4>
+                        <p class="text-xs text-slate-300">Teachers mark attendance, parents receive WhatsApp credentials, and fee collections begin.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- INTERACTIVE CATALOG EXPLORER WITH QUICK PRESETS          -->
+    <!-- ======================================================== -->
+    <section id="modules" class="py-20 bg-slate-50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+                <div>
+                    <div class="inline-flex items-center gap-2 text-xs font-bold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full mb-3">
+                        <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+                        <span>MODULAR CAMPUS ARCHITECTURE</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                        Modular Capabilities Tailored To Your School
+                    </h2>
+                    <p class="text-slate-600 text-sm sm:text-base mt-2 max-w-2xl">
+                        Choose a quick institutional preset below or hand-pick individual modules. Click any capability to inspect detailed features or add to your proposal.
+                    </p>
+                </div>
+
                 <div class="flex items-center gap-3">
                     <button 
                         onclick="window.selectAllModules()" 
                         class="text-xs font-bold text-indigo-600 hover:text-indigo-800 bg-indigo-50 hover:bg-indigo-100 px-3.5 py-2 rounded-xl transition flex items-center gap-1.5">
                         <i data-lucide="check-check" class="w-4 h-4"></i>
-                        <span>Select All 38</span>
+                        <span>Select All</span>
                     </button>
                     <button 
                         onclick="window.resetModuleSelection()" 
                         class="text-xs font-semibold text-slate-500 hover:text-slate-700 px-3 py-2 rounded-xl transition">
-                        Clear
+                        Clear Selection
                     </button>
                 </div>
             </div>
 
+            <!-- Quick Presets Row (REDUCES COGNITIVE LOAD) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                <!-- Preset 1 -->
+                <button 
+                    onclick="window.applyPreset('starter')" 
+                    data-preset="starter" 
+                    class="preset-btn ring-2 ring-indigo-600 bg-indigo-50 text-left p-5 rounded-2xl border border-slate-200 shadow-sm transition hover:shadow-md flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-extrabold text-emerald-600 uppercase tracking-wider flex items-center gap-1">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                                Starter Essentials
+                            </span>
+                            <span class="text-[11px] font-bold text-slate-500">Core Pack</span>
+                        </div>
+                        <h4 class="text-sm font-bold text-slate-900">Student Info, Admissions, Fees & WhatsApp</h4>
+                        <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                            Perfect for modernizing daily basics: 100% paperless admissions, omnichannel fees & instant attendance alerts.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-200/80 flex items-center justify-between text-xs font-bold text-indigo-600">
+                        <span>Load This Preset</span>
+                        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                    </div>
+                </button>
+
+                <!-- Preset 2 -->
+                <button 
+                    onclick="window.applyPreset('academic')" 
+                    data-preset="academic" 
+                    class="preset-btn bg-white text-left p-5 rounded-2xl border border-slate-200 shadow-sm transition hover:shadow-md flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-extrabold text-amber-600 uppercase tracking-wider flex items-center gap-1">
+                                <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                                Academic Pro
+                            </span>
+                            <span class="text-[11px] font-bold text-slate-500">Curriculum & Apps</span>
+                        </div>
+                        <h4 class="text-sm font-bold text-slate-900">CBSE Exams, Homework, Timetable & Apps</h4>
+                        <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                            Includes complete academic suite plus native Parent and Teacher mobile apps for homework and instant grades.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-200/80 flex items-center justify-between text-xs font-bold text-indigo-600">
+                        <span>Load This Preset</span>
+                        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                    </div>
+                </button>
+
+                <!-- Preset 3 -->
+                <button 
+                    onclick="window.applyPreset('enterprise')" 
+                    data-preset="enterprise" 
+                    class="preset-btn bg-white text-left p-5 rounded-2xl border border-slate-200 shadow-sm transition hover:shadow-md flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-extrabold text-indigo-600 uppercase tracking-wider flex items-center gap-1">
+                                <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
+                                Complete Enterprise Suite
+                            </span>
+                            <span class="text-[11px] font-bold text-slate-500">Full Operating System</span>
+                        </div>
+                        <h4 class="text-sm font-bold text-slate-900">Genie AI, Live GPS Bus, Multi-Branch & LMS</h4>
+                        <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                            Total institutional command center with natural language AI, multi-campus governance & 100+ document themes.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-200/80 flex items-center justify-between text-xs font-bold text-indigo-600">
+                        <span>Load This Preset</span>
+                        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                    </div>
+                </button>
+            </div>
+
             <!-- Sticky Category Filter Pills & Search Bar -->
-            <div class="bg-white/90 backdrop-blur-md p-4 rounded-2xl border border-slate-200/80 shadow-sm mb-8 space-y-4">
+            <div class="bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-slate-200/80 shadow-sm mb-8 space-y-4">
                 <div class="flex flex-col md:flex-row items-center justify-between gap-4">
                     <!-- Search Input -->
                     <div class="relative w-full md:w-96">
@@ -344,35 +509,36 @@
                         <input 
                             id="module-search" 
                             type="text" 
-                            placeholder="Search by module name, feature, or metric (e.g. GPS, WhatsApp, fee)..." 
+                            placeholder="Search by capability, keyword (e.g. GPS, WhatsApp, fee)..." 
                             class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-slate-50/50"
                         />
                     </div>
 
                     <!-- Module Counter Display -->
                     <div id="module-count-display" class="text-xs font-bold text-slate-500 self-end md:self-center">
-                        Showing 38 of 38 Modules
+                        Showing All Capabilities
                     </div>
                 </div>
 
-                <!-- Category Pills (Horizontal scrollable on mobile) -->
-                <div id="filter-pills" class="flex items-center gap-2 overflow-x-auto pb-1 pt-1 no-scrollbar">
-                    <!-- Dynamic rendering by app.js -->
+                <!-- Category Pills (Horizontal scrollable with fade indicator) -->
+                <div class="scroll-fade-container">
+                    <div id="filter-pills" class="flex items-center gap-2 overflow-x-auto pb-1 pt-1 no-scrollbar">
+                        <!-- Dynamic rendering by app.js -->
+                    </div>
                 </div>
             </div>
 
             <!-- Dynamic Modules Grid -->
             <div id="modules-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Injected dynamically by app.js with high fidelity cards -->
+                <!-- Injected dynamically by app.js -->
             </div>
         </div>
     </section>
 
     <!-- ======================================================== -->
-    <!-- GENIE AI ASSISTANT SPOTLIGHT (Slice 3)                   -->
+    <!-- GENIE AI ASSISTANT SPOTLIGHT                            -->
     <!-- ======================================================== -->
     <section id="genie-ai" class="py-24 bg-navy-900 text-white relative overflow-hidden">
-        <!-- Glow accents -->
         <div class="absolute -right-20 top-10 w-80 h-80 bg-cyan-500/20 rounded-full blur-[100px] pointer-events-none"></div>
         <div class="absolute -left-20 bottom-10 w-80 h-80 bg-indigo-600/20 rounded-full blur-[100px] pointer-events-none"></div>
 
@@ -383,7 +549,7 @@
                 <div class="lg:col-span-6 space-y-6">
                     <div class="inline-flex items-center gap-2 text-xs font-bold text-cyan-400 bg-cyan-950/60 border border-cyan-800/60 px-3 py-1 rounded-full">
                         <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
-                        <span>MODULE #31 · COMPETITIVE ADVANTAGE</span>
+                        <span>COMPETITIVE ADVANTAGE</span>
                     </div>
 
                     <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
@@ -402,7 +568,7 @@
                                 <i data-lucide="zap" class="w-4 h-4"></i>
                             </span>
                             <div>
-                                <strong class="text-white">Sub-2-Second Latency:</strong> Proprietary in-memory indexing delivers answers 10x faster than traditional SQL reports.
+                                <strong class="text-white">Sub-2-Second Latency:</strong> In-memory data querying delivers answers 10x faster than traditional SQL reports.
                             </div>
                         </div>
 
@@ -411,7 +577,7 @@
                                 <i data-lucide="message-square" class="w-4 h-4"></i>
                             </span>
                             <div>
-                                <strong class="text-white">Natural Language Prompts:</strong> Type or voice-speak: <em>"Who hasn't paid fee for Term 2?"</em> or <em>"Print Class 9 admit cards"</em>.
+                                <strong class="text-white">Natural Language Queries:</strong> Type or speak: <em>"Who hasn't paid fee for Term 2?"</em> or <em>"Print Class 9 admit cards"</em>.
                             </div>
                         </div>
 
@@ -484,13 +650,13 @@
                                 </div>
                             </div>
 
-                            <!-- Loader (hidden by default) -->
+                            <!-- Loader -->
                             <div id="genie-sim-loader" class="hidden flex items-center gap-2 text-xs text-cyan-400 py-3">
                                 <i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i>
                                 <span>Genie is querying live database...</span>
                             </div>
 
-                            <!-- Result Card Area (filled dynamically) -->
+                            <!-- Result Card Area -->
                             <div id="genie-sim-result">
                                 <!-- Populated dynamically by app.js -->
                             </div>
@@ -503,14 +669,14 @@
     </section>
 
     <!-- ======================================================== -->
-    <!-- MOBILE APPS SUITE SHOWCASE (Slice 4)                     -->
+    <!-- MOBILE APPS SUITE SHOWCASE                              -->
     <!-- ======================================================== -->
     <section id="mobile-apps" class="py-24 bg-white relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <div class="inline-flex items-center gap-2 text-xs font-bold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full mb-3">
                     <i data-lucide="smartphone" class="w-3.5 h-3.5"></i>
-                    <span>MODULES #36, #37, #38 · NATIVE MOBILE APPS</span>
+                    <span>NATIVE MOBILE APPLICATIONS</span>
                 </div>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
                     Dedicated Native Apps for Every Stakeholder
@@ -522,13 +688,13 @@
                 <!-- Interactive App Tab Switcher -->
                 <div class="inline-flex p-1.5 rounded-2xl bg-slate-100 mt-8 border border-slate-200">
                     <button onclick="window.switchAppPreview('parent')" data-tab="parent" class="app-tab-btn px-5 py-2.5 rounded-xl font-bold text-xs bg-indigo-600 text-white shadow-md shadow-indigo-500/25 transition">
-                        Parent Mobile App (#36)
+                        Parent Mobile App
                     </button>
                     <button onclick="window.switchAppPreview('teacher')" data-tab="teacher" class="app-tab-btn px-5 py-2.5 rounded-xl font-bold text-xs text-slate-600 hover:bg-slate-200 transition">
-                        Teacher Mobile App (#37)
+                        Teacher Mobile App
                     </button>
                     <button onclick="window.switchAppPreview('admin')" data-tab="admin" class="app-tab-btn px-5 py-2.5 rounded-xl font-bold text-xs text-slate-600 hover:bg-slate-200 transition">
-                        Admin Executive App (#38)
+                        Admin Executive App
                     </button>
                 </div>
             </div>
@@ -542,7 +708,6 @@
                         <div class="phone-camera"></div>
                     </div>
                     <div class="phone-screen p-4 space-y-3">
-                        <!-- App Header -->
                         <div class="flex items-center justify-between">
                             <div>
                                 <span class="text-[10px] text-slate-400 font-semibold uppercase">Parent Portal</span>
@@ -614,7 +779,6 @@
                             <span class="w-7 h-7 rounded-full bg-cyan-100 text-cyan-700 flex items-center justify-center font-bold text-xs">TR</span>
                         </div>
 
-                        <!-- 30-Sec Attendance Marker -->
                         <div class="p-3 rounded-xl bg-indigo-50 border border-indigo-200 space-y-2">
                             <div class="flex items-center justify-between text-[11px] font-bold text-indigo-900">
                                 <span>Period 1: Mathematics</span>
@@ -639,10 +803,9 @@
                             </button>
                         </div>
 
-                        <!-- Homework Publisher -->
                         <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
                             <div class="text-[11px] font-bold text-slate-800 mb-1">Quick Homework Post</div>
-                            <div class="text-[10px] text-slate-500 mb-2">Attach photo & set deadline for tomorrow</div>
+                            <div class="text-[10px] text-slate-500 mb-2">Attach board photo & set deadline</div>
                             <button class="w-full py-1.5 border border-dashed border-slate-300 rounded-lg text-[10px] font-semibold text-slate-600 flex items-center justify-center gap-1">
                                 <i data-lucide="camera" class="w-3.5 h-3.5"></i>
                                 <span>Snap Board Photo</span>
@@ -660,12 +823,11 @@
                         <div class="flex items-center justify-between">
                             <div>
                                 <span class="text-[10px] text-slate-400 font-semibold uppercase">Admin Executive</span>
-                                <div class="text-xs font-extrabold text-slate-800">Daily School Pulse</div>
+                                <div class="text-xs font-extrabold text-slate-800">Daily Campus Pulse</div>
                             </div>
                             <span class="w-7 h-7 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xs">AD</span>
                         </div>
 
-                        <!-- Real-time Revenue Gauge -->
                         <div class="p-3 rounded-xl bg-slate-900 text-white space-y-1">
                             <span class="text-[10px] text-slate-400">Today's Fee Collections</span>
                             <div class="text-lg font-extrabold text-emerald-400">₹3,42,800</div>
@@ -675,7 +837,6 @@
                             </div>
                         </div>
 
-                        <!-- Campus KPI Grid -->
                         <div class="grid grid-cols-2 gap-2 text-center">
                             <div class="p-2.5 rounded-xl bg-slate-100">
                                 <div class="text-xs font-extrabold text-slate-800">2,410 / 2,450</div>
@@ -687,7 +848,6 @@
                             </div>
                         </div>
 
-                        <!-- One-Tap Emergency Broadcast -->
                         <div class="p-3 rounded-xl bg-rose-50 border border-rose-200">
                             <div class="text-[11px] font-bold text-rose-900 mb-1">Instant Notice Broadcast</div>
                             <button class="w-full py-1.5 rounded-lg bg-rose-600 text-white text-[10px] font-bold">
@@ -702,13 +862,89 @@
     </section>
 
     <!-- ======================================================== -->
-    <!-- ROI & SAVINGS INTERACTIVE CALCULATOR (Slice 5)          -->
+    <!-- MULTI-BRANCH & CAMPUS GROUPS SPOTLIGHT (HIGH-TICKET)     -->
+    <!-- ======================================================== -->
+    <section id="groups" class="py-20 bg-slate-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-5">
+                    <div class="inline-flex items-center gap-2 text-xs font-bold text-amber-400 bg-amber-950/60 border border-amber-800/60 px-3 py-1 rounded-full">
+                        <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+                        <span>MULTI-BRANCH ARCHITECTURE</span>
+                    </div>
+
+                    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight">
+                        Built for School Groups & Educational Trusts.
+                    </h2>
+
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Operating 2 to 20+ campuses? Stop dealing with fragmented software. Schoollyx provides a single master super-admin console with complete data segregation, group-level financial consolidation, and seamless student/teacher transfers.
+                    </p>
+
+                    <div class="space-y-3 pt-2">
+                        <div class="flex items-center gap-3 text-xs font-bold text-slate-200">
+                            <i data-lucide="check-circle" class="w-4 h-4 text-amber-400"></i>
+                            <span>Consolidated group fee collections & multi-branch balance sheets</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-xs font-bold text-slate-200">
+                            <i data-lucide="check-circle" class="w-4 h-4 text-amber-400"></i>
+                            <span>One-click cross-campus student & staff transfers with zero re-entry</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-xs font-bold text-slate-200">
+                            <i data-lucide="check-circle" class="w-4 h-4 text-amber-400"></i>
+                            <span>Unified curriculum rollout and comparative academic benchmarks</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <button onclick="window.openDemoModal()" class="px-6 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs shadow-lg shadow-amber-500/25 transition">
+                            Request Educational Trust Walkthrough
+                        </button>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6">
+                    <div class="p-6 rounded-3xl bg-slate-950 border border-slate-800 space-y-4">
+                        <div class="flex items-center justify-between pb-3 border-b border-slate-800 text-xs">
+                            <span class="font-bold text-slate-300">Central Trust Command</span>
+                            <span class="text-emerald-400 font-mono">4 Campuses Synced</span>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between text-xs">
+                                <div>
+                                    <div class="font-bold text-white">Campus 1: Nagercoil Main</div>
+                                    <div class="text-[10px] text-slate-400">1,850 Students · 98.4% Attendance</div>
+                                </div>
+                                <span class="text-xs font-extrabold text-emerald-400">₹32.4L Collected</span>
+                            </div>
+                            <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between text-xs">
+                                <div>
+                                    <div class="font-bold text-white">Campus 2: City North Academy</div>
+                                    <div class="text-[10px] text-slate-400">920 Students · 99.1% Attendance</div>
+                                </div>
+                                <span class="text-xs font-extrabold text-emerald-400">₹18.1L Collected</span>
+                            </div>
+                            <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between text-xs">
+                                <div>
+                                    <div class="font-bold text-white">Campus 3: International Branch</div>
+                                    <div class="text-[10px] text-slate-400">1,240 Students · 97.9% Attendance</div>
+                                </div>
+                                <span class="text-xs font-extrabold text-emerald-400">₹26.8L Collected</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- ROI & SAVINGS INTERACTIVE CALCULATOR                    -->
     <!-- ======================================================== -->
     <section id="roi-calculator" class="py-24 bg-slate-100/70 border-y border-slate-200 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
-                <!-- Left: Explanation -->
                 <div class="lg:col-span-5 space-y-5">
                     <div class="inline-flex items-center gap-2 text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
                         <i data-lucide="calculator" class="w-3.5 h-3.5"></i>
@@ -739,10 +975,8 @@
                     </div>
                 </div>
 
-                <!-- Right: Interactive Slider Card -->
                 <div class="lg:col-span-7">
                     <div class="p-8 rounded-3xl bg-white border border-slate-200 shadow-xl space-y-6">
-                        <!-- Slider 1: Students -->
                         <div>
                             <div class="flex items-center justify-between text-sm font-bold text-slate-800 mb-2">
                                 <span>Total Student Strength:</span>
@@ -764,7 +998,6 @@
                             </div>
                         </div>
 
-                        <!-- Slider 2: Annual Fee -->
                         <div>
                             <div class="flex items-center justify-between text-sm font-bold text-slate-800 mb-2">
                                 <span>Average Annual Fee per Student:</span>
@@ -786,7 +1019,6 @@
                             </div>
                         </div>
 
-                        <!-- Results Panel -->
                         <div class="pt-4 border-t border-slate-100">
                             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
                                 <div class="p-4 rounded-2xl bg-indigo-50/70 border border-indigo-100">
@@ -814,9 +1046,9 @@
     </section>
 
     <!-- ======================================================== -->
-    <!-- COMPARISON TABLE: SCHOOLLYX VS LEGACY ERP (Slice 6)      -->
+    <!-- COMPARISON TABLE: SCHOOLLYX VS LEGACY                    -->
     <!-- ======================================================== -->
-    <section id="compare" class="py-24 bg-white">
+    <section class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <div class="inline-flex items-center gap-2 text-xs font-bold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full mb-3">
@@ -888,7 +1120,7 @@
                             <td class="p-5 text-slate-400">Manual Word/Excel</td>
                         </tr>
                         <tr>
-                            <td class="p-5 font-bold text-slate-900">Multi-Branch Management (#30)</td>
+                            <td class="p-5 font-bold text-slate-900">Multi-Branch Management</td>
                             <td class="p-5 bg-indigo-50/30 text-emerald-600 font-bold flex items-center gap-2">
                                 <i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i>
                                 <span>One Master Control Dashboard</span>
@@ -903,59 +1135,115 @@
     </section>
 
     <!-- ======================================================== -->
-    <!-- FREQUENTLY ASKED QUESTIONS                              -->
+    <!-- CONTACT & GOOGLE MAPS SEGMENT (VERIFIED ADDRESS & LINK) -->
     <!-- ======================================================== -->
-    <section id="faq" class="py-24 bg-slate-50 border-t border-slate-200">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">
-                    Frequently Asked Questions
-                </h2>
-                <p class="text-slate-600 text-sm mt-2">
-                    Everything you need to know about switching your institution to Schoollyx.
-                </p>
-            </div>
+    <section id="contact" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Details -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="inline-flex items-center gap-2 text-xs font-bold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full">
+                        <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+                        <span>CAMPUS HEADQUARTERS</span>
+                    </div>
 
-            <div class="space-y-4">
-                <details class="group bg-white p-6 rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden">
-                    <summary class="flex items-center justify-between cursor-pointer font-bold text-slate-800 text-base">
-                        <span>How long does it take to migrate from our current software?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform group-open:rotate-180"></i>
-                    </summary>
-                    <p class="mt-4 text-sm text-slate-600 leading-relaxed">
-                        With Module #11 (Bulk Upload System), migrating student profiles, historical fee ledgers, and staff data takes under <strong>48 hours</strong>. Our dedicated onboarding engineers assist your team with Excel / CSV validation and verification free of charge.
-                    </p>
-                </details>
+                    <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">
+                        Visit or Connect With Our Onboarding Team
+                    </h2>
 
-                <details class="group bg-white p-6 rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden">
-                    <summary class="flex items-center justify-between cursor-pointer font-bold text-slate-800 text-base">
-                        <span>Can we choose only specific modules instead of all 38?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform group-open:rotate-180"></i>
-                    </summary>
-                    <p class="mt-4 text-sm text-slate-600 leading-relaxed">
-                        Yes! Schoollyx is completely modular. You can use our "My Package" builder to select only the modules your school needs right now (e.g. Fees, Attendance, and Parent App) and unlock other modules like LMS or Inventory whenever you wish.
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Ready to modernize your institution? Connect with our education consultants for an interactive demo, campus pricing proposal, or on-site consultation.
                     </p>
-                </details>
 
-                <details class="group bg-white p-6 rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden">
-                    <summary class="flex items-center justify-between cursor-pointer font-bold text-slate-800 text-base">
-                        <span>How does the WhatsApp notification system work?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform group-open:rotate-180"></i>
-                    </summary>
-                    <p class="mt-4 text-sm text-slate-600 leading-relaxed">
-                        We connect directly via official Meta WhatsApp Business Cloud API. Parents receive branded alerts with payment links, bus delay notifications, and attendance check-in confirmations right on their WhatsApp chats with a 98% open rate.
-                    </p>
-                </details>
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start gap-3.5 p-4 rounded-2xl bg-white border border-slate-200/90 shadow-sm">
+                            <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Physical Address</span>
+                                <h4 class="text-sm font-bold text-slate-900 mt-0.5">Hafzee Research Infopark</h4>
+                                <p class="text-xs text-slate-600 mt-0.5">
+                                    Priya Nagar, Nagercoil, Tamil Nadu 629002
+                                </p>
+                                <a href="https://maps.app.goo.gl/6Gky1rJjpNDoPung9?g_st=aw" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold text-indigo-600 hover:text-indigo-800 mt-2 transition">
+                                    <span>Open in Google Maps</span>
+                                    <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                                </a>
+                            </div>
+                        </div>
 
-                <details class="group bg-white p-6 rounded-2xl border border-slate-200 shadow-sm [&_summary::-webkit-details-marker]:hidden">
-                    <summary class="flex items-center justify-between cursor-pointer font-bold text-slate-800 text-base">
-                        <span>Is student data secure and compliant?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform group-open:rotate-180"></i>
-                    </summary>
-                    <p class="mt-4 text-sm text-slate-600 leading-relaxed">
-                        Absolutely. All database records are encrypted in transit (TLS 1.3) and at rest (AES-256). We enforce granular role-based permissions and daily automated backups with 99.9% uptime SLA.
-                    </p>
-                </details>
+                        <div class="flex items-start gap-3.5 p-4 rounded-2xl bg-white border border-slate-200/90 shadow-sm">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i data-lucide="phone-call" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Direct Phone & WhatsApp</span>
+                                <a href="tel:+918754671568" class="text-sm font-bold text-slate-900 hover:text-indigo-600 transition block mt-0.5">
+                                    +91 8754671568
+                                </a>
+                                <p class="text-xs text-slate-500 mt-0.5">
+                                    Available Mon–Sat: 8:30 AM – 7:30 PM IST
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3.5 p-4 rounded-2xl bg-white border border-slate-200/90 shadow-sm">
+                            <div class="w-10 h-10 rounded-xl bg-cyan-50 text-cyan-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Official Email</span>
+                                <a href="mailto:contact@schoollyx.in" class="text-sm font-bold text-slate-900 hover:text-indigo-600 transition block mt-0.5">
+                                    contact@schoollyx.in
+                                </a>
+                                <p class="text-xs text-slate-500 mt-0.5">
+                                    Inquiries & institutional RFPs
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Maps Embed & Interactive Card -->
+                <div class="lg:col-span-7">
+                    <div class="h-full min-h-[420px] rounded-3xl bg-white p-3 border border-slate-200 shadow-xl flex flex-col justify-between">
+                        <!-- Embedded Map Preview -->
+                        <div class="w-full h-80 rounded-2xl overflow-hidden relative border border-slate-200 bg-slate-100">
+                            <iframe 
+                                title="Schoollyx Office Location"
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                loading="lazy" 
+                                allowfullscreen 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.467472288339!2d77.4285!3d8.1833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b04f1003f02cfa3%3A0x71ad903de29f306d!2sHafzee%20Research%20Infopark!5e0!3m2!1sen!2sin!4v1700000000000">
+                            </iframe>
+                            <div class="absolute bottom-3 left-3 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-xl shadow-md border border-slate-200 text-xs font-bold text-slate-800 flex items-center gap-1.5">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                                <span>Hafzee Research Infopark, Nagercoil</span>
+                            </div>
+                        </div>
+
+                        <!-- Direction Bar -->
+                        <div class="pt-4 px-2 flex flex-col sm:flex-row items-center justify-between gap-3">
+                            <div>
+                                <div class="text-xs font-bold text-slate-800">Visiting from outside Nagercoil?</div>
+                                <div class="text-[11px] text-slate-500">Located in Priya Nagar with dedicated parking & conference facilities.</div>
+                            </div>
+                            <a 
+                                href="https://maps.app.goo.gl/6Gky1rJjpNDoPung9?g_st=aw" 
+                                target="_blank" 
+                                class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs shadow-md transition flex items-center justify-center gap-2 flex-shrink-0">
+                                <i data-lucide="navigation" class="w-4 h-4"></i>
+                                <span>Get Driving Directions</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -1021,29 +1309,29 @@
                 </div>
 
                 <div>
-                    <h4 class="font-bold text-white text-sm mb-4">Core Pillars</h4>
+                    <h4 class="font-bold text-white text-sm mb-4">Core Architecture</h4>
                     <ul class="space-y-2">
-                        <li><a href="#modules" class="hover:text-white transition">Core Administration (1-4)</a></li>
-                        <li><a href="#modules" class="hover:text-white transition">Finance & Accounts (3, 6)</a></li>
-                        <li><a href="#modules" class="hover:text-white transition">Transport & Safety (23, 28)</a></li>
-                        <li><a href="#modules" class="hover:text-white transition">Academic & LMS (12-18)</a></li>
-                        <li><a href="#modules" class="hover:text-white transition">Multi-Branch Control (#30)</a></li>
+                        <li><a href="#modules" class="hover:text-white transition">Core Administration</a></li>
+                        <li><a href="#modules" class="hover:text-white transition">Finance & Accounts</a></li>
+                        <li><a href="#modules" class="hover:text-white transition">Transport & Campus Safety</a></li>
+                        <li><a href="#modules" class="hover:text-white transition">Academic & LMS</a></li>
+                        <li><a href="#groups" class="hover:text-white transition">Multi-Branch Group Management</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="font-bold text-white text-sm mb-4">Intelligence & Apps</h4>
                     <ul class="space-y-2">
-                        <li><a href="#genie-ai" class="hover:text-white transition">Genie AI Assistant (#31)</a></li>
-                        <li><a href="#mobile-apps" class="hover:text-white transition">Parent Mobile App (#36)</a></li>
-                        <li><a href="#mobile-apps" class="hover:text-white transition">Teacher Mobile App (#37)</a></li>
-                        <li><a href="#mobile-apps" class="hover:text-white transition">Admin Mobile App (#38)</a></li>
+                        <li><a href="#genie-ai" class="hover:text-white transition">Genie AI Assistant</a></li>
+                        <li><a href="#mobile-apps" class="hover:text-white transition">Parent Mobile App</a></li>
+                        <li><a href="#mobile-apps" class="hover:text-white transition">Teacher Mobile App</a></li>
+                        <li><a href="#mobile-apps" class="hover:text-white transition">Admin Mobile App</a></li>
                         <li><a href="#roi-calculator" class="hover:text-white transition">Savings Calculator</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="font-bold text-white text-sm mb-4">Official Contact</h4>
+                    <h4 class="font-bold text-white text-sm mb-4">Headquarters</h4>
                     <div class="space-y-2">
                         <div class="flex items-center gap-2">
                             <i data-lucide="phone" class="w-4 h-4 text-emerald-400"></i>
@@ -1054,14 +1342,16 @@
                             <span class="text-slate-200">contact@schoollyx.in</span>
                         </div>
                         <div class="flex items-center gap-2">
-                            <i data-lucide="globe" class="w-4 h-4 text-cyan-400"></i>
-                            <span class="text-slate-200">www.schoollyx.in</span>
+                            <i data-lucide="map-pin" class="w-4 h-4 text-cyan-400"></i>
+                            <a href="https://maps.app.goo.gl/6Gky1rJjpNDoPung9?g_st=aw" target="_blank" class="text-slate-200 hover:underline">
+                                Priya Nagar, Nagercoil, TN 629002
+                            </a>
                         </div>
                         <div class="pt-3">
-                            <a href="assets/docs/Schoollyx_Catalog.pdf" target="_blank" download class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-indigo-400 hover:text-white transition text-[11px] font-semibold">
+                            <button onclick="window.openWhitepaperModal()" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-indigo-400 hover:text-white transition text-[11px] font-semibold">
                                 <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
-                                <span>Download PDF Catalog</span>
-                            </a>
+                                <span>2026 Implementation Guide</span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -1089,10 +1379,11 @@
         <!-- Package Trigger Button -->
         <button 
             onclick="window.openQuoteDrawer()" 
-            class="p-3.5 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white shadow-xl shadow-indigo-500/30 transition transform hover:scale-105 flex items-center justify-center relative">
+            class="p-3.5 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white shadow-xl shadow-indigo-500/30 transition transform hover:scale-105 flex items-center justify-center relative"
+            title="View Selected Modules">
             <i data-lucide="layers" class="w-5 h-5"></i>
             <span id="floating-quote-count" class="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-rose-500 text-white text-[10px] font-extrabold flex items-center justify-center shadow">
-                8
+                6
             </span>
         </button>
 
@@ -1101,26 +1392,81 @@
             href="https://wa.me/918754671568?text=Hello%20Schoollyx%20Team%2C%20I%20am%20interested%20in%20a%20demo%20of%20Schoollyx%20ERP." 
             target="_blank" 
             class="p-3.5 rounded-2xl bg-emerald-500 hover:bg-emerald-600 text-white shadow-xl shadow-emerald-500/30 transition transform hover:scale-105 flex items-center justify-center"
-            title="Chat with Schoollyx Team on WhatsApp">
+            title="Chat with Schoollyx Team on WhatsApp (+91 8754671568)">
             <i data-lucide="message-circle" class="w-5 h-5"></i>
         </a>
     </div>
 
     <!-- ======================================================== -->
-    <!-- MODAL 1: MODULE DEEP DIVE MODAL                         -->
+    <!-- MODAL 1: PORTAL LOGIN GATEWAY (SCHOOLITES PATTERN)      -->
+    <!-- ======================================================== -->
+    <div id="login-modal" class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-slate-200 relative">
+            <button onclick="window.closeLoginModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 p-1">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <div class="text-center mb-6">
+                <div class="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center mx-auto mb-3">
+                    <i data-lucide="shield-check" class="w-6 h-6"></i>
+                </div>
+                <h3 id="login-modal-role-title" class="text-xl font-extrabold text-slate-900">
+                    School Portal Login
+                </h3>
+                <p id="login-modal-role-desc" class="text-xs text-slate-500 mt-1">
+                    Enter your school subdomain and credentials to access your dashboard.
+                </p>
+            </div>
+
+            <!-- Role Selector Tabs inside Modal -->
+            <div class="flex p-1 rounded-xl bg-slate-100 mb-5">
+                <button onclick="window.openLoginModal('admin')" data-role="admin" class="login-role-tab flex-1 py-2 rounded-lg text-xs font-bold text-slate-600">Admin</button>
+                <button onclick="window.openLoginModal('teacher')" data-role="teacher" class="login-role-tab flex-1 py-2 rounded-lg text-xs font-bold text-slate-600">Teacher</button>
+                <button onclick="window.openLoginModal('parent')" data-role="parent" class="login-role-tab flex-1 py-2 rounded-lg text-xs font-bold text-slate-600">Parent</button>
+                <button onclick="window.openLoginModal('student')" data-role="student" class="login-role-tab flex-1 py-2 rounded-lg text-xs font-bold text-slate-600">Student</button>
+            </div>
+
+            <form onsubmit="window.submitLoginDemo(event)" class="space-y-3.5">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">School Subdomain</label>
+                    <div class="flex items-center rounded-xl border border-slate-200 overflow-hidden bg-slate-50">
+                        <input id="login-subdomain" type="text" placeholder="yourschool" class="w-full px-3 py-2.5 text-xs bg-transparent focus:outline-none" value="greenwood" />
+                        <span class="text-xs font-semibold text-slate-500 px-3 bg-slate-100 border-l border-slate-200">.schoollyx.in</span>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">User ID / Registered Phone</label>
+                    <input type="text" placeholder="Enter username or mobile" class="w-full px-3.5 py-2.5 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500" value="admin@greenwood.edu" />
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Password</label>
+                    <input type="password" placeholder="••••••••" class="w-full px-3.5 py-2.5 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500" value="password123" />
+                </div>
+
+                <button type="submit" class="w-full py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs shadow-lg shadow-indigo-500/25 transition mt-2 flex items-center justify-center gap-2">
+                    <i data-lucide="log-in" class="w-4 h-4"></i>
+                    <span>Secure Sign In</span>
+                </button>
+            </form>
+
+            <div class="pt-4 text-center text-xs text-slate-500">
+                New school? <button onclick="window.closeLoginModal(); window.openDemoModal();" class="text-indigo-600 font-bold hover:underline">Request pilot account</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- MODAL 2: MODULE DEEP DIVE MODAL                         -->
     <!-- ======================================================== -->
     <div id="module-detail-modal" class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm hidden flex items-center justify-center p-4">
         <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-200 relative animate-float">
-            <!-- Close Button -->
             <button onclick="window.closeModuleDetail()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 p-1 rounded-lg">
                 <i data-lucide="x" class="w-5 h-5"></i>
             </button>
 
-            <!-- Module Header -->
-            <div class="flex items-center gap-3 mb-4">
-                <span id="modal-module-id" class="w-9 h-9 rounded-xl bg-indigo-50 text-indigo-700 font-extrabold text-xs flex items-center justify-center">
-                    #01
-                </span>
+            <div class="flex items-center gap-3 mb-3">
                 <div>
                     <span id="modal-module-category" class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">
                         Core Administration
@@ -1131,7 +1477,7 @@
                 </div>
             </div>
 
-            <div class="flex items-center gap-2 mb-4">
+            <div class="flex items-center gap-2 mb-3">
                 <span id="modal-key-badge" class="key-badge text-[11px] font-bold px-2.5 py-0.5 rounded-full inline-flex items-center gap-1 shadow-sm">
                     ⭐ KEY MODULE
                 </span>
@@ -1144,19 +1490,22 @@
                 Tagline
             </p>
 
-            <p id="modal-module-desc" class="text-sm text-slate-600 leading-relaxed mb-6">
+            <p id="modal-module-desc" class="text-sm text-slate-600 leading-relaxed mb-4">
                 Module description goes here.
             </p>
 
-            <!-- Feature Bullet List -->
+            <!-- Compliance Badges Container -->
+            <div id="modal-badges-container" class="flex flex-wrap gap-2 mb-4">
+                <!-- Badges populated dynamically -->
+            </div>
+
             <div class="mb-6">
-                <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-3">Included Capabilities:</h4>
-                <ul id="modal-features-list" class="space-y-2 max-h-56 overflow-y-auto pr-2">
+                <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-2">Included Capabilities:</h4>
+                <ul id="modal-features-list" class="space-y-2 max-h-48 overflow-y-auto pr-2">
                     <!-- Populated dynamically -->
                 </ul>
             </div>
 
-            <!-- Modal Action Buttons -->
             <div class="space-y-2 pt-2 border-t border-slate-100">
                 <button id="modal-toggle-package-btn" class="w-full py-3 px-4 rounded-xl font-bold text-sm bg-indigo-600 text-white hover:bg-indigo-700 transition">
                     Add to Custom School Package
@@ -1169,8 +1518,7 @@
     <!-- DRAWER: CUSTOM SCHOOL PACKAGE BUILDER                   -->
     <!-- ======================================================== -->
     <div id="quote-drawer" class="fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-sm hidden flex justify-end">
-        <div class="bg-white w-full max-w-md h-full p-6 flex flex-col justify-between shadow-2xl animate-slide-in">
-            <!-- Drawer Header -->
+        <div class="bg-white w-full max-w-md h-full p-6 flex flex-col justify-between shadow-2xl">
             <div>
                 <div class="flex items-center justify-between pb-4 border-b border-slate-200">
                     <div class="flex items-center gap-2">
@@ -1183,17 +1531,15 @@
                 </div>
 
                 <div class="flex items-center justify-between py-3 text-xs font-semibold text-slate-500">
-                    <span id="quote-drawer-count">8 Selected</span>
-                    <button onclick="window.selectAllModules()" class="text-indigo-600 hover:underline">Select All 38</button>
+                    <span id="quote-drawer-count">6 Modules Selected</span>
+                    <button onclick="window.selectAllModules()" class="text-indigo-600 hover:underline font-bold">Select All</button>
                 </div>
 
-                <!-- Selected Module Items List -->
                 <div id="quote-selected-list" class="space-y-2 max-h-[40vh] overflow-y-auto pr-1">
                     <!-- Injected dynamically by app.js -->
                 </div>
             </div>
 
-            <!-- Drawer Form & Submit -->
             <div class="pt-4 border-t border-slate-200 space-y-3">
                 <div>
                     <label class="block text-xs font-bold text-slate-700 mb-1">School / Institution Name</label>
@@ -1219,7 +1565,7 @@
                 </button>
 
                 <p class="text-[10px] text-slate-400 text-center">
-                    Sends selected modules directly to Schoollyx onboarding desk (+91 8754671568).
+                    Direct connect to Schoollyx onboarding desk (+91 8754671568).
                 </p>
             </div>
         </div>
@@ -1259,7 +1605,47 @@
                 </div>
 
                 <button type="submit" class="w-full py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs shadow-lg shadow-indigo-500/25 transition mt-2">
-                    Confirm & Connect on WhatsApp
+                    Confirm & Connect on WhatsApp (+91 8754671568)
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- MODAL 4: WHITEPAPER & IMPLEMENTATION GUIDE MODAL         -->
+    <!-- ======================================================== -->
+    <div id="whitepaper-modal" class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-slate-200 relative">
+            <button onclick="window.closeWhitepaperModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <div class="text-center mb-6">
+                <div class="w-12 h-12 rounded-2xl bg-cyan-50 text-cyan-600 flex items-center justify-center mx-auto mb-3">
+                    <i data-lucide="file-text" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-xl font-extrabold text-slate-900">2026 Implementation Guide</h3>
+                <p class="text-xs text-slate-500 mt-1">Get the complete campus rollout roadmap, fee gateway SLA, and hardware specifications.</p>
+            </div>
+
+            <form onsubmit="window.submitWhitepaperRequest(event)" class="space-y-3.5">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Your Full Name</label>
+                    <input id="whitepaper-name" required type="text" placeholder="e.g. Anand Sharma" class="w-full px-3.5 py-2.5 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">School / Institution</label>
+                    <input id="whitepaper-school" required type="text" placeholder="e.g. Heritage Public School" class="w-full px-3.5 py-2.5 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">WhatsApp Number to Receive PDF</label>
+                    <input id="whitepaper-phone" required type="tel" placeholder="+91 98765 43210" class="w-full px-3.5 py-2.5 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+                </div>
+
+                <button type="submit" class="w-full py-3.5 rounded-xl bg-cyan-600 hover:bg-cyan-700 text-white font-bold text-xs shadow-lg shadow-cyan-500/25 transition mt-2">
+                    Send Guide to My WhatsApp
                 </button>
             </form>
         </div>
