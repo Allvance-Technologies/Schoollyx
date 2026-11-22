@@ -33,8 +33,40 @@ body {
 
 @media (max-width: 767px) {
   body {
-    padding-bottom: 74px;
+    padding-bottom: 84px;
   }
+}
+
+/* Mobile Safe-Area and Bottom Navigation */
+.mobile-bottom-nav {
+  padding-bottom: calc(0.35rem + env(safe-area-inset-bottom, 0px));
+}
+
+/* Mobile Inside-Viewing Accordion */
+.mobile-inside-view {
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
+}
+
+.module-row-mobile.expanded .mobile-inside-view {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.module-row-mobile.collapsed .mobile-inside-view {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+}
+
+.module-row-mobile.expanded .module-chevron {
+  transform: rotate(180deg);
+}
+
+.module-chevron {
+  transition: transform 0.25s ease;
 }
 
 /* Glassmorphism Classes */

@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const whitepaperModal = document.getElementById('whitepaper-modal');
 
     // -------------------------------------------------------------
-    // 0. Mobile Menu Logic
+    // 0. Mobile Menu Logic & Migration Stepper
     // -------------------------------------------------------------
     window.toggleMobileMenu = function() {
         state.isMobileMenuOpen = !state.isMobileMenuOpen;
@@ -55,8 +55,40 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    window.switchMobileMigrationStep = function(step) {
+        const steps = {
+            1: {
+                title: "01. Export & Upload Excel / CSV",
+                desc: "Export student records, parent phone numbers, and historical fee ledgers from your legacy system or spreadsheets."
+            },
+            2: {
+                title: "02. Automated AI Audit & Cleansing",
+                desc: "Our engine scans and corrects duplicates, phone formatting, and historical balance errors automatically."
+            },
+            3: {
+                title: "03. Campus Goes Live in 48 Hours",
+                desc: "Teachers mark attendance, parents receive WhatsApp credentials, and fee collections begin immediately."
+            }
+        };
+
+        [1, 2, 3].forEach(num => {
+            const tab = document.getElementById(`mobile-mig-tab-${num}`);
+            if (tab) {
+                const isCurrent = num === step;
+                tab.className = isCurrent 
+                    ? "py-1.5 rounded-lg text-xs font-bold bg-indigo-600 text-white transition"
+                    : "py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white transition";
+            }
+        });
+
+        const titleEl = document.getElementById('mobile-mig-title');
+        const descEl = document.getElementById('mobile-mig-desc');
+        if (titleEl && steps[step]) titleEl.textContent = steps[step].title;
+        if (descEl && steps[step]) descEl.textContent = steps[step].desc;
+    };
+
     // -------------------------------------------------------------
-    // 1. Presets Logic (Reduce Decision Fatigue)
+    // 1. Presets Logic (Desktop Cards & Mobile Segmented Control)
     // -------------------------------------------------------------
     window.applyPreset = function(presetKey) {
         const preset = SCHOOLLYX_DATA.presets[presetKey];
@@ -65,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
         state.activePreset = presetKey;
         state.selectedModules = new Set(preset.moduleIds);
 
-        // Update button active styling
+        // Update desktop button active styling
         document.querySelectorAll('.preset-btn').forEach(btn => {
             const isCurrent = btn.dataset.preset === presetKey;
             btn.classList.toggle('ring-2', isCurrent);
@@ -74,6 +106,25 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.classList.toggle('bg-indigo-50', isCurrent);
         });
 
+        // Update mobile preset tab styling
+        document.querySelectorAll('.mobile-preset-tab').forEach(tab => {
+            const isCurrent = tab.dataset.mobilePreset === presetKey;
+            tab.classList.toggle('bg-white', isCurrent);
+            tab.classList.toggle('text-indigo-700', isCurrent);
+            tab.classList.toggle('shadow-sm', isCurrent);
+            tab.classList.toggle('text-slate-600', !isCurrent);
+        });
+
+        const mobileTitle = document.getElementById('mobile-preset-title');
+        const mobileDesc = document.getElementById('mobile-preset-desc');
+        const mobileBadge = document.getElementById('mobile-preset-badge');
+        if (mobileTitle) mobileTitle.textContent = `${preset.name} (${preset.tag})`;
+        if (mobileDesc) mobileDesc.textContent = preset.description;
+        if (mobileBadge) {
+            mobileBadge.textContent = `${preset.name} Active`;
+            mobileBadge.className = `text-[10px] text-${preset.color}-600 font-extrabold bg-${preset.color}-50 px-2 py-0.5 rounded-full border border-${preset.color}-200`;
+        }
+
         updateQuoteBadges();
         renderModules();
         renderQuoteDrawer();
@@ -81,40 +132,72 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // -------------------------------------------------------------
-    // 2. Render Category Filter Pills
+    // 2. Render Category Filter Pills & Mobile Category Dropdown
     // -------------------------------------------------------------
     function renderFilterPills() {
-        if (!filterPillsContainer) return;
-        
-        filterPillsContainer.innerHTML = SCHOOLLYX_DATA.pillars.map(pillar => {
-            const isActive = state.activeFilter === pillar.id;
-            return `
-                <button 
-                    data-filter="${pillar.id}" 
-                    class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold transition-all duration-200 flex items-center gap-2 whitespace-nowrap flex-shrink-0 ${
-                        isActive 
-                        ? 'bg-indigo-600 text-white shadow-md shadow-indigo-500/25' 
-                        : 'bg-white text-slate-600 hover:bg-slate-100 hover:text-slate-900 border border-slate-200/80'
-                    }">
-                    <span>${pillar.name}</span>
-                    <span class="text-[11px] px-2 py-0.5 rounded-full ${isActive ? 'bg-indigo-700/60 text-white' : 'bg-slate-100 text-slate-500'}">
-                        ${pillar.count}
-                    </span>
-                </button>
-            `;
-        }).join('');
+        // Desktop horizontal pills
+        if (filterPillsContainer) {
+            filterPillsContainer.innerHTML = SCHOOLLYX_DATA.pillars.map(pillar => {
+                const isActive = state.activeFilter === pillar.id;
+                return `
+                    <button 
+                        data-filter="${pillar.id}" 
+                        class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold transition-all duration-200 flex items-center gap-2 whitespace-nowrap flex-shrink-0 ${
+                            isActive 
+                            ? 'bg-indigo-600 text-white shadow-md shadow-indigo-500/25' 
+                            : 'bg-white text-slate-600 hover:bg-slate-100 hover:text-slate-900 border border-slate-200/80'
+                        }">
+                        <span>${pillar.name}</span>
+                        <span class="text-[11px] px-2 py-0.5 rounded-full ${isActive ? 'bg-indigo-700/60 text-white' : 'bg-slate-100 text-slate-500'}">
+                            ${pillar.count}
+                        </span>
+                    </button>
+                `;
+            }).join('');
 
-        filterPillsContainer.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                state.activeFilter = btn.dataset.filter;
-                renderFilterPills();
-                renderModules();
+            filterPillsContainer.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    state.activeFilter = btn.dataset.filter;
+                    renderFilterPills();
+                    renderModules();
+                });
             });
-        });
+        }
+
+        // Mobile dropdown selector (Senior pattern: avoids horizontal scroll fatigue)
+        const mobileCategoryDropdown = document.getElementById('mobile-category-dropdown');
+        if (mobileCategoryDropdown) {
+            mobileCategoryDropdown.innerHTML = SCHOOLLYX_DATA.pillars.map(pillar => {
+                return `<option value="${pillar.id}" ${state.activeFilter === pillar.id ? 'selected' : ''}>
+                    ${pillar.name} (${pillar.count})
+                </option>`;
+            }).join('');
+
+            if (!mobileCategoryDropdown.dataset.listenerAttached) {
+                mobileCategoryDropdown.dataset.listenerAttached = 'true';
+                mobileCategoryDropdown.addEventListener('change', (e) => {
+                    state.activeFilter = e.target.value;
+                    renderFilterPills();
+                    renderModules();
+                });
+            }
+        }
     }
 
+    // Mobile Accordion Toggle (Inside Viewing)
+    window.toggleMobileAccordion = function(id) {
+        const item = document.getElementById(`module-row-${id}`);
+        if (!item) return;
+        const isCollapsed = item.classList.contains('collapsed');
+        item.classList.toggle('collapsed', !isCollapsed);
+        item.classList.toggle('expanded', isCollapsed);
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    };
+
     // -------------------------------------------------------------
-    // 3. Render Module Cards in Grid
+    // 3. Render Module Cards in Grid & Mobile Accordion List
     // -------------------------------------------------------------
     function renderModules() {
         if (!modulesGrid) return;
@@ -175,7 +258,80 @@ document.addEventListener('DOMContentLoaded', () => {
         modulesGrid.innerHTML = filtered.map(mod => {
             const isSelected = state.selectedModules.has(mod.id);
             return `
-                <div class="module-card group bg-white rounded-2xl p-5 sm:p-6 border ${mod.isKey ? 'border-amber-200 shadow-sm shadow-amber-100/50' : 'border-slate-200/90'} flex flex-col justify-between hover:border-indigo-400">
+                <!-- MOBILE VIEW: COMPACT ACCORDION WITH INSIDE-VIEWING (Prevents 13,000px scroll) -->
+                <div id="module-row-${mod.id}" class="md:hidden module-row-mobile collapsed bg-white rounded-2xl border ${mod.isKey ? 'border-amber-200 shadow-sm' : 'border-slate-200'} overflow-hidden transition-all duration-200">
+                    <!-- Collapsed Header Row (Always Visible) -->
+                    <div class="p-3 sm:p-3.5 flex items-center justify-between gap-2.5 cursor-pointer select-none" onclick="window.toggleMobileAccordion(${mod.id})">
+                        <div class="flex items-center gap-2.5 min-w-0">
+                            <div class="w-8 h-8 rounded-xl ${mod.isKey ? 'bg-amber-50 text-amber-600' : 'bg-indigo-50 text-indigo-600'} flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="${mod.icon}" class="w-4 h-4"></i>
+                            </div>
+                            <div class="min-w-0">
+                                <div class="flex items-center gap-1.5">
+                                    <h3 class="text-xs font-bold text-slate-900 truncate">${mod.title}</h3>
+                                    ${mod.isKey ? '<span class="text-[9px] font-extrabold px-1.5 py-0.2 rounded bg-amber-100 text-amber-700 flex-shrink-0">⭐ KEY</span>' : ''}
+                                </div>
+                                <div class="flex items-center gap-2 text-[10px] text-slate-400 mt-0.5">
+                                    <span class="truncate">${mod.categoryName}</span>
+                                    <span>•</span>
+                                    <span class="text-indigo-600 font-semibold">${mod.stat}</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-1.5 sm:gap-2 flex-shrink-0">
+                            <button onclick="event.stopPropagation(); window.toggleModuleSelection(${mod.id})"
+                                class="px-2.5 py-1 rounded-lg text-[11px] font-bold flex items-center gap-1 transition ${
+                                    isSelected 
+                                    ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' 
+                                    : 'bg-slate-100 text-slate-600 hover:bg-indigo-50 hover:text-indigo-600'
+                                }">
+                                <i data-lucide="${isSelected ? 'check' : 'plus'}" class="w-3 h-3"></i>
+                                <span>${isSelected ? 'Added' : 'Add'}</span>
+                            </button>
+                            <div class="w-6 h-6 rounded-lg bg-slate-50 text-slate-400 flex items-center justify-center module-chevron">
+                                <i data-lucide="chevron-down" class="w-3.5 h-3.5"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Inside Viewing Body (Expanded smoothly) -->
+                    <div class="mobile-inside-view px-3.5 pb-3.5 pt-1 border-t border-slate-100 bg-slate-50/60 space-y-2">
+                        <p class="text-xs text-indigo-600 font-semibold">${mod.tagline}</p>
+                        <p class="text-xs text-slate-600 leading-relaxed">${mod.description}</p>
+                        
+                        <!-- Badges -->
+                        <div class="flex flex-wrap gap-1">
+                            ${(mod.badges || []).map(b => `
+                                <span class="text-[10px] font-medium px-2 py-0.5 rounded bg-white border border-slate-200 text-slate-600">
+                                    ${b}
+                                </span>
+                            `).join('')}
+                        </div>
+
+                        <!-- Top 3 Features -->
+                        <div class="space-y-1 pt-1 border-t border-slate-200/50">
+                            ${mod.features.slice(0, 3).map(feat => `
+                                <div class="text-[11px] text-slate-600 flex items-center gap-1.5">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 flex-shrink-0"></span>
+                                    <span>${feat}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+
+                        <div class="pt-2 flex items-center justify-between border-t border-slate-200/60">
+                            <button onclick="window.openModuleDetail(${mod.id})" 
+                                class="text-xs font-bold text-indigo-600 hover:underline flex items-center gap-1">
+                                <span>View Full Specifications</span>
+                                <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                            </button>
+                            <span class="text-[10px] text-slate-400 font-medium">${mod.stat}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DESKTOP VIEW: RICH 3-COLUMN CARD -->
+                <div class="hidden md:flex module-card group bg-white rounded-2xl p-5 sm:p-6 border ${mod.isKey ? 'border-amber-200 shadow-sm shadow-amber-100/50' : 'border-slate-200/90'} flex-col justify-between hover:border-indigo-400">
                     <div>
                         <!-- Header with Badges -->
                         <div class="flex items-start justify-between gap-3 mb-4">
@@ -799,4 +955,5 @@ document.addEventListener('DOMContentLoaded', () => {
     updateQuoteBadges();
     runGenieSimulation(0);
     window.switchAppPreview('parent');
+    window.switchMobileMigrationStep(1);
 });

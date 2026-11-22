@@ -61,26 +61,27 @@
 <body class="bg-slate-50 text-slate-900 antialiased selection:bg-indigo-500 selection:text-white">
 
     <!-- ======================================================== -->
-    <!-- TOP NOTIFICATION BANNER (CLEAN & ALIGNED)                -->
+    <!-- TOP NOTIFICATION BANNER (CLEAN & MOBILE RESPONSIVE)     -->
     <!-- ======================================================== -->
-    <div class="bg-slate-950 text-white text-xs py-2 px-3 sm:px-4 border-b border-slate-800/80">
+    <div class="bg-slate-950 text-white text-xs py-1.5 px-3 sm:px-4 border-b border-slate-800/80">
         <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
             <!-- Left Pilot Badge & Note -->
             <div class="flex items-center gap-2 min-w-0">
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 text-[10px] font-bold uppercase tracking-wider border border-emerald-500/30 whitespace-nowrap flex-shrink-0">
+                <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 text-[10px] font-bold uppercase tracking-wider border border-emerald-500/30 whitespace-nowrap flex-shrink-0">
                     <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
                     Pilot
                 </span>
                 <span class="text-[11px] sm:text-xs text-slate-300 truncate">
-                    30-Day Zero-Risk Campus Pilot with Free Data Migration
+                    <span class="sm:hidden">30-Day Zero-Risk Campus Pilot</span>
+                    <span class="hidden sm:inline">30-Day Zero-Risk Campus Pilot with Free Data Migration</span>
                 </span>
             </div>
             <!-- Right Contact -->
             <div class="flex items-center gap-2.5 sm:gap-4 text-slate-300 text-xs flex-shrink-0">
-                <a href="tel:+918754671568" class="hover:text-white font-bold text-white flex items-center gap-1 transition">
+                <a href="tel:+918754671568" class="hover:text-emerald-400 font-bold text-white flex items-center gap-1 transition">
                     <i data-lucide="phone" class="w-3.5 h-3.5 text-emerald-400"></i>
                     <span class="hidden sm:inline">+91 8754671568</span>
-                    <span class="sm:hidden text-[11px]">Call</span>
+                    <span class="sm:hidden text-[11px] text-emerald-400 font-semibold">+91 8754671568</span>
                 </a>
                 <span class="text-slate-700 hidden sm:inline">|</span>
                 <a href="https://maps.app.goo.gl/6Gky1rJjpNDoPung9?g_st=aw" target="_blank"
@@ -96,20 +97,20 @@
     <!-- NAVIGATION BAR WITH LOGIN DROPDOWN & SCROLLSPY          -->
     <!-- ======================================================== -->
     <header class="sticky top-0 z-40 glass-nav transition-all">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2 sm:gap-4">
             <!-- Brand Logo -->
-            <a href="#" class="flex items-center gap-3 group">
+            <a href="#" class="flex items-center gap-2 sm:gap-3 group flex-shrink-0">
                 <div
-                    class="w-11 h-11 rounded-2xl bg-gradient-to-br from-indigo-600 to-cyan-500 flex items-center justify-center text-white shadow-lg shadow-indigo-500/25 group-hover:scale-105 transition-transform">
-                    <i data-lucide="cpu" class="w-6 h-6"></i>
+                    class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-gradient-to-br from-indigo-600 to-cyan-500 flex items-center justify-center text-white shadow-md sm:shadow-lg shadow-indigo-500/25 group-hover:scale-105 transition-transform flex-shrink-0">
+                    <i data-lucide="cpu" class="w-5 h-5 sm:w-6 sm:h-6"></i>
                 </div>
                 <div>
-                    <div class="flex items-center gap-1.5">
-                        <span class="text-2xl font-extrabold tracking-tight text-slate-900">Schoollyx</span>
+                    <div class="flex items-center gap-1 sm:gap-1.5">
+                        <span class="text-xl sm:text-2xl font-extrabold tracking-tight text-slate-900">Schoollyx</span>
                         <span
-                            class="text-[10px] font-extrabold px-1.5 py-0.5 rounded bg-indigo-100 text-indigo-700">OS</span>
+                            class="text-[9px] sm:text-[10px] font-extrabold px-1.5 py-0.5 rounded bg-indigo-100 text-indigo-700">OS</span>
                     </div>
-                    <span class="text-[10px] font-semibold text-slate-400 block -mt-1 tracking-wider uppercase">
+                    <span class="text-[9px] font-semibold text-slate-400 hidden sm:block -mt-1 tracking-wider uppercase">
                         Hafzee Research Infopark
                     </span>
                 </div>
@@ -131,17 +132,17 @@
             </nav>
 
             <!-- Actions: Login Dropdown + Custom Package Cart + Book Demo -->
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
                 <!-- Portal Login Dropdown (CREDIBILITY BOOSTER) -->
                 <div class="relative group">
-                    <button
-                        class="px-3.5 py-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-bold flex items-center gap-1.5 transition shadow-sm">
-                        <i data-lucide="log-in" class="w-4 h-4 text-indigo-600"></i>
+                    <button onclick="window.openLoginModal('admin')"
+                        class="px-2.5 sm:px-3.5 py-2 sm:py-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-bold flex items-center gap-1 sm:gap-1.5 transition shadow-sm">
+                        <i data-lucide="log-in" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-indigo-600"></i>
                         <span>Login</span>
                         <i data-lucide="chevron-down"
-                            class="w-3.5 h-3.5 text-slate-400 group-hover:rotate-180 transition-transform"></i>
+                            class="w-3 h-3 text-slate-400 hidden sm:inline group-hover:rotate-180 transition-transform"></i>
                     </button>
-                    <!-- Dropdown Menu -->
+                    <!-- Dropdown Menu (Desktop Hover) -->
                     <div
                         class="absolute right-0 mt-2 w-56 rounded-2xl bg-white border border-slate-200 shadow-xl py-2 hidden group-hover:block transition-all z-50">
                         <div
@@ -185,18 +186,19 @@
 
                 <!-- Book Demo Button -->
                 <button onclick="window.openDemoModal()"
-                    class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 text-white text-xs font-bold shadow-md shadow-indigo-500/25 transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
-                    <i data-lucide="calendar" class="w-4 h-4"></i>
-                    <span class="hidden md:inline">Book Live Demo</span>
-                    <span class="md:hidden">Demo</span>
+                    class="px-3 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 text-white text-xs font-bold shadow-md shadow-indigo-500/25 transition-all transform hover:-translate-y-0.5 flex items-center gap-1.5 sm:gap-2 whitespace-nowrap">
+                    <i data-lucide="calendar" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+                    <span class="hidden sm:inline">Book Live Demo</span>
+                    <span class="sm:hidden">Demo</span>
                 </button>
-
-                </header>
+            </div>
+        </div>
+    </header>
 
     <!-- ======================================================== -->
     <!-- HERO SECTION                                             -->
     <!-- ======================================================== -->
-    <section class="relative hero-mesh-bg text-white pt-20 pb-28 overflow-hidden">
+    <section class="relative hero-mesh-bg text-white pt-10 sm:pt-20 pb-16 sm:pb-28 overflow-hidden">
         <div class="absolute -top-40 -left-40 w-96 h-96 bg-indigo-600/30 rounded-full blur-[120px] pointer-events-none">
         </div>
         <div class="absolute top-1/2 -right-40 w-96 h-96 bg-cyan-500/20 rounded-full blur-[140px] pointer-events-none">
@@ -205,29 +207,56 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <!-- Eyebrow Pill -->
             <div
-                class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-slate-700 text-xs font-semibold text-slate-300 mb-8 backdrop-blur-md">
+                class="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-slate-800/80 border border-slate-700 text-[11px] sm:text-xs font-semibold text-slate-300 mb-5 sm:mb-8 backdrop-blur-md">
                 <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span>The Unified AI-Powered School Operating System</span>
+                <span class="hidden sm:inline">The Unified AI-Powered School Operating System</span>
+                <span class="sm:hidden">Unified AI Campus OS</span>
                 <span class="text-slate-500">|</span>
-                <span class="text-cyan-400 font-mono">2026 Enterprise Edition</span>
+                <span class="text-cyan-400 font-mono">2026 Edition</span>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-7 space-y-6">
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15]">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                <div class="lg:col-span-7 space-y-4 sm:space-y-6">
+                    <h1 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
                         Empowering Schools Through
                         <span class="text-gradient block mt-1">Smart AI Technology.</span>
                     </h1>
 
-                    <p class="text-base sm:text-lg text-slate-300 max-w-2xl font-normal leading-relaxed">
+                    <!-- Desktop Copy -->
+                    <p class="hidden sm:block text-base sm:text-lg text-slate-300 max-w-2xl font-normal leading-relaxed">
                         Replace slow, fragmented legacy software with one seamless operating system. Complete student
                         lifecycle records, automated fee collections with <strong>10+ payment gateways</strong>, live
                         GPS transit security, and our signature <strong>Genie AI Assistant</strong> answering
                         administrative questions in under 2 seconds.
                     </p>
 
-                    <!-- Key Institutional Metrics -->
-                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2">
+                    <!-- Mobile Concise Copy -->
+                    <p class="sm:hidden text-xs text-slate-300 leading-relaxed font-normal">
+                        Unified AI operating system for schools — automated fees with 10+ gateways, live GPS transit tracking, and our signature <strong>Genie AI</strong> answering questions in under 2 seconds.
+                    </p>
+
+                    <!-- MOBILE COMPACT 4-METRIC STRIP (Takes ~50px height instead of 250px!) -->
+                    <div class="sm:hidden grid grid-cols-4 gap-1 p-2 rounded-2xl bg-slate-900/90 border border-slate-800 text-center shadow-lg">
+                        <div class="px-1">
+                            <div class="text-base font-extrabold text-white">10+</div>
+                            <div class="text-[9px] text-slate-400 leading-tight mt-0.5">Gateways</div>
+                        </div>
+                        <div class="px-1 border-l border-slate-800">
+                            <div class="text-base font-extrabold text-cyan-400">&lt;2s</div>
+                            <div class="text-[9px] text-slate-400 leading-tight mt-0.5">Genie AI</div>
+                        </div>
+                        <div class="px-1 border-l border-slate-800">
+                            <div class="text-base font-extrabold text-emerald-400">99.9%</div>
+                            <div class="text-[9px] text-slate-400 leading-tight mt-0.5">Attendance</div>
+                        </div>
+                        <div class="px-1 border-l border-slate-800">
+                            <div class="text-base font-extrabold text-amber-400">70%</div>
+                            <div class="text-[9px] text-slate-400 leading-tight mt-0.5">Time Saved</div>
+                        </div>
+                    </div>
+
+                    <!-- DESKTOP SPACIOUS METRIC CARDS -->
+                    <div class="hidden sm:grid sm:grid-cols-4 gap-4 pt-2">
                         <div class="p-4 rounded-2xl glass-panel-dark border border-slate-800">
                             <div class="text-2xl sm:text-3xl font-extrabold text-white">10+</div>
                             <div class="text-xs text-slate-400 mt-1">Payment Gateways</div>
@@ -246,74 +275,75 @@
                         </div>
                     </div>
 
-                    <!-- Call To Actions -->
-                    <div class="flex flex-wrap items-center gap-4 pt-4">
+                    <!-- Call To Actions (Mobile Friendly Flex) -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 pt-2">
                         <button onclick="window.openDemoModal()"
-                            class="px-8 py-4 rounded-xl bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 text-white font-bold text-sm shadow-xl shadow-indigo-500/30 transition transform hover:-translate-y-0.5 flex items-center gap-2">
-                            <i data-lucide="play-circle" class="w-5 h-5"></i>
+                            class="w-full sm:w-auto px-6 py-3.5 sm:px-8 sm:py-4 rounded-xl bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 text-white font-bold text-xs sm:text-sm shadow-xl shadow-indigo-500/30 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                            <i data-lucide="play-circle" class="w-4 h-4 sm:w-5 sm:h-5"></i>
                             <span>Schedule Live 1-on-1 Demo</span>
                         </button>
 
-                        <a href="#modules"
-                            class="px-6 py-4 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700 text-slate-200 font-bold text-sm transition flex items-center gap-2">
-                            <i data-lucide="grid" class="w-4 h-4 text-cyan-400"></i>
-                            <span>Explore Capabilities</span>
-                        </a>
+                        <div class="grid grid-cols-2 gap-2 sm:flex sm:items-center">
+                            <a href="#modules"
+                                class="px-4 py-3 sm:px-6 sm:py-4 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700 text-slate-200 font-bold text-xs sm:text-sm transition flex items-center justify-center gap-1.5 sm:gap-2">
+                                <i data-lucide="grid" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-cyan-400"></i>
+                                <span>Capabilities</span>
+                            </a>
 
-                        <button onclick="window.openWhitepaperModal()"
-                            class="px-5 py-4 rounded-xl text-slate-400 hover:text-white font-semibold text-sm transition flex items-center gap-1.5">
-                            <i data-lucide="file-text" class="w-4 h-4 text-indigo-400"></i>
-                            <span>Implementation Guide</span>
-                        </button>
+                            <button onclick="window.openWhitepaperModal()"
+                                class="px-3 py-3 sm:px-5 sm:py-4 rounded-xl bg-slate-800/40 hover:bg-slate-800 text-slate-300 hover:text-white font-semibold text-xs sm:text-sm transition flex items-center justify-center gap-1.5 border border-slate-700/60 sm:border-transparent">
+                                <i data-lucide="file-text" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-indigo-400"></i>
+                                <span>Whitepaper</span>
+                            </button>
+                        </div>
                     </div>
 
                     <!-- Trust statement -->
-                    <div class="flex items-center gap-3 pt-2 text-xs text-slate-400">
-                        <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
-                        <span>Zero setup fee for approved K-12 institutions · Free  data migration from legacy
-                            software</span>
+                    <div class="flex items-center gap-2 pt-1 text-[11px] sm:text-xs text-slate-400">
+                        <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                        <span>Zero setup fee for approved K-12 institutions · Free data migration</span>
                     </div>
                 </div>
 
                 <!-- Hero Dashboard Showcase Visual -->
-                <div class="lg:col-span-5 relative">
+                <div class="lg:col-span-5 relative mt-4 lg:mt-0">
                     <div
                         class="relative mx-auto rounded-2xl p-2 bg-gradient-to-b from-slate-700/60 to-slate-900/90 border border-slate-700/80 shadow-2xl glow-primary">
                         <div class="flex items-center justify-between px-3 py-2 border-b border-slate-700/50 mb-2">
                             <div class="flex items-center gap-1.5">
-                                <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
-                                <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
-                                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                                <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+                                <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
                             </div>
                             <span class="text-[10px] font-mono text-slate-400">schoollyx.in/admin-portal</span>
-                            <div class="w-8"></div>
+                            <div class="w-6"></div>
                         </div>
 
                         <img src="assets/images/hero_dashboard.jpg" alt="Schoollyx SaaS Executive Dashboard"
                             class="rounded-xl w-full h-auto object-cover border border-slate-800 shadow-inner" />
 
-                        <!-- Floating Live Status Overlays -->
+                        <!-- Floating Live Status Overlays (Compact on mobile) -->
                         <div
-                            class="absolute -bottom-5 left-2 sm:-left-4 p-3 rounded-xl bg-slate-900/95 border border-indigo-500/40 shadow-xl backdrop-blur-md flex items-center gap-3">
+                            class="absolute -bottom-3 sm:-bottom-5 left-1 sm:-left-4 p-2 sm:p-3 rounded-xl bg-slate-900/95 border border-indigo-500/40 shadow-xl backdrop-blur-md flex items-center gap-2 sm:gap-3">
                             <div
-                                class="w-9 h-9 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
-                                <i data-lucide="zap" class="w-5 h-5"></i>
+                                class="w-7 h-7 sm:w-9 sm:h-9 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="zap" class="w-4 h-4 sm:w-5 sm:h-5"></i>
                             </div>
                             <div>
-                                <div class="text-[11px] font-bold text-white">45% Faster Fees</div>
-                                <div class="text-[10px] text-slate-400">Auto WhatsApp Defaulter Alerts</div>
+                                <div class="text-[10px] sm:text-[11px] font-bold text-white">45% Faster Fees</div>
+                                <div class="text-[9px] sm:text-[10px] text-slate-400">WhatsApp Defaulter Alerts</div>
                             </div>
                         </div>
 
                         <div
-                            class="absolute -top-5 right-2 sm:-right-4 p-3 rounded-xl bg-slate-900/95 border border-cyan-500/40 shadow-xl backdrop-blur-md flex items-center gap-3">
+                            class="absolute -top-3 sm:-top-5 right-1 sm:-right-4 p-2 sm:p-3 rounded-xl bg-slate-900/95 border border-cyan-500/40 shadow-xl backdrop-blur-md flex items-center gap-2 sm:gap-3">
                             <div
-                                class="w-9 h-9 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center">
-                                <i data-lucide="sparkles" class="w-5 h-5"></i>
+                                class="w-7 h-7 sm:w-9 sm:h-9 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="sparkles" class="w-4 h-4 sm:w-5 sm:h-5"></i>
                             </div>
                             <div>
-                                <div class="text-[11px] font-bold text-white">Genie AI Ready</div>
-                                <div class="text-[10px] text-slate-400">&lt;2s Natural Language Query</div>
+                                <div class="text-[10px] sm:text-[11px] font-bold text-white">Genie AI Ready</div>
+                                <div class="text-[9px] sm:text-[10px] text-slate-400">&lt;2s Instant Queries</div>
                             </div>
                         </div>
                     </div>
@@ -325,12 +355,31 @@
     <!-- ======================================================== -->
     <!-- TRUST & COMPLIANCE STRIP                                -->
     <!-- ======================================================== -->
-    <section class="bg-white border-y border-slate-200/80 py-8">
+    <section class="bg-white border-y border-slate-200/80 py-4 sm:py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center items-center">
+            <!-- Mobile Horizontal Chip Marquee -->
+            <div class="md:hidden flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 text-slate-800 text-xs font-bold whitespace-nowrap flex-shrink-0">
+                    <i data-lucide="award" class="w-3.5 h-3.5 text-indigo-600"></i> CBSE, ICSE & State
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 text-slate-800 text-xs font-bold whitespace-nowrap flex-shrink-0">
+                    <i data-lucide="credit-card" class="w-3.5 h-3.5 text-emerald-600"></i> Razorpay & UPI
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 text-slate-800 text-xs font-bold whitespace-nowrap flex-shrink-0">
+                    <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-500"></i> WhatsApp API
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 text-slate-800 text-xs font-bold whitespace-nowrap flex-shrink-0">
+                    <i data-lucide="lock" class="w-3.5 h-3.5 text-cyan-600"></i> AES-256 Encrypted
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 text-slate-800 text-xs font-bold whitespace-nowrap flex-shrink-0">
+                    <i data-lucide="headphones" class="w-3.5 h-3.5 text-emerald-600"></i> 24/7 Dedicated Support
+                </span>
+            </div>
+
+            <!-- Desktop Grid -->
+            <div class="hidden md:grid grid-cols-5 gap-6 text-center items-center">
                 <div class="flex flex-col items-center">
-                    <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Curriculum
-                        Standard</span>
+                    <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Curriculum Standard</span>
                     <span class="text-sm font-extrabold text-slate-800 mt-1 flex items-center gap-1">
                         <i data-lucide="award" class="w-4 h-4 text-indigo-600"></i>
                         <span>CBSE, ICSE & State</span>
@@ -357,7 +406,7 @@
                         <span>AES-256 Encrypted</span>
                     </span>
                 </div>
-                <div class="col-span-2 md:col-span-1 flex flex-col items-center">
+                <div class="flex flex-col items-center">
                     <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Dedicated Support</span>
                     <span class="text-sm font-extrabold text-emerald-600 mt-1 flex items-center gap-1">
                         <i data-lucide="headphones" class="w-4 h-4 text-emerald-600"></i>
@@ -372,32 +421,32 @@
     <!-- 48-HOUR DATA MIGRATION BANNER (MIGRATION ANXIETY CURE)    -->
     <!-- ======================================================== -->
     <section id="migration"
-        class="py-14 bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white relative">
+        class="py-10 sm:py-14 bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
                 <div class="lg:col-span-4 space-y-2">
                     <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider flex items-center gap-1.5">
                         <i data-lucide="check-circle" class="w-4 h-4"></i>
                         <span>Zero Data Loss Guarantee</span>
                     </span>
-                    <h3 class="text-2xl font-extrabold tracking-tight">
-                        Switching From Your Old ERP?.
+                    <h3 class="text-xl sm:text-2xl font-extrabold tracking-tight">
+                        Switching From Your Old ERP?
                     </h3>
                     <p class="text-xs text-slate-300 leading-relaxed">
                         Never worry about losing historical student records or pending fees. Our dedicated engineering
-                        team migrates all your school data with 100% verification.
+                        team migrates all your school data with 100% verification in 48 hours.
                     </p>
                 </div>
 
-                <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Desktop 3-Step Cards -->
+                <div class="hidden md:grid lg:col-span-8 grid-cols-3 gap-4">
                     <div class="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2">
                         <div
                             class="w-8 h-8 rounded-lg bg-indigo-600 text-white text-xs font-bold flex items-center justify-center">
                             01
                         </div>
                         <h4 class="text-sm font-bold text-white">Upload Excel / CSV</h4>
-                        <p class="text-xs text-slate-300">Export student profiles, parent contacts, and fee registers
-                            from your legacy system.</p>
+                        <p class="text-xs text-slate-300">Export student profiles, parent contacts, and fee registers from legacy system.</p>
                     </div>
 
                     <div class="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2">
@@ -406,8 +455,7 @@
                             02
                         </div>
                         <h4 class="text-sm font-bold text-white">Automated AI Audit</h4>
-                        <p class="text-xs text-slate-300">Our engine scans and corrects duplicates, phone formatting,
-                            and historical balance errors.</p>
+                        <p class="text-xs text-slate-300">Our engine scans and corrects duplicates, phone formatting, and historical balances.</p>
                     </div>
 
                     <div class="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2">
@@ -416,8 +464,30 @@
                             03
                         </div>
                         <h4 class="text-sm font-bold text-white">Campus Goes Live</h4>
-                        <p class="text-xs text-slate-300">Teachers mark attendance, parents receive WhatsApp
-                            credentials, and fee collections begin.</p>
+                        <p class="text-xs text-slate-300">Teachers mark attendance, parents receive WhatsApp credentials, and fee collections begin.</p>
+                    </div>
+                </div>
+
+                <!-- Mobile Interactive Step Switcher (Senior Mobile Pattern) -->
+                <div class="md:hidden space-y-3">
+                    <div class="grid grid-cols-3 gap-1.5 p-1 rounded-xl bg-white/5 border border-white/10 text-center">
+                        <button onclick="window.switchMobileMigrationStep(1)" id="mobile-mig-tab-1"
+                            class="py-1.5 rounded-lg text-xs font-bold bg-indigo-600 text-white transition">
+                            01 Upload
+                        </button>
+                        <button onclick="window.switchMobileMigrationStep(2)" id="mobile-mig-tab-2"
+                            class="py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white transition">
+                            02 Audit
+                        </button>
+                        <button onclick="window.switchMobileMigrationStep(3)" id="mobile-mig-tab-3"
+                            class="py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white transition">
+                            03 Go Live
+                        </button>
+                    </div>
+
+                    <div id="mobile-mig-content" class="p-4 rounded-2xl bg-white/10 border border-white/15 text-xs space-y-1">
+                        <div class="font-bold text-white text-sm" id="mobile-mig-title">01. Export & Upload Excel / CSV</div>
+                        <p class="text-slate-300 text-xs" id="mobile-mig-desc">Export student profiles, parent phone numbers, and historical fee ledgers from your legacy system or spreadsheets.</p>
                     </div>
                 </div>
             </div>
@@ -427,41 +497,66 @@
     <!-- ======================================================== -->
     <!-- INTERACTIVE CATALOG EXPLORER WITH QUICK PRESETS          -->
     <!-- ======================================================== -->
-    <section id="modules" class="py-20 bg-slate-50 relative">
+    <section id="modules" class="py-12 sm:py-20 bg-slate-50 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
             <!-- Section Header -->
-            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 mb-6 sm:mb-8">
                 <div>
                     <div
-                        class="inline-flex items-center gap-2 text-xs font-bold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full mb-3">
+                        class="inline-flex items-center gap-1.5 text-xs font-bold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full mb-2 sm:mb-3">
                         <i data-lucide="layers" class="w-3.5 h-3.5"></i>
                         <span>MODULAR CAMPUS ARCHITECTURE</span>
                     </div>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                    <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
                         Modular Capabilities Tailored To Your School
                     </h2>
-                    <p class="text-slate-600 text-sm sm:text-base mt-2 max-w-2xl">
-                        Choose a quick institutional preset below or hand-pick individual modules. Click any capability
-                        to inspect detailed features or add to your proposal.
+                    <p class="text-slate-600 text-xs sm:text-base mt-1.5 sm:mt-2 max-w-2xl">
+                        Choose an institutional preset below or hand-pick individual capabilities. Click any capability to inspect detailed features or add to proposal.
                     </p>
                 </div>
 
-                <div class="flex items-center gap-3">
+                <div class="flex items-center gap-2 sm:gap-3 self-start md:self-auto">
                     <button onclick="window.selectAllModules()"
-                        class="text-xs font-bold text-indigo-600 hover:text-indigo-800 bg-indigo-50 hover:bg-indigo-100 px-3.5 py-2 rounded-xl transition flex items-center gap-1.5">
-                        <i data-lucide="check-check" class="w-4 h-4"></i>
+                        class="text-xs font-bold text-indigo-600 hover:text-indigo-800 bg-indigo-50 hover:bg-indigo-100 px-3 py-2 rounded-xl transition flex items-center gap-1.5">
+                        <i data-lucide="check-check" class="w-3.5 h-3.5"></i>
                         <span>Select All</span>
                     </button>
                     <button onclick="window.resetModuleSelection()"
                         class="text-xs font-semibold text-slate-500 hover:text-slate-700 px-3 py-2 rounded-xl transition">
-                        Clear Selection
+                        Clear
                     </button>
                 </div>
             </div>
 
-            <!-- Quick Presets Row (REDUCES COGNITIVE LOAD) -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            <!-- MOBILE SEGMENTED PRESET SELECTOR (SAVES 600PX OF SCROLLING!) -->
+            <div class="md:hidden mb-6">
+                <div class="text-xs font-bold text-slate-700 mb-2 flex items-center justify-between">
+                    <span>1-Tap Institutional Presets:</span>
+                    <span id="mobile-preset-badge" class="text-[10px] text-emerald-600 font-extrabold bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">Starter Active</span>
+                </div>
+                <div class="grid grid-cols-3 p-1 rounded-xl bg-slate-200/90 gap-1 text-center">
+                    <button onclick="window.applyPreset('starter')" data-mobile-preset="starter"
+                        class="mobile-preset-tab py-2 px-1 rounded-lg text-xs font-bold bg-white text-indigo-700 shadow-sm transition">
+                        Starter
+                    </button>
+                    <button onclick="window.applyPreset('academic')" data-mobile-preset="academic"
+                        class="mobile-preset-tab py-2 px-1 rounded-lg text-xs font-bold text-slate-600 hover:text-slate-900 transition">
+                        Academic Pro
+                    </button>
+                    <button onclick="window.applyPreset('enterprise')" data-mobile-preset="enterprise"
+                        class="mobile-preset-tab py-2 px-1 rounded-lg text-xs font-bold text-slate-600 hover:text-slate-900 transition">
+                        Enterprise
+                    </button>
+                </div>
+                <div id="mobile-preset-summary" class="mt-2.5 p-3 rounded-xl bg-white border border-slate-200 shadow-sm text-xs space-y-1">
+                    <div class="font-bold text-slate-900" id="mobile-preset-title">Starter Essentials (Core Pack)</div>
+                    <p class="text-slate-500 text-[11px]" id="mobile-preset-desc">100% paperless admissions, omnichannel fees & instant WhatsApp attendance alerts.</p>
+                </div>
+            </div>
+
+            <!-- DESKTOP QUICK PRESETS ROW -->
+            <div class="hidden md:grid md:grid-cols-3 gap-4 mb-8">
                 <!-- Preset 1 -->
                 <button onclick="window.applyPreset('starter')" data-preset="starter"
                     class="preset-btn ring-2 ring-indigo-600 bg-indigo-50 text-left p-5 rounded-2xl border border-slate-200 shadow-sm transition hover:shadow-md flex flex-col justify-between">
@@ -476,8 +571,7 @@
                         </div>
                         <h4 class="text-sm font-bold text-slate-900">Student Info, Admissions, Fees & WhatsApp</h4>
                         <p class="text-xs text-slate-600 mt-1 leading-relaxed">
-                            Perfect for modernizing daily basics: 100% paperless admissions, omnichannel fees & instant
-                            attendance alerts.
+                            Perfect for modernizing daily basics: 100% paperless admissions, omnichannel fees & instant attendance alerts.
                         </p>
                     </div>
                     <div
@@ -501,8 +595,7 @@
                         </div>
                         <h4 class="text-sm font-bold text-slate-900">CBSE Exams, Homework, Timetable & Apps</h4>
                         <p class="text-xs text-slate-600 mt-1 leading-relaxed">
-                            Includes complete academic suite plus native Parent and Teacher mobile apps for homework and
-                            instant grades.
+                            Includes complete academic suite plus native Parent and Teacher mobile apps for homework and instant grades.
                         </p>
                     </div>
                     <div
@@ -526,8 +619,7 @@
                         </div>
                         <h4 class="text-sm font-bold text-slate-900">Genie AI, Live GPS Bus, Multi-Branch & LMS</h4>
                         <p class="text-xs text-slate-600 mt-1 leading-relaxed">
-                            Total institutional command center with natural language AI, multi-campus governance & 100+
-                            document themes.
+                            Total institutional command center with natural language AI, multi-campus governance & 100+ document themes.
                         </p>
                     </div>
                     <div
@@ -538,17 +630,17 @@
                 </button>
             </div>
 
-            <!-- Sticky Category Filter Pills & Search Bar -->
+            <!-- Sticky Category Filter Pills, Search Bar & Mobile Dropdown -->
             <div
-                class="bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-slate-200/80 shadow-sm mb-8 space-y-4">
-                <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                class="bg-white/95 backdrop-blur-md p-3.5 sm:p-4 rounded-2xl border border-slate-200/80 shadow-sm mb-6 sm:mb-8 space-y-3 sm:space-y-4">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-3 sm:gap-4">
                     <!-- Search Input -->
                     <div class="relative w-full md:w-96">
                         <i data-lucide="search"
                             class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"></i>
                         <input id="module-search" type="text"
-                            placeholder="Search by capability, keyword (e.g. GPS, WhatsApp, fee)..."
-                            class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-slate-50/50" />
+                            placeholder="Search capability (e.g. GPS, WhatsApp, fee)..."
+                            class="w-full pl-10 pr-4 py-2 sm:py-2.5 rounded-xl border border-slate-200 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-slate-50/50" />
                     </div>
 
                     <!-- Module Counter Display -->
@@ -557,16 +649,34 @@
                     </div>
                 </div>
 
-                <!-- Category Pills (Horizontal scrollable with fade indicator) -->
-                <div class="scroll-fade-container">
+                <!-- MOBILE CATEGORY DROPDOWN PICKER (SENIOR DEVELOPER PATTERN) -->
+                <div class="md:hidden">
+                    <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">
+                        Select Category Filter:
+                    </label>
+                    <div class="relative">
+                        <select id="mobile-category-dropdown"
+                            class="w-full pl-3.5 pr-9 py-2.5 rounded-xl border border-slate-300 bg-slate-50 text-xs font-bold text-slate-800 focus:ring-2 focus:ring-indigo-500 focus:outline-none appearance-none">
+                            <!-- Populated dynamically by app.js -->
+                        </select>
+                        <i data-lucide="chevron-down" class="w-4 h-4 text-slate-500 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none"></i>
+                    </div>
+                </div>
+
+                <!-- Desktop Category Pills -->
+                <div class="hidden md:block scroll-fade-container">
                     <div id="filter-pills" class="flex items-center gap-2 overflow-x-auto pb-1 pt-1 no-scrollbar">
                         <!-- Dynamic rendering by app.js -->
                     </div>
                 </div>
             </div>
 
-            <!-- Dynamic Modules Grid -->
-            <div id="modules-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Dynamic Modules Grid (Responsive: Accordion on Mobile, Cards on Desktop) -->
+            <div id="modules-grid" class="space-y-3 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6">
+                <!-- Injected dynamically by app.js -->
+            </div>
+        </div>
+    </section>
                 <!-- Injected dynamically by app.js -->
             </div>
         </div>
@@ -1146,12 +1256,76 @@
                 </p>
             </div>
 
-            <!-- Mobile Scroll Hint -->
-            <div class="lg:hidden text-xs text-slate-500 text-center mb-3 flex items-center justify-center gap-1.5 font-medium">
-                <i data-lucide="arrow-left-right" class="w-3.5 h-3.5 text-indigo-500"></i>
-                <span>Swipe table sideways to view all comparisons</span>
+            <!-- MOBILE VIEW: COMPARISON CARDS (SENIOR PATTERN: NO SQUISHED HORIZONTAL SCROLL) -->
+            <div class="md:hidden space-y-3">
+                <div class="p-3.5 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-2">
+                    <div class="font-bold text-xs text-slate-900">AI Assistant (<2s natural language queries)</div>
+                    <div class="grid grid-cols-2 gap-2 text-[11px]">
+                        <div class="p-2 rounded-xl bg-indigo-50 border border-indigo-100 text-indigo-900 font-bold flex items-center gap-1.5">
+                            <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-500"></i>
+                            <span>Schoollyx: &lt;2s Genie AI</span>
+                        </div>
+                        <div class="p-2 rounded-xl bg-slate-50 border border-slate-200 text-slate-500 flex items-center gap-1.5">
+                            <span>Legacy: ❌ Not Available</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-3.5 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-2">
+                    <div class="font-bold text-xs text-slate-900">Fee Payment Gateways</div>
+                    <div class="grid grid-cols-2 gap-2 text-[11px]">
+                        <div class="p-2 rounded-xl bg-indigo-50 border border-indigo-100 text-indigo-900 font-bold flex items-center gap-1.5">
+                            <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-500"></i>
+                            <span>Schoollyx: 10+ Gateways</span>
+                        </div>
+                        <div class="p-2 rounded-xl bg-slate-50 border border-slate-200 text-slate-500 flex items-center gap-1.5">
+                            <span>Legacy: Single or None</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-3.5 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-2">
+                    <div class="font-bold text-xs text-slate-900">Live GPS Bus Tracking with SOS</div>
+                    <div class="grid grid-cols-2 gap-2 text-[11px]">
+                        <div class="p-2 rounded-xl bg-indigo-50 border border-indigo-100 text-indigo-900 font-bold flex items-center gap-1.5">
+                            <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-500"></i>
+                            <span>Schoollyx: Built-in RFID & Map</span>
+                        </div>
+                        <div class="p-2 rounded-xl bg-slate-50 border border-slate-200 text-slate-500 flex items-center gap-1.5">
+                            <span>Legacy: Expensive Add-on</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-3.5 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-2">
+                    <div class="font-bold text-xs text-slate-900">Official WhatsApp Business Integration</div>
+                    <div class="grid grid-cols-2 gap-2 text-[11px]">
+                        <div class="p-2 rounded-xl bg-indigo-50 border border-indigo-100 text-indigo-900 font-bold flex items-center gap-1.5">
+                            <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-500"></i>
+                            <span>Schoollyx: 99% Delivery</span>
+                        </div>
+                        <div class="p-2 rounded-xl bg-slate-50 border border-slate-200 text-slate-500 flex items-center gap-1.5">
+                            <span>Legacy: SMS Only (Low open)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-3.5 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-2">
+                    <div class="font-bold text-xs text-slate-900">Multi-Branch Management</div>
+                    <div class="grid grid-cols-2 gap-2 text-[11px]">
+                        <div class="p-2 rounded-xl bg-indigo-50 border border-indigo-100 text-indigo-900 font-bold flex items-center gap-1.5">
+                            <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-500"></i>
+                            <span>Schoollyx: 1 Master Console</span>
+                        </div>
+                        <div class="p-2 rounded-xl bg-slate-50 border border-slate-200 text-slate-500 flex items-center gap-1.5">
+                            <span>Legacy: Separate Licenses</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="overflow-x-auto">
+
+            <!-- DESKTOP TABLE VIEW -->
+            <div class="hidden md:block overflow-x-auto">
                 <table
                     class="w-full text-left text-sm border-collapse bg-white rounded-2xl shadow-sm border border-slate-200">
                     <thead>
@@ -1802,7 +1976,7 @@
         <!-- ======================================================== -->
     <!-- MOBILE BOTTOM NAVIGATION BAR (FOR RESPONSIVE SCREENS)    -->
     <!-- ======================================================== -->
-    <nav class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-t border-slate-200/90 shadow-[0_-4px_25px_rgba(0,0,0,0.08)] py-1.5 px-3">
+    <nav class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-t border-slate-200/90 shadow-[0_-4px_25px_rgba(0,0,0,0.08)] py-1.5 px-3 mobile-bottom-nav">
         <div class="max-w-md mx-auto grid grid-cols-5 items-center justify-around text-center">
             
             <!-- Tab 1: Home -->
