@@ -9,5 +9,6 @@ Thumbs.db
 *.txt
 schoolites_home.html
 
-# Local logs
+# Local logs & archives
 *.log
+*.zip
